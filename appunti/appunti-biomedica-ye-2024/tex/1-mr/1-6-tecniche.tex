@@ -1,0 +1,379 @@
+\section{Tecniche di MRI}
+Dopo aver visto le basi del funzionamento dell'\textit{imaging} di risonanza magnetica, concentriamoci sulle tecniche più utilizzate in ambito di ricerca ma, soprattutto, clinico. 
+
+\subsection{Sequenza \textit{gradient echo}}
+Dopo la SE, un'altra sequenza di acquisizione molto importante è la  \textbf{sequenza \textit{gradient echo}} (GE). Essa consiste di un solo impulso eccitante di 90° ma prevede l'applicazione di un gradiente di campo magnetico. Tale applicazione consiste a sua volta di due fasi, come rappresentato nella \figref{fig:ge}: nella prima fase, chiamata \textit{rewind}, viene applicato un gradiente di campo magnetico lungo \textit{-z}, che provoca lo sfasamento degli spin; nella seconda fase, chiamata \textit{readout}, durante la quale avviene contestualmente l'acquisizione del segnale, viene applicato un gradiente lungo \textit{z}, che inverte lo sfasamento e produce l'eco. L'\virgolette{area} del gradiente di \textit{rewind}, data dal prodotto di intensità e tempo di applicazione, deve essere la metà dell'area del gradiente di \textit{readout}. A differenza della \textit{spin echo}, durante la quale si applica un secondo impulso di 180° per eliminare gli effetti delle disomogeneità magnetiche, nella \textit{gradient echo} il segnale è suscettibile alle disomogeneità e il tempo di rilassamento non sarà $\mathrm{T_2}$ ma $\mathrm{T}_2^*$:
+\begin{equation}
+    \frac{1}{\mathrm{T}_2^*} = \frac{1}{\mathrm{T}_2'} + \frac{1}{\mathrm{T_2}}\,,
+    \label{t2}
+\end{equation}
+dove $\mathrm{T}_2'$ è il tempo di rilassamento dovuto alle disomogeneità. Il vantaggio della GE è principalmente dovuto al tempo di ripetizione molto ristretto a cui può essere spinta, fatto che aiuta soprattutto quando si esegue un'indagine che richiede un gran numero di ripetizioni, come la 3D-CSI. Inoltre, in alcuni casi, la non rimozione delle disomogeneità magnetiche è un vantaggio, come si vedrà più avanti. Nella \figref{fig:ge2} è riportata un'acquisizione con sequenza \textit{gradient echo}: la zona più scura è dovuta alla maggior disomogeneità del campo in quella regione, a causa della presenza di aria (orbite e seni nasali).
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.5]{immagini/ge.png}
+\caption{\label{fig:ge} \textit{Sequenza gradient echo}.}
+\end{figure}
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.7]{immagini/ge-2.png}
+\caption{\label{fig:ge2} \textit{Acquisizioni con sequenza gradient echo a tempi di eco diversi}.}
+\end{figure}
+
+\subsection{Sequenza \textit{inversion recovery}}
+La \textbf{sequenza \textit{inversion recovery}} è sostanzialmente una \textit{spin echo}, ma con un passaggio preliminare aggiuntivo: viene applicato al campione un impulso di 180° che porta la magnetizzazione sul semiasse \textit{-z}. Da qui, la magnetizzazione ritornerà sul semiasse \textit{z} con un certo $\mathrm{T_1}$, ma nell'esatto momento in cui la magnetizzazione è nulla, comincia la sequenza \textit{spin echo}, in modo che l'andamento della magnetizzazione sia invertito rispetto a come sarebbe con la sola applicazione della \textit{spin echo} (\figref{fig:inv}). Il tempo che trascorre fra il primo impulso e il secondo è detto tempo d'inversione, e bisogna impostarlo in base al $\mathrm{T_1}$ della sostanza d'interesse.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.75]{immagini/inv.png}
+\caption{\label{fig:inv} \textit{Sequenza inversion recovery}.}
+\end{figure}
+
+\noindent Grazie all'\textit{inversion recovery} è possibile applicare tre importanti tecniche di MRI: la FLAIR, la STIR e la DIR.
+
+La \underline{FLAIR} (\textit{fluid attenuated inversion recovery}) è una tecnica di \textit{imaging} pesata in $\mathrm{T_2}$ caratterizzata da tempi di inversione a 1,5\,T compresi tra 1500 e 2500\,ms e che risulta molto efficace nel sopprimere il segnale proveniente dai fluidi, in modo da avere un buon contrasto per la materia solida (immagine in basso della \figref{fig:flair2}).
+
+La \underline{STIR} (\textit{short time inversion recovery}) è caratterizzata da tempi di inversione molto brevi, compresi tra 80 e 150\,ms a 1,5\,T, ed è impiegata per attenuare il segnale proveniente dal grasso. È molto utile nelle situazioni in cui il grasso è infiltrato nella regione da indagare, e di conseguenza il suo segnale non si riesce a eliminare con le bande di saturazione (immagine in alto a sinistra della \figref{fig:flair2}).
+
+La \underline{DIR} (\textit{double inversion recovery}) è una tecnica molto recente, utilizzata per lo più per la diagnosi della sclerosi multipla, e caratterizzata da due tempi di inversione. Per un campo magnetico di 3\,T, intensità alla quale viene di solito impiegata la DIR, i due tempi di inversione sono rispettivamente di 2000 o 3000\,ms e di 450\,ms. Questa tecnica viene utilizzata per sopprimere il segnale proveniente sia dai fluidi sia dalla materia bianca, in modo da poter osservare meglio le placche, che risultano bianche, tipiche della sclerosi multipla (immagine in alto a destra della \figref{fig:flair2}).
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.7]{immagini/dir.png}\quad\includegraphics[scale=0.896]{immagini/stir.png}\quad\includegraphics[scale=0.9]{immagini/flair-2.png}
+\caption{\label{fig:flair2} \textit{Dall'alto verso il basso: immagini ottenute con tecniche STIR, DIR e FLAIR}.}
+\end{figure}
+
+\subsection{MRI strutturale}
+Spesso, per rendere l'esame di MRI più accurato e sensibile, ci si può servire di un mezzo di contrasto, da iniettare nel paziente per via endovenosa e tale che contenga sostanze paramagnetiche, le quali hanno la proprietà di ridurre enormemente i tempi di rilassamento dei nuclei di idrogeno dei tessuti. I mezzi di contrasto a base di gadolinio sono di gran lunga i più comuni. Il gadolinio ($\mathrm{_{64}Gd}$) è un lantanide con proprietà paramagnetiche e ha l'effetto di far diminuire il $\mathrm{T_1}$ dei tessuti in cui penetra. Se iniettato in forma pura, il gadolinio sarebbe tossico, perciò, prima di essere iniettato, esso viene chelato, ovvero incorporato in una qualche molecola che non gli permetta di accumularsi nei tessuti, ma che lo faccia rimanere in circolazione per essere pian piano smaltito dai reni. Il cervello, da parte sua, possiede uno strato protettivo, la barriera emato-encefalica, che blocca il passaggio delle sostanze nocive. In presenza di lesioni, però, questa lascia passare le sostanze, tra cui il mezzo di contrasto, che potrà essere rivelato proprio in concomitanza delle lesioni. Nella \figref{fig:glio2} è possibile vedere due immagini pesate in $\mathrm{T_1}$ della stessa sezione di cervello prima e dopo l'iniezione del mezzo di contrasto, che mette meglio in evidenza il glioblastoma indicato dalla freccia (sebbene le immagini pesate in $\mathrm{T_1}$ non siano le più adatte per indagare i tumori).
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.73]{immagini/glio-2.png}
+\caption{\label{fig:glio2} \textit{Immagini pesate in $T_1$ della stessa sezione di cervello prima e dopo l'iniezione del mezzo di contrasto, con indicazione di glioblastoma}.}
+\end{figure}
+
+In generale, come è già stato detto, la pesatura in $\mathrm{T_1}$ è la più adatta per l'\textbf{\textit{imaging} strutturale}, ovvero per studiare la morfologia dell'organo o della regione da indagare. L'MRI strutturale serve a dare valutazioni puramente qualitative per la diagnosi e prognosi di patologie e sindromi, e quindi anche a identificare lesioni e monitorarle nel tempo.
+
+Per dare un'idea molto elementare della struttura cerebrale, il cervello è costituito da 4 lobi: frontale, parietale, temporale e occipitale, separati da solchi che possono essere più o meno netti. È protetto da tre sottili strati, le meningi, ed è ricco di liquidi che mantengono la pressione della scatola cranica. Le cellule principali che costituiscono il cervello sono i neuroni, i quali sono organizzati in due tipi di tessuto: la materia grigia, in cui si trova la parte centrale del neurone, il soma, e la materia bianca, costituita dagli assoni, cioè i prolungamenti dei neuroni (\figref{fig:struttura}).
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.6]{immagini/struttura.png}
+\caption{\label{fig:struttura} \textit{Disposizione della materia cerebrale}.}
+\end{figure}
+
+\subsection{MRI funzionale}
+L'\textbf{\textit{imaging} funzionale} di risonanza magnetica (fMRI) si prefigge lo scopo di acquisire informazioni sulla funzionalità dei tessuti. In ambito clinico può essere utilizzato in svariate situazioni, ad esempio per individuare le zone del cervello da asportare in caso di un'operazione per la cura dell'epilessia, oppure per aiutare il neurochirurgo in fase di asportazione di un tumore nel procurare al paziente meno danni possibile. In ambito di ricerca, viene utilizzato per studiare la neurodegenerazione, i disturbi psichiatrici e metabolici e per la trattografia. Per dare un'idea del principio biologico che rende possibile l'fMRI, si può dire che l'attività neuronale, di tipo elettrico, produce un consumo di glucosio e di ossigeno, che devono essere portati ai tessuti cerebrali attraverso il sangue. Ciò induce una risposta emodinamica, in termini di maggior afflusso di sangue e ossigeno nella zona sottoposta a stimolo. È proprio questa risposta quella che viene effettivamente rivelata in fMRI, quindi l'attività neuronale viene studiata in modo indiretto, ragion per cui la tecnica risulta così poco invasiva. L'\textit{imaging} funzionale condivide con l'\textit{imaging} classico i limiti di risoluzione spaziale e temporale, dovuti rispettivamente alle dimensioni dei voxel che si riescono a raggiungere e ai tempi di ripetizione. In più, sono presenti altri due limiti: il fatto che la risposta emodinamica non sia molto specifica delle aree di attivazione neocorticale e la risoluzione temporale intrinseca della risposta emodinamica.
+
+Il segnale che viene ottenuto dal cervello in fMRI è detto \textbf{BOLD} (\textit{blood oxygen level dependent}) ed è influenzato dal volume dei vasi sanguigni, dal flusso del sangue che irrora il tessuto sotto indagine, e dal suo livello di ossigenazione. Come mostrato nella \figref{fig:bold}, il segnale BOLD è costituito per lo più da un \textit{plateau} della durata di 5-6\,s, mentre la durata complessiva è di circa 10\,s.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=1.2]{immagini/bold.png}
+\caption{\label{fig:bold} \textit{Segnale BOLD}.}
+\end{figure}
+
+\noindent L'emissione del segnale BOLD è dovuta al distacco dell'ossigeno dall'emoglobina: la forma ossigenata dell'emoglobina, detta ossiemoglobina, è una molecola debolmente diamagnetica che, quando giunge al tessuto che necessita ossigeno, lo rilascia, diventando deossiemoglobina, che al contrario è fortemente paramagnetica.
+L'azione di una sostanza paramagnetica, come è già stato detto nel caso del gadolinio, è quella di ridurre i tempi di rilassamento: ciò è dovuto al fatto che gli atomi paramagnetici posseggono momenti magnetici propri, i quali si orientano e inducono forti distorsioni nel campo magnetico in cui gli atomi stessi sono immersi.
+Tali distorsioni producono l'effetto di accorciare il $\mathrm{T}_2'$, ossia il termine dovuto proprio alle disomogeneità del campo magnetico, quindi, in base al'\eqref{t2}, il reciproco di $\mathrm{T}_2^*$ sarà maggiore, ovvero $\mathrm{T}_2^*$ sarà minore.
+
+In questo caso, in cui riusciamo a ottenere contrasto tra un tessuto e un altro proprio grazie a $\mathrm{T}_2^*$, è opportuno utilizzare una sequenza pesata in $\mathrm{T}_2^*$, come la \textit{gradient echo}.
+Come ci si può facilmente aspettare, il contrasto nell'immagine finale dipende dal diverso rapporto tra le concentrazioni di ossi/deossiemoglobina nelle zone del cervello attive rispetto a quelle non attive.
+Non è altrettanto intuitivo capire quali tessuti emetteranno un segnale più intenso e quali meno.
+Chiaramente, le regioni che appaiono più intense sono quelle con una maggiore concentrazione di ossiemoglobina, poiché questa non provoca l'accorciamento del tempo di rilassamento, quindi i tessuti maggiormente irrorati da essa mantengono l'eccitazione e il segnale più a lungo.
+Verrebbe da pensare, però, che siccome le regioni del cervello attivate consumano più ossigeno, in corrispondenza di quelle regioni abbondi la deossiemoglobina: in realtà non è così, poiché l'organismo, per soddisfare il bisogno del tessuto attivato, manda a esso una grande quantità di ossiemoglobina, che alla fine risulta predominante nelle regioni stimolate.
+In sintesi, le regioni attive emetteranno un segnale più intenso e quelle non attive un segnale meno intenso.
+
+Una sequenza molto importante per l'\textit{imaging} funzionale, la quale valse il Nobel per la medicina a Peter Mansfield nel 2003, è l'\textbf{\textit{echo-planar imaging}} (EPI). Questa è fondamentalmente basata sulla GE, in quanto utilizza un solo impulso eccitante di 90°, e riesce con questo singolo impulso a riempire tutto lo spazio \textit{k}, non necessitando di ripetizioni, a meno di ulteriori acquisizioni di media, ovviamente. In pratica, dopo aver applicato l'impulso e il gradiente di selezione, vengono applicati alternativamente i gradienti per la codifica di fase e di frequenza, come mostrato nella \figref{fig:epi}: le prime applicazioni dei due gradienti vengono eseguite in modo da impartire una fase iniziale negativa a tutti gli spin e, di conseguenza, condizionare il segnale, così che la sua emissione inizi nell'angolo in basso a sinistra dello spazio \textit{k}. A questo punto si applica per un certo tempo un gradiente per la codifica in frequenza positivo, fino a campionare tutta l'ultima riga dello spazio \textit{k}; poi si applica per un istante il gradiente per la codifica in fase, così da passare alla riga immediatamente superiore (\figref{fig:kepi}) e, grazie a un'ulteriore applicazione del gradiente per la codifica in frequenza, stavolta nel verso opposto a quella precedente, campionare la seconda riga dal basso. Si applicano alternativamente i due gradienti fino a campionare \virgolette{a zig-zag} tutto lo spazio \textit{k}. Sul fronte del segnale si osserveranno degli eco ripetuti, uno per ogni riga campionata dello spazio \textit{k}, chiaramente di intensità vistosamente decrescente, poiché dopo un po' il rilassamento trasversale si farà sentire parecchio.
+
+Il principale vantaggio dell'EPI è dovuto all'applicazione di un singolo impulso per il campionamento di tutto lo spazio, cosa che accorcia enormemente il tempo di acquisizione, che sarà pari al tempo di ripetizione della sequenza, molto più lungo di quello delle altre sequenze incontrate ma nel complesso enormemente più breve, se si tiene in conto che le altre sequenze necessitano di diverse ripetizioni. Il tempo di acquisizione per una EPI eseguita a 1,5\,T è di 2,5-3\,s, mentre per ottenere un'immagine con una sequenza \textit{spin echo} sono necessari in media 20 minuti.
+
+Accanto ai pregi, costituiti dalla sensibilità alle variazioni di suscettività magnetica e dalla velocità di acquisizione, l'EPI presenta, ovviamente, anche dei difetti, ossia scarso contrasto e distorsioni nelle immagini ottenute. Lo scarso contrasto è dovuto al basso SNR, a sua volta influenzato negativamente da ciclo cardiaco, movimenti della testa, eventi neuronali spontanei e rumore termico. Le distorsioni, invece, sono dovute alle correnti parassite che si generano inevitabilmente nelle componenti elettroniche, a causa delle rapide variazioni di campo magnetico provocate dal gradiente per la codifica in frequenza.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.60]{immagini/epi.png}
+\caption{\label{fig:epi} \textit{Sequenza EPI}.}
+\end{figure}
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.60]{immagini/kepi.png}
+\caption{\label{fig:kepi} \textit{Riempimento \virgolette{a zig-zag} dello spazio k con la sequenza EPI}.}
+\end{figure}
+
+\newpage
+
+\subsection{Struttura di un esperimento fMRI}
+In generale, con l'fMRI si possono fare due tipi di studi: sul cervello sottoposto a stimoli e sul cervello a riposo.
+
+Lo studio dell'attività cerebrale sotto stimolazione trova impiego in ambito clinico, in tutte le situazioni precedentemente citate. Il segnale in un esperimento fMRI a 1.5 T consiste in una variazione di intensità di circa il 5\%, troppo debole per essere distinta dallo stato basale; per questo motivo, lo stimolo deve essere ripetuto, in modo da aumentare l'SNR. Durante l’acquisizione, viene condotto un paradigma: vengono presentati degli stimoli, che possono essere di natura sensoriale oppure compiti motori o cognitivi, e lo stesso stimolo o compito viene ripetuto, periodicamente o non, per poter fare una media statistica tra le immagini relative all'attivazione. Ai periodi in cui il soggetto riceve lo stimolo, vengono alternati periodi di riposo in cui il soggetto non fa niente, per acquisire il livello basale. Infine, si confronta l’attività cerebrale durante il compito con quella basale durante il riposo. Esistono due diversi tipi di sequenze stimolo-riposo, il \textit{block design} e l'\textit{event related design}, illustrate nella \figref{fig:design}.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.75]{immagini/design.png}
+\caption{\label{fig:design} \textit{Sopra, sequenza block design; sotto, sequenza event related design}.}
+\end{figure}
+
+Il \underline{\textit{block design}} è caratterizzato da periodi di stimolazione e riposo periodici, di durata sempre uguale, in media 20-30 s. Il \textit{block design} è adeguato per diversi tipi di esperimenti, specialmente nelle fasi iniziali di un progetto di ricerca; inoltre è adatto per indagini statistiche e i suoi risultati sono facili da interpretare. Uno svantaggio è costituito dalla struttura periodica, che rende facilmente prevedibili i momenti in cui eseguire i compiti, falsando così il risultato. Per lo stesso motivo, il \textit{block design} è inadatto per studi che richiedono di sondare una reazione a uno stimolo inaspettato, e anche per categorie di pazienti come gli schizofrenici, che spesso mostrano comportamenti irregolari o incontrollabili che non possono essere forzati in una struttura periodica.
+
+L'\underline{\textit{event related design}} (ER), al contrario, presenta stimoli molto brevi e improvvisi e periodi di riposo di lunghezza diversa. L'ER è più versatile del \textit{block design}, permette di eseguire esperimenti meno prevedibili e di studiare la risposta emodinamica per i singoli stimoli. Gli svantaggi dell'ER sono la maggior complessità in fase di analisi dati, la quale richiederà una gran conoscenza di fMRI, e l'SNR più basso, dovuto alla tempistica ristretta dei singoli stimoli. Se per il \textit{block design} la percentuale di variazione del segnale da stato attivo a stato a riposo può essere compresa tra il 3\% e il 5\%, per l'\textit{event related design} questa può essere inferiore all'1\%. Per compensare questa perdita di potenza statistica, il numero di prove dovrebbe essere aumentato di molto, con conseguenti tempi di scansione più lunghi.
+
+Come accennato, gli stimoli che possono essere indotti possono essere dei compiti molto semplici, di varia natura; vediamone alcuni.
+\begin{description}
+    \item[Motorio] Il più famoso compito di tipo motorio è il \textit{finger tapping}: il paziente viene invitato a fissare una croce per concentrarsi e a non pensare a nulla, e il suo compito sarà quello di unire le dita di una mano nel momento in cui veda un impulso luminoso. In questo modo, si può eseguire un compito motorio pur mantenendo la testa perfettamente ferma.
+    \item[Visivo] Davanti al paziente viene proiettata l'immagine di una scacchiera, che si accende e si spegne con frequenza diversa, per sondare l'attività della regione del cervello che si occupa di elaborare gli stimoli visivi.
+    \item[Verbale] In questo caso gli stimoli possono essere di svariati tipi. Al paziente può essere chiesto di associare una frase a un'immagine fra due che gli vengono proposte, usando delle apposite manopole. Può anche essere chiesto di pensare a verbi associati a delle parole che gli vengono mostrate, oppure di pensare a parole che iniziano con le lettere che gli vengono mostrate.
+    \item[Cognitivo] Un esempio è lo \textit{stroop test}: il paziente deve comunicare, sempre con le manopole, il colore di una parola, cercando di ignorare il significato della parola stessa, che rimanderà a un colore diverso. Un altro test rappresentativo è il \textit{2-back working memory test}: al paziente vengono fatte sentire delle consonanti tramite delle cuffie ed egli dovrà comunicare se la consonante sentita era già presente fra le ultime due consonanti.
+\end{description}
+
+A differenza degli studi di ricerca, in cui i gruppi di soggetti sono studiati in un ambiente altamente controllato, nelle applicazioni cliniche si hanno i risultati di un singolo soggetto che vanno usati per indagare problemi di quell'individuo. Inoltre, nell'fMRI è richiesta una maggior collaborazione da parte del paziente rispetto agli esami di MRI standard, e il paziente dovrà essere istruito sul paradigma che dovrà eseguire. L'applicazione clinica ad oggi più diffusa dell'fMRI è il \textit{planning} prechirurgico, ad esempio per la resezione di tumori, in quanto il chirurgo deve trovare un compromesso tra un ampio margine di rimozione nell'area interessata dal tumore, in modo da scongiurare recidive, e il cercare di non danneggiare le funzioni specifiche della stessa area. Un esame di fMRI, con un paradigma e degli stimoli adeguati, può fornire informazioni utili, per il neurochirurgo che opererà il paziente, su quali zone del cervello preservare.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.7]{immagini/para.png}
+\caption{\label{fig:para} \textit{fMRI eseguito con diversi paradigmi di un cervello interessato da tumore}.}
+\end{figure}
+
+Nella \figref{fig:para} è raffigurato l'fMRI di un cervello affetto da un tumore nell'area preposta al linguaggio. Si può vedere come dall'area più scura non provenga segnale di alcun tipo, quindi alcune funzionalità sono state già danneggiate, ma anche come a ridosso di quella zona ci sia un'attività molto intensa. Il segnale, nei casi di stimoli di generazione del linguaggio, non proviene simmetricamente da entrambi gli emisferi, poiché quello preposto al linguaggio è proprio il sinistro. Al contrario, si osserva che l'area preposta alla comprensione del linguaggio scritto è localizzata soprattutto nel lobo occipitale, in maniera simmetrica nei due emisferi. Ci si potrebbe chiedere, se alcuni tipi di tumori aumentano il flusso sanguigno verso se stessi, per quale motivo il segnale proveniente dai tumori non sia più intenso di quello delle altre zone, bensì molto meno intenso. La risposta, come si vedrà poco più avanti, può essere rintracciata nel metodo di analisi dei dati di fMRI. Infatti, vengono ricercate le variazioni di segnale BOLD in seguito agli stimoli forniti, mentre alcuni tessuti (non tutti) colpiti da tumore, benché abbiano un metabolismo in generale più accelerato, non rispondono bene agli stimoli, in quanto affetti da perdita parziale o totale di funzionalità.
+
+Infine, nella \figref{fig:trapianto} è possibile osservare l'fMRI di un paziente inizialmente destrimane che, dopo aver perso una mano e aver ricevuto un trapianto, è diventato mancino, come si può dedurre dall'elevata localizzazione nel cervello dell'area preposta all'uso della mano sinistra, al contrario della moltitudine di regioni che si attivano quando utilizza la mano destra. Per confronto, è riportata anche l'fMRI di un gruppo di controllo destrimane, in cui si osserva una situazione opposta in quanto a localizzazione delle aree attivate.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.93]{immagini/trapianto.png}
+\caption{\label{fig:trapianto} \textit{fMRI per azioni compiute separatamente con entrambe le mani da un paziente trapiantato mancino e da un gruppo di controllo destrimane}.}
+\end{figure}
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.8]{immagini/topo.png}
+\caption{\label{fig:topo} \textit{Andamento simile del segnale BOLD nelle due aree indicate del cervello di un topo}.}
+\end{figure}
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=1.8]{immagini/default.png}
+\caption{\label{fig:default} \textit{Default mode network}.}
+\end{figure}
+
+Diamo, infine, qualche cenno sullo studio dell'attività cerebrale a riposo. Questa non trova applicazione in ambito clinico ma di ricerca e per molto tempo si sono avuti dei dubbi sull'effettiva validità di questi studi. Infatti, l'attività del cervello a riposo è molto bassa e c'era ragione di pensare che il segnale proveniente da tale attività non potesse essere distinto efficacemente dal rumore. Tuttavia, sebbene il cervello rappresenti appena il 2\% della massa totale del corpo, il suo consumo di energia è il 20\% di quella consumata dall'organismo, quindi ci sono le basi per pensare che anche a riposo la sua attività non sia così impercettibile. Inoltre, da osservazioni sperimentali, si poté constatare come l'attività BOLD non fosse casuale, ma presentasse strutture e un'organizzazione specifiche; infatti, vennero identificati dei \textit{network}, cioè insiemi di aree cerebrali connessi durante i test. Tale connettività può essere di tipo funzionale, con andamenti temporali del segnale BOLD simili come nella \figref{fig:topo}, oppure effettiva, cioè legata a rapporti di causalità. La ricerca sui \textit{network} può essere utile anche per lo studio di alcune patologie, come la schizofrenia, in cui soprattutto il \textit{default mode network} (\figref{fig:default}) risulta alterato.
+
+\subsection{Analisi dei dati fMRI}
+L'analisi dei dati raccolti dall'fMRI segue il cosiddetto modello lineare generale (GLM), definito dalla formula:
+\begin{equation}
+    y(t) = \beta x(t) + \varepsilon(t)\,,
+\end{equation}
+dove \textit{x} è un valore che deriva dallo stimolo e dalla risposta emodinamica ipotizzata, \textit{y} è il valore del segnale BOLD nel voxel, $\beta$ (da stimare) rappresenta quanto influisce lo stimolo sul segnale BOLD e $\varepsilon$ costituisce il rumore. Se si considerano più tipi di stimoli diversi, si crea un modello separatamente per ciascuno stimolo con entità di risposte diverse, e poi si sommano insieme:
+\begin{equation}
+    y(t) = \beta_1 x_1(t) + \beta_2 x_2(t) + \ldots + \beta_n x_n(t) + \varepsilon(t)\,.
+\end{equation}
+Se un voxel risponde fortemente al modello $x_i$, dall'operazione di \textit{fitting} risulterà un elevato valore di $\beta_i$. Nella \figref{fig:conv} è illustrato il processo di costruzione del modello \textit{x}: in poche parole, questo è ottenuto dal prodotto di convoluzione fra il valore booleano dello stimolo, che può essere acceso o spento, e il valore stimato della funzione di risposta emodinamica.%
+\footnote{Si considerino due funzioni $f,g:\mathbb{R} \to \mathbb{R}$ integrabili secondo Lebesgue in $\mathbb{R}$. Si definisce convoluzione di \textit{f} e \textit{g} la funzione definita nel seguente modo:
+\begin{equation*}
+\left( f \ast g \right) (t) = \int_{-\infty}^\infty f(\tau)\,g(t-\tau)\,\mathrm{d}\tau\,.
+\end{equation*}}
+I voxel dove il fit coincide con il segnale BOLD corrisponderanno alle zone colorate da giallo a rosso nell'immagine finale, come mostrato nella \figref{fig:modello}.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.5]{immagini/conv.png}
+\caption{\label{fig:conv} \textit{Dall'alto verso il basso: funzione booleana dello stimolo somministrato, funzione di risposta emodinamica e prodotto di convoluzione fra le due funzioni precedenti}.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.69]{immagini/modello.png}
+\caption{\label{fig:modello} \textit{Adattamento del fit al segnale BOLD per singolo voxel}.}
+\end{figure}
+
+\subsection{\textit{Diffusion weighted imaging}}
+Il \textbf{\textit{diffusion weighted imaging}} (DWI) è l'unica tecnica che permette, senza utilizzare traccianti radioattivi, di studiare i fasci di fibre nervose cerebrali \textit{in vivo}. È utilizzata sia in ambito clinico sia di ricerca, per studiare l'architettura del cervello. Il fenomeno alla base del DWI è la diffusione dell'acqua dovuta all'agitazione termica delle molecole, sebbene sarebbe più corretto parlare di autodiffusione, poiché si è interessati al moto di tipo browniano delle singole molecole d'acqua nell'acqua stessa. La legge fisica alla base della diffusione è la prima legge di Fick:
+\begin{equation}
+    J = -D \frac{\mathrm{d}C}{\mathrm{d}x}\,,
+\end{equation}
+dove \textit{J} è il flusso di molecole attraverso un'area per unità di tempo, \textit{D} è il coefficiente di diffusione, \textit{C} è la concentrazione volumetrica e \textit{x} è la posizione lungo l'asse perpendicolare all'area a cui il flusso si riferisce. Gli urti fra le molecole, per periodi di tempo sufficientemente lunghi, comportano un consistente spostamento quadratico medio delle singole molecole dato dalla seguente relazione:
+\begin{equation}
+    \langle (r-r_0)^2 \rangle = 6Dt\,.
+\end{equation}
+La sequenza che rende possibile il DWI è la \textbf{\textit{pulsed gradient spin echo}} (PGSE), studiata da Stejskal e Tanner in un lavoro del 1965: come rappresentato nella \figref{fig:pgse}, la PGSE utilizza una sequenza di impulsi identica alla SE, quindi un primo impulso di 90° e un secondo di 180°. I gradienti utilizzati, se ci soffermiamo a un'indagine non volumetrica ma superficiale, sono tre: due classici gradienti per la codifica in fase e in frequenza e un gradiente nuovo, detto di diffusione. La PGSE ha una struttura molto precisa: le aree (intensità $\times$ tempo) dei due gradienti di diffusione devono essere uguali, e, con riferimento alla \figref{fig:pgse}, il punto centrale dell'impulso di 180° deve essere equidistante dai centri dei due gradienti di diffusione. La durata dei due gradienti di diffusione è chiamata $\delta$ mentre la distanza tra i centri dei due gradienti è detta $\Delta$. Questi gradienti sono sufficienti per formare l'immagine, sebbene altri gradienti possono essere aggiunti per aumentare la sensibilità della tecnica.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.5]{immagini/pgse.png}
+\caption{\label{fig:pgse} \textit{Sequenza pulsed gradient spin echo}.}
+\end{figure}
+
+\noindent Nella \figref{fig:pgse2} è illustrata l'azione dei gradienti di diffusione nella PGSE. Esattamente come nella \textit{gradient echo}, il primo gradiente sfasa gli spin, mentre il secondo, insieme all'impulso di 180°, li rifasa. A differenza della GE, però, qui si stanno studiando fenomeni di diffusione, quindi le molecole non sono ferme: di conseguenza, spin di nuclei che prima avevano acquisito una certa fase in virtù della loro posizione spaziale, potrebbero spostarsi nel periodo di tempo che intercorre fra il primo e il secondo gradiente di diffusione. Proprio tale spostamento rende impossibile il rifasamento degli spin ad opera del secondo gradiente, in quanto ciò è possibile solo se i nuclei conservano la loro posizione spaziale durante tutto il processo. Alla fine, ci si ritroverà con alcuni spin tutti alla stessa fase e altri completamente sfasati fra di loro. Chiaramente, più intensa è la diffusione, maggiore sarà il numero degli spin sfasati e più rapida sarà la diminuzione del segnale emesso, come si può osservare nella \figref{fig:diff}.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.55]{immagini/pgse-2.png}
+\caption{\label{fig:pgse2} \textit{Sfasamento e rifasamento degli spin nella PGSE}.}
+\end{figure}
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.65]{immagini/diff.png}
+\caption{\label{fig:diff} \textit{Andamento del segnale in funzione del tempo e dell'entità della diffusione}.}
+\end{figure}
+
+Nel loro lavoro del 1965, Stejskal e Tanner dimostrarono che il calo dell'intensità del segnale per la PGSE è correlato all'aumento del coefficiente di diffusione \textit{D}. L'equazione che descrive il fenomeno è la seguente:
+\begin{equation}
+    S = S_0\,\mathrm{e}^{-bD}\,,\hspace{5 pt} \text{con} \hspace{5 pt} b = \gamma^2 G^2 \delta^2 \bigg( \Delta - \frac{\delta}{3} \bigg)\,,
+\end{equation}
+dove $\gamma$ è il rapporto giromagnetico e \textit{G} è l'intensità del gradiente; il valore \textit{b} è di solito misurato in $\mathrm{\frac{s}{mm^2}}$. Ciò che interessa stimare per il DWI è il coefficiente di diffusività, che si ottiene da:
+\begin{equation}
+    D = -\frac{1}{b} \ln{\frac{S}{S_0}},
+\end{equation}
+dove \textit{b} è un parametro noto, poiché impostato da chi esegue l'esperimento, \textit{S} può essere misurato, mentre $\mathrm{S_0}$ si può determinare semplicemente facendo un'acquisizione a $b=0$.
+ A questo punto, per determinare \textit{D} è necessario eseguire un fit dei valori del segnale in diverse acquisizioni, che per ragioni di tempo dovranno essere veloci. Per tale motivo, si sceglie una sequenza \textit{echo planar} adattata alla SE, ovvero la SE-EPI, illustrata nella \figref{fig:seepi}.
+ \begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{immagini/seepi.png}
+\caption{\label{fig:seepi} \textit{Sequenza SE-EPI}.}
+\end{figure}
+Questa sequenza non è altro che una PGSE molto veloce, grazie alla tecnica di acquisizione dello spazio \textit{k} tipica dell'EPI, con tutti i suoi vantaggi e svantaggi. Ovviamente il vantaggio è il tempo di acquisizione estremamente breve, mentre lo svantaggio è la scarsa qualità delle immagini, specialmente per valori di \textit{b} superiori a 1000 $\mathrm{\frac{s}{mm^2}}$, per i quali il segnale è già piuttosto basso.
+
+In realtà, il coefficiente di diffusività che si misura nei tessuti solidi non è \virgolette{puro}, ma anzi è chiamato \textit{apparent diffusion coefficient} (ADC), a causa dell'alterazione indotta nella misura dal fatto che l'acqua non si trova libera nei tessuti, bensì è contenuta all'interno di cellule e, per andare ancor più a fondo, all'interno degli organelli delle cellule. Bisogna però fare una distinzione fra materia isotropa e anisotropa. La materia isotropa è caratterizzata da proprietà fisiche che non dipendono dalla direzione. Un esempio di materia isotropa è la materia grigia, costituita dai neuroni, i quali si estendono in tutte le direzioni più o meno in egual misura: di conseguenza, l'acqua sarà vincolata al loro interno, ma non avrà una direzione di diffusione privilegiata. Al contrario, la materia anisotropa ha una struttura tale da fornire ai fluidi al suo interno una direzione di diffusione privilegiata. Un esempio è la materia bianca, costituita dagli assoni, strutture molto lunghe e sottili, che lasciano all'acqua praticamente una sola direzione di diffusione: quella lungo la quale gli assoni stessi si sviluppano. Nella \figref{fig:materia} sono rappresentati entrambi i casi appena citati.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.74]{immagini/materia.png}\quad\includegraphics[scale=0.94]{immagini/materia-1.png}
+\caption{\label{fig:materia} \textit{Struttura isotropa della materia grigia e struttura anisotropa della materia bianca}.}
+\end{figure}
+
+Possiamo sfruttare le conoscenze anatomiche delle strutture cerebrali per mettere in evidenza proprio quelle strutture in un'acquisizione DWI. Infatti, possiamo indirizzare i gradienti di diffusione in modo da massimizzare la rapidità con cui il segnale cala, così da avere più contrasto fra zone strutturate diversamente. Questo fatto può essere compreso rapidamente osservando la \figref{fig:orie} e ricordando la modalità di sfasamento riportata nella \figref{fig:pgse2}: chiaramente, orientando i gradienti di diffusione lungo la direzione 1, perpendicolare alla direzione di diffusione delle molecole del fluido, lo sfasamento degli spin sarà di gran lunga minore rispetto a come sarebbe se si applicassero i gradienti di diffusione lungo la direzione 2. Il punto, quindi, sta proprio nell'indirizzare i gradienti di diffusione parallelamente alla direzione in cui si sviluppano per lunghezza le strutture da esaminare, come mostrato nella \figref{fig:dire}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{immagini/orie.png}
+\caption{\label{fig:orie} \textit{Flusso di molecole di un fluido con possibili orientazioni dei gradienti di diffusione}.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1.1]{immagini/dire.png}
+\caption{\label{fig:dire} \textit{Acquisizioni DWI con direzioni dei gradienti di diffusione differenti, che mettono in evidenza strutture diverse e parallele alle direzioni dei gradienti stessi}.}
+\end{figure}
+
+\subsection{\textit{Diffusion tensor imaging}}
+Alla luce di quanto detto, in un ambiente anisotropo, non sarà sufficiente uno scalare per definire il coefficiente di diffusione in tutte le direzioni dello spazio, ma è necessario introdurre il tensore di diffusione:
+\begin{equation}
+    \Vec{D} = 
+     \begin{pmatrix}
+      D_{xx} & D_{xy} & D_{xz} \\
+      D_{yx} & D_{yy} & D_{yz} \\
+      D_{zx} & D_{zy} & D_{zz} 
+     \end{pmatrix}\,.
+\end{equation}
+Tale tensore è una matrice $3 \times 3$ simmetrica, quindi per conoscerlo è sufficiente determinare 6 elementi. La tecnica di \textit{imaging} pesato in diffusione che utilizza il tensore di diffusione è il \textbf{\textit{diffusion tensor imaging}} (DTI) e richiede, come la DWI, anche il valore del segnale misurato per $b=0$. In totale bisognerà trovare, allora, 7 parametri con 7 diverse acquisizioni, per poter alla fine ricavare una mappa. Per ogni acquisizione con gradienti applicati nella generica direzione \textit{j}, la funzione che descrive il segnale sarà:
+\begin{equation}
+    s_j = s_0\,\mathrm{e}^{-b_j \Vec{x}_j^T\Vec{Dx}_j} \hspace{3 pt} \Rightarrow \hspace{3 pt} \ln{\frac{s_j}{s_0}} = -b_j \Vec{x}_j^T\Vec{Dx}_j\,.
+\end{equation}
+La diagonalizzazione di $\Vec{D}$ permette di determinare tre autovettori e tre autovalori: i primi rappresentano le tre principali direzioni di diffusione, mentre i secondi, ordinati in maniera decrescente all'interno della matrice diagonale, rappresentano i coefficienti di diffusione delle molecole nel tessuto. Quanto maggiore sarà un autovalore, tanto più dominante sarà la direzione di diffusione a esso associata.
+\begin{equation}
+    \Vec{D} = 
+     \begin{pmatrix}
+      D_{xx} & D_{xy} & D_{xz} \\
+      D_{yx} & D_{yy} & D_{yz} \\
+      D_{zx} & D_{zy} & D_{zz}
+     \end{pmatrix}
+    =
+     \begin{pmatrix}
+      V_{1x} & V_{1y} & V_{1z} \\
+      V_{2x} & V_{2y} & V_{2z} \\
+      V_{3x} & V_{3y} & V_{3z}
+     \end{pmatrix}
+    \times
+     \begin{pmatrix}
+      \lambda_1 & 0         & 0         \\
+      0         & \lambda_2 & 0         \\
+      0         & 0         & \lambda_3
+     \end{pmatrix}
+    \times
+    \begin{pmatrix}
+     V_{1x} & V_{2x} & V_{3x} \\
+     V_{1y} & V_{2y} & V_{3y} \\
+     V_{1z} & V_{2z} & V_{3z}
+    \end{pmatrix}\,.
+\end{equation}
+Come tutti i tensori, anche il tensore di diffusione può essere rappresentato come un ellissoide, con gli assi più o meno lunghi a seconda di qual è la direzione di diffusione prevalente. Come si può facilmente dedurre, nel caso di un tessuto isotropo l'ellissoide è in realtà una sfera, poiché gli autovalori saranno all'incirca tutti uguali. D'altra parte, nel caso di un tessuto anisotropo, si hanno due casi interessanti:
+\begin{itemize}[label=$-$]
+    \item uno dei tre autovalori è molto maggiore degli altri due, perciò l'ellissoide è molto schiacciato e allungato nella direzione associata all'autovalore maggiore;
+    \item due autovalori sono simili e molto maggiori del terzo, quindi l'ellissoide assomiglia a una sfera appiattita.
+\end{itemize}
+
+Dal tensore di diffusione si possono calcolare delle mappe, di cui un esempio semplice è la diffusività media (MD), che viene ricavata, pixel per pixel, dalla traccia di $\Vec{D}$:
+\begin{equation}
+    \text{MD} = \frac{\text{tr}(\Vec{D})}{3} = \frac{1}{3}\left(D_{xx} + D_{yy} + D_{zz}\right)\,.
+\end{equation}
+Una mappa molto più interessante è la mappa di anisotropia frazionaria (FA), costruita come segue:
+\begin{equation}
+    \text{FA} = \sqrt{\frac{3 \sum_{i=1}^3 (\lambda_i - \langle \lambda \rangle)^2}{2 \sum_{i=1}^3 \lambda_i^2}}\,;
+\end{equation}
+FA è normalizzato, ossia può assumere valori da 0 a 1, ed è un indice dell'isotropia: tanto più FA è vicino a 1, più si ha anisotropia, mentre se FA è nullo si ha isotropia completa. La FA può anche essere rappresentata in scala di colori: in particolare, i colori rosso, verde e blu sono associati rispettivamente alle direzioni latero-laterale (\textit{x}), antero-posteriore (\textit{y}) e infero-superiore (\textit{z}), e l'intensità di ogni colore è proporzionale all'entità della diffusività lungo ciascuna direzione.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.7]{immagini/colori.png}
+\caption{\label{fig:colori} \textit{Mappe ricavate con tecniche MD, FA e FA a colori}.}
+\end{figure}
+
+Nella \figref{fig:colori} sono riportati degli esempi per tutte e tre le mappe fin qui discusse. Si osserva come la MD metta in evidenza il liquor e la corteccia, mentre la FA restituisce un'intensità più elevata per la materia bianca e i corpi callosi. Concentrandoci proprio sulle mappe FA, nella \figref{fig:fa} è riportato un confronto fra tre diverse mappe di questo tipo. Fra le tre, l'ultima è quella in cui si riescono a distinguere con maggiore nettezza le strutture cerebrali: i pixel sono sostituiti da piccole linee senza verso, la cui direzione indica la direzione principale di diffusione, e anche il colore è quello associato alla direzione principale.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.67]{immagini/fa.png}
+\caption{\label{fig:fa} \textit{Da sinistra a destra: mappe FA, FA a colori e FA codificata in vettori}.}
+\end{figure}
+
+Dopo averle presentate, vediamo le applicazioni delle due principali tipologie di mappe.
+
+La MD riflette le proprietà fisiche della materia in termini di moto traslazionale delle molecole d'acqua e dipende dal valore di \textit{b}: per \textit{b} piccolo, il segnale è dato per lo più dalle componenti a rapida diffusione, come le molecole d'acqua; viceversa, per \textit{b} grande, il segnale è dato dalle molecole a lenta diffusione. La MD è la tecnica d'elezione per lo studio degli ictus e, se eseguita a poche ore dall'evento ischemico, permette di elaborare prognosi molto accurate. Altri ambiti di applicazione dell'MD riguardano lo studio di:
+\begin{itemize}[label=$-$]
+    \item disturbi metabolici;
+    \item infiammazioni;
+    \item edemi;
+    \item tumori.
+\end{itemize}
+
+La FA è utilizzata principalmente per ricavare informazioni sulla struttura della materia bianca e sulla sua integrità, che nell'immagine sarà associata a un'interruzione del flusso diffusivo.
+
+Ad ogni modo, il più grande limite di DWI e DTI in ambito diagnostico è l'incertezza nell'interpretazione dei risultati.
+Facciamo degli esempi. Se nello studio ipotetico di un solo assone si rivela una diminuzione di FA, tale risultato non ha un'interpretazione univoca, bensì almeno due: la diminuzione di FA potrebbe essere causata da una diminuzione dell'ADC longitudinale, che porta all'ipotesi di rottura dell'assone, oppure da un aumento dell'ADC trasversale, che invece fa ipotizzare una rottura della mielina, la guaina che circonda e protegge l'assone.
+Del resto, anche l'MD non è esente da problemi di interpretazione dei risultati, come illustrato nella \figref{fig:famd}.
+Risulta, infatti, che situazioni completamente diverse, come il rigonfiamento cellulare, sintomo di un'infiammazione, e l'aumento di densità cellulare, associato alle neoplasie, presentano entrambe un'aumentata FA e una minore MD.
+Al contrario, la perdita di mielina degli assoni, associata a malattie neurodegenerative come la sclerosi multipla, e la morte cellulare (necrosi), provocano entrambe una diminuzione di FA e un aumento di MD.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.72]{immagini/famd.png}
+\caption{\label{fig:famd} \textit{Differenti configurazioni con lo stesso effetto su MD e FA}.}
+\end{figure}
+
+\subsection{Trattografia}
+La \textbf{trattografia} è una tecnica di modellazione tridimensionale usata per rappresentare i tratti neurali, utilizzando i dati provenienti dal DTI.
+Questa tecnica consente di studiare sia la densità di fibre in una regione, sia le loro velocità e qualità di trasmissione dei segnali neuronali.
+Inoltre, riesce a valutare anche eventuali danneggiamenti nella mielina che avvolge gli assoni.
+
+Il primo approccio che emerse nella costruzione di immagini trattografiche fu quello deterministico, che si basa sull'assunzione che la direzione di massima diffusività nei voxel con carattere anisotropo fornisca l'orientazione principale della fibra.
+Seguendo questo approccio, si ricostruisce la struttura dei fasci assegnando a ciascun voxel il suo ellissoide di diffusione e cercando di trovare una sorta di continuità fra di essi, come illustrato nella \figref{fig:tratto}.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.9]{immagini/tratto.png}
+\caption{\label{fig:tratto} \textit{Codifica dei voxel in ellissoidi di diffusione}.}
+\end{figure}
+
+Benché questa tecnica riesca a fornire buoni risultati, talvolta invece i risultati sono completamente sbagliati, ad esempio quando si analizzano regioni in cui fasci con direzioni differenti si incrociano.
+In questo caso, non si riesce a distinguere l'anisotropia dei singoli fasci, e il segnale che viene acquisito combina le singole anisotropie in una generale isotropia della regione.
+Di conseguenza, negli anni si passò a un approccio probabilistico, il quale prescrive di considerare anche eventuali incertezze nella codifica delle immagini e riesce a evitare i problemi legati agli incroci di fibre.
+Nella \figref{fig:tratti} sono rappresentati i principali \textit{network} cerebrali, ottenuti mediante trattografia.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.75]{immagini/tratti.png}
+\caption{\label{fig:tratti} \textit{Principali network cerebrali}.}
+\end{figure}

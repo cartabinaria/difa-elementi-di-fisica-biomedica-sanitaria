@@ -1,0 +1,153 @@
+\section{Tomografia a NMR}
+In questo capitolo ci si occuperà di come poter ricavare delle immagini con la tecnica della risonanza magnetica nucleare.
+In particolare, i due quesiti a cui ci si propone di rispondere sono i seguenti.
+\begin{itemize}[label=$-$]
+    \item Come ottenere delle immagini spazialmente risolte a partire da un segnale NMR che si riferisce all'intero campione?
+    \item Come si riesce a ottenere una risoluzione spaziale anche di un millimetro o, in ambito non clinico, anche inferiore se la lunghezza d'onda della radiofrequenza utilizzata è più grande di diversi ordini di grandezza?
+\end{itemize}
+Innanzitutto, bisogna specificare che il segnale che proviene dalla diseccitazione del campione è costituito da un inviluppo di segnali a diverse frequenze, a causa delle differenze negli spin dei nuclei del campione.
+Per ricavare dal segnale acquisito la distribuzione di frequenze di Larmor dei nuclei (che chiameremo \textbf{proiezione}) è comodo usare l'analisi di Fourier.
+Questa ci permette di ricavare dei picchi di frequenze dall'inviluppo; l'intensità dei picchi rappresenta la quantità di nuclei che emettono radiazione di una certa frequenza.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.66]{immagini/fourier.png}
+\caption{\label{fig:fourier} \textit{Effetto dell'applicazione della trasformazione di Fourier a un inviluppo}.}
+\end{figure}
+
+\subsection{Mappatura 2D}
+Immaginiamo di avere tre provette piene d'acqua di volume diverso immerse in un campo magnetico uniforme.
+Poiché le provette sono riempite della stessa sostanza, la frequenza del segnale che emetteranno sarà identica e, sebbene l'intensità del segnale proveniente da ciascuna provetta sarà diversa (a causa del diverso numero di nuclei di idrogeno presente in ognuna di esse), alla fine non sarà possibile distinguere i singoli segnali.
+L'unica maniera possibile per distinguerli è fare in modo che la frequenza dei segnali emessi, ossia la frequenza di Larmor dei nuclei di idrogeno di ciascuna provetta, sia diversa.
+Per fare ciò, in base all'\eqref{larmor}, è necessario fare in modo che il campo magnetico applicato a ciascuna provetta sia diverso: in altre parole, è necessario applicare non un campo magnetico uniforme ma un gradiente di campo magnetico, come mostrato nella \figref{fig:gradiente}.
+Se il gradiente applicato è costante e diretto lungo \textit{x}, la formula per l'intensità del campo magnetico sarà:
+\begin{equation}
+    B_z(x)=B_z(0)+G_xx \hspace{2 pt}, \hspace{4 pt} G_x=\frac{\Delta B_z(x)}{\Delta x}=\mathrm{cost.}
+\end{equation}
+Di conseguenza, la frequenza di risonanza dei nuclei dipenderà linearmente dalla loro posizione lungo \textit{x}:
+\begin{equation}
+    \nu (x)= \frac{\gamma}{2\pi}(B_z(0)+G_xx) \,.
+\end{equation}
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.6]{immagini/gradiente.png}
+\caption{\label{fig:gradiente} \textit{Gradiente da applicare a campioni della stessa sostanza per poter distinguere i diversi segnali}.}
+\end{figure}
+
+\noindent La tecnica appena illustrata è nota col nome di \textbf{zeugmatografia} ed è possibile riassumerla in quattro punti:
+\begin{itemize}[label=$-$]
+    \item assegnare a ciascun punto dell'asse \textit{x} un diverso valore del campo magnetico, che corrisponderà a una diversa frequenza di Larmor;
+    \item analizzare il segnale NMR tramite analisi di Fourier per ottenere la proiezione lungo \textit{x};
+    \item l'intensità del segnale a una certa frequenza risulterà proporzionale alla densità di nuclei di idrogeno in una certa posizione spaziale (in realtà l'immagine avrà sempre una pesatura in qualche parametro);
+    \item per ottenere un'immagine spazialmente risolta occorrerà ripetere l'operazione lungo direzioni diverse, ottenendo varie proiezioni.
+\end{itemize}
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.5]{immagini/bobine.png}
+\caption{\label{fig:bobine} \textit{Bobine di gradiente per direzioni diverse}.}
+\end{figure}
+
+\subsection{Mappatura 3D}
+Vediamo come si può estendere la tecnica appena esposta per la mappatura bidimensionale a una mappatura tridimensionale.
+Di fatto, bisogna selezionare il segnale di una sezione all'interno di un campione tridimensionale, ossia bisogna selezionare una fetta.
+Per fare ciò, non è necessario che il sistema hardware esegua nessun movimento meccanico, come succede per altre tecniche diagnostiche, ma è sufficiente applicare contemporaneamente tre gradienti lungo le tre dimensioni spaziali.
+È importante non fare confusione tra la direzione dei gradienti di campo e il campo stesso: bisogna ricordare che comunque si tratta di tre gradienti della stessa componente $B_z$ del campo magnetico, quindi, anche se i gradienti di campo sono diretti in tre direzioni diverse, il campo in sé sarà diretto come \textit{z}.
+\begin{equation}\boxed{
+    \begin{cases}
+    G_x = \Delta B_z/\Delta x \\
+    G_y = \Delta B_z/\Delta y \\
+    G_z = \Delta B_z/\Delta z
+    \end{cases}
+    \Vec{G}=G_x\Vec{i}+G_y\Vec{j}+G_z\Vec{k}}
+\end{equation}
+Ciascuna terna $(G_x,G_y,G_z)$ individua una direzione nello spazio tale che:
+\begin{itemize}[label=$-$]
+    \item spostandosi lungo tale direzione, si ha la più rapida variazione di $B_z$;
+    \item $B_z$ è costante sul piano perpendicolare a tale direzione.
+\end{itemize}
+In altre parole, la direzione del vettore gradiente individua un asse perpendicolare a sezioni del campione da esaminare, e su ciascuna sezione $B_z$ assume lo stesso valore, pur variando lungo la direzione stessa.
+Volendo fare un esempio, se si applica, come nell'immagine di sinistra della \figref{fig:mela}, un gradiente $G_r=\Delta B_z/\Delta r=15$\,mT/m, e assumendo che lo spessore della fetta sia $\Delta r=1$\,mm, si ha che la variazione del campo magnetico in quella fetta è $\Delta B_z=15\times10^{-6}$\,T = 0,15\,G.
+Le frequenze del segnale proveniente dalla fetta selezionata sono comprese in un intervallo $\Delta \nu$ = 46,2\,MHz/T $\times 15 \times 10^{-6}$\,T = 640\,Hz.
+Il modo privilegiato per selezionare un segnale emesso in un intervallo di frequenze preciso è quello di applicare al campione un impulso selettivo, cioè tale per cui la sua trasformata di Fourier sia una funzione rettangolare (immagine di destra della \figref{fig:mela}) limitata nel dominio di frequenze in questione.
+La funzione più utilizzata come impulso selettivo è il seno cardinale, definito come segue:
+\[ \senc{x} =
+   \begin{cases}
+    \dfrac{\sen{x}}{x} & \quad \text{se } x\neq0 \\
+    1                          & \quad \text{se } x=0 \,.
+   \end{cases}
+\]
+In sintesi, l'introduzione del gradiente di campo magnetico è sufficiente solo per distinguere spazialmente le frequenze, ma per ricevere segnale esclusivamente dai punti spaziali, e quindi dalle frequenze, che ci interessano, è necessario che il campo $\Vec{B}_1$ abbia una forma ben precisa: quella della funzione $\senc{x}$.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.685]{immagini/mela.png}\quad\includegraphics[scale=0.6]{immagini/sinc.png}
+\caption{\label{fig:mela} \textit{A sinistra, raffigurazione di un gradiente di selezione di una fetta; a destra, andamenti della funzione \textnormal{sinc}(t) e della sua trasformata di Fourier}.}
+\end{figure}
+
+\subsection{Metodo \textit{spin-warp}}
+Il \textbf{metodo \textit{spin-warp}} è la più semplice sequenza per \textit{imaging} e consta delle seguenti cinque fasi.
+\begin{enumerate}
+    \item \emph{Applicazione di un impulso a radiofrequenza di 90°}: la sua forma è quella del seno cardinale e consiste in una breve e intensa cessione di energia.
+    \item \emph{Attivazione del gradiente di selezione}: viene attivato contemporaneamente all'impulso del punto 1., in modo da selezionare una fetta del campione da esaminare, ed è diretto lungo \textit{z} (direzione di $\Vec{B}_0$).
+    \item \emph{Attivazione del gradiente per la codifica di fase}: si attiva quando viene spento il gradiente di selezione, è diretto lungo \textit{y} e il suo compito è quello di far precedere gli spin sul piano \textit{xy} con frequenze diverse, a seconda delle posizioni dei nuclei lungo l'asse \textit{y}.
+    \item \emph{Attivazione del gradiente per la codifica di frequenza}: si attiva quando viene spento il gradiente per la codifica di fase, è diretto lungo \textit{x} e il suo compito è quello di far precedere gli spin sul piano \textit{xy} con frequenze diverse, a seconda delle posizioni dei nuclei lungo l'asse \textit{x}.
+    \item \emph{Ricezione del segnale}: avviene contestualmente al punto 4.
+\end{enumerate}
+Nell'immagine di sinistra della \figref{fig:k} sono raffigurate le diverse fasi.
+In pratica, quando viene spento il gradiente per la codifica di fase, gli spin riprenderanno a precedere tutti alla stessa frequenza, ma la fase di precessione di ogni gruppo di spin che condivide la stessa posizione lungo l'asse \textit{y} sarà ormai diversa da tutti gli altri gruppi.
+L'utilità del gradiente per la codifica di frequenza sarà quella di selezionare anch'esso dei gruppi di nuclei che condividono la stessa posizione lungo l'asse \textit{x}, e far precedere gli spin dei nuclei di ciascun gruppo con frequenza diversa dagli spin dei nuclei di tutti gli altri gruppi.
+Siccome esistono, però, già dei gruppi caratterizzati da fasi di precessione diverse e discriminati in base alla loro posizione lungo l'asse \textit{y}, quest'ulteriore differenziazione lungo l'asse \textit{x} fa in modo che lo spin di ogni singolo nucleo abbia una fase e una frequenza di precessione diverse da qualsiasi altro nucleo del campione.
+La sequenza \textit{spin-warp} viene di solito ripetuta 128 o 256 volte per poter raccogliere tutti i dati necessari per produrre un'immagine; ogni volta che la sequenza viene ripetuta l'intensità del gradiente per la codifica di fase cambia.
+\vspace{- 7 pt}
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.5]{immagini/sw.png}\quad\includegraphics[scale=0.5]{immagini/k.png}
+\caption{\label{fig:k} \textit{Da sinistra a destra: sequenza spin-warp con indicazione grafica della durata di ogni fase e riempimento dello spazio k al variare di $G_y$}.}
+\end{figure}
+
+\vspace{-12 pt}
+
+\subsection{Codifica spaziale e campionamento} \label{1.4.4}
+Per poter trattare la modalità di traduzione del segnale in pixel, è comodo introdurre il vettore d'onda:
+\begin{equation}
+    \Vec{k}=\gamma \Vec{G}t \,.
+\end{equation}
+Sperimentalmente, per ottenere la mappatura del piano si fanno variare $k_x=\gamma G_x t$ e $k_y=\gamma G_y t$, poiché la distribuzione spaziale dei pixel in un'immagine MRI è:
+\begin{equation}
+    \rho(x,y) \approx \iint S(k_x,k_y) \mathrm{e}^{\mathrm{i}(k_xx+k_yy)}\,\mathrm{d}k_x\,\mathrm{d}k_y\,.
+\end{equation}
+dove $S(k_x,k_y)$ è l'intensità del segnale.
+Si tratta, quindi, di far variare $k_x$ in \textit{M} modi e $k_y$ in \textit{N} modi, per campionare lo spazio \textit{k} con $M \times N$ punti e ricavare una mappatura della densità in $M \times N$ punti, cioè $M \times N$ pixel.
+In pratica, per ogni variazione del gradiente $G_y$, viene acquisita un’intera riga dello spazio \textit{k} lungo l’asse \textit{x} e, dopo \textit{N} acquisizioni, ognuna con $G_y$, lo spazio \textit{k} sarà totalmente riempito e l'immagine sarà completa, come mostrato sulla destra della \figref{fig:k}; il tempo totale di acquisizione è $T_R \times N$.
+
+Nella \figref{fig:k2} si possono vedere delle interferenze nelle immagini di sinistra dovute a errori nell'acquisizione.
+Nelle immagini raffiguranti gli spazi \textit{k}, in corrispondenza delle frecce, sono presenti dei puntini troppo luminosi, che sono le cause delle interferenze.
+Ogni punto dello spazio \textit{k} rappresenta un’onda nell'immagine.
+Il livello di grigio del punto rappresenta l’ampiezza dell'onda nell'immagine, la distanza dall'origine è correlata alla frequenza e l’angolo alla fase.
+La sovrapposizione di tutte le onde rappresentate nello spazio \textit{k} con la loro ampiezza, frequenza e fase costituisce l’immagine.
+A riprova di ciò, come si vede in figura, più il punto è vicino all'origine, minore è la frequenza delle bande d'interferenza e i fronti d'onda sono perpendicolari al segmento che unisce il punto luminoso all'origine; in particolare, nell'ultima immagine le bande di interferenza sono così sottili che a stento si riescono a vedere, infatti il puntino luminoso nel corrispondente spazio \textit{k} è molto lontano dall'origine.
+Se l'interferenza si trova lontano dall'origine, si potrebbe scegliere di selezionare solo la parte centrale dello spazio \textit{k}, cioè il segnale a bassa frequenza.
+Questo permette di eliminare l'interferenza, ma l'immagine così ottenuta sarebbe poco risolta, come si può vedere nelle immagini di destra della \figref{fig:k2}, proprio perché le basse frequenze corrispondono a lunghezze d'onda elevate che sono in grado di riprodurre soltanto le grandi aree dell'immagine e gli ampi contrasti, ma non possono ricostruire i dettagli minuti.
+Al contrario, se si seleziona solo il segnale ad alta frequenza, nell'immagine che si otterrebbe sarebbero in evidenza i dettagli e i bordi degli oggetti, ma si perderebbe il contrasto.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.505]{immagini/k-2.png}\quad\includegraphics[scale=0.5]{immagini/k-3.png}
+\caption{\label{fig:k2} \textit{A sinistra, spazi k acquisiti con un'interferenza; a destra, selezione del segnale nello spazio k in base alla frequenza, con rispettive immagini}.}
+\end{figure}
+
+\vspace{-5 pt}
+
+Rimane da discutere riguardo al campionamento del segnale, in particolare circa la frequenza di campionamento.
+Come mostrato nella \figref{fig:aliasing}, se non si campiona il segnale con la frequenza giusta può verificarsi il fenomeno dell'\textit{aliasing}, ossia un'ambiguità nel campionamento effettuato che non permette di dedurre la frequenza del segnale stesso.
+Se il campione da indagare è più piccolo dell'oggetto posto nello scanner, di cui il campione costituisce una parte, l'\textit{aliasing} si manifesta nell'immagine finale come una sovrapposizione, nel senso che le parti dell'oggetto al di fuori dell'area di \textit{imaging} vengono sovrapposte all'immagine che si vuole ottenere.
+Per evitare l'\textit{aliasing}, è necessario seguire il \textbf{teorema di Nyquist}, il quale afferma che per campionare un segnale senza perdita di informazione, bisogna adottare una frequenza di campionamento maggiore di almeno il doppio rispetto alla frequenza della massima componente spettrale del segnale.
+In questo caso, come si intuisce dall'immagine di destra della \figref{fig:aliasing}, la frequenza campionata sarà univoca.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.614]{immagini/aliasing.png}\quad\includegraphics[scale=0.518]{immagini/nyquist.png}
+\caption{\label{fig:aliasing} \textit{A sinistra, campionamento non adeguato che dà luogo ad aliasing; a destra, rimozione dell'ambiguità mediante frequenza di campionamento maggiore}.}
+\end{figure}

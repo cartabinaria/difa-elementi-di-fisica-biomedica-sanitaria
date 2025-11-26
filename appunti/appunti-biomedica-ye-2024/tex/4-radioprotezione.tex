@@ -1,0 +1,238 @@
+\chapter{Protezione per radiazioni ionizzanti e non ionizzanti}
+
+Il presente capitolo è da intendersi come una diretta prosecuzione del capitolo precedente sulle radiazioni ionizzanti, in quanto si tratterà principalmente della protezione degli individui proprio dalle radiazioni ionizzanti, mediante la dosimetria e la radioprotezione. Successivamente, viene trattata anche la protezione dalle radiazioni non ionizzanti, in particolare campi a radiofrequenza e campi magnetici nell'ambito della risonanza magnetica.
+
+\section{Dosimetria}
+La \textbf{dosimetria} è la disciplina che si occupa di definire e quantificare le grandezze che descrivono l’interazione delle radiazioni con i mezzi, che quando sono biologici vengono chiamati in gergo recettori. Solo per distinguere da subito i due ambiti, poiché se ne parlerà approfonditamente in un altro momento, la radioprotezione è, invece, la disciplina il cui scopo è ottimizzare il rapporto rischi/benefici associati a una certa pratica radiologica. Se schematizziamo la zona in cui si svolge una pratica radiologica in tre sezioni, la sorgente, l'ambiente e il recettore, si può pensare la dosimetria come adibita all'identificazione e alla misurazione delle grandezze che si manifestano in tutte e tre le sezioni, mentre la radioprotezione si occupa, dal punto di vista dei danni da radiazione, solo dell'ultima sezione.
+
+\subsection{Grandezze della dosimetria}
+Concentrandoci, per l'appunto, sulla dosimetria, si andranno a misurare, rispettivamente per le tre sezioni, grandezze caratteristiche della sorgente, grandezze di campo e grandezze dosimetriche.
+
+Le \underline{grandezze caratteristiche della sorgente} variano a seconda della natura della sorgente stessa, che può essere un nuclide radioattivo o un apparecchio che emette raggi X quando acceso. Nel primo caso, la grandezza che si misura è l'attività della sorgente, cioè il numero di atomi che decadono nell'unità di tempo; questa dipende sia dal tipo di nuclide sia dal tipo di decadimento radioattivo. Nel secondo caso si misura, invece, il rendimento del tubo a raggi X, cioè il numero di raggi X emessi nell'unità di tempo.
+
+Le \underline{grandezze di campo} possono essere espresse in termini di radiazioni (o particelle) o di energia della radiazione. Nel primo caso si hanno le seguenti relazioni:
+\begin{description}
+    \item[Fluenza di particelle] $\Phi = \dfrac{\mathrm{d}N}{\mathrm{d}a}$\,, ovvero il numero di radiazioni per unità di superficie del corpo investito dalle radiazioni.
+    \item[Tasso di fluenza di particelle] $\varphi = \dfrac{\mathrm{d}\Phi}{\mathrm{d}t} = \dfrac{\mathrm{d}^2N}{\mathrm{d}a\,\mathrm{d}t}$\,, ovvero la fluenza di particelle per unità di tempo.
+    \item[Radianza di particelle] $p = \dfrac{\mathrm{d}\varphi}{\mathrm{d}\Omega} = \dfrac{\mathrm{d}^3N}{\mathrm{d}a\,\mathrm{d}t\,\mathrm{d}\Omega}$\,, ovvero il tasso di fluenza di particelle calcolato per unità di angolo solido del corpo investito dalle radiazioni.
+    \item[Distribuzione spettrale della radianza di particelle o spettro] $p_E = \dfrac{\mathrm{d}p}{\mathrm{d}E} = \dfrac{\mathrm{d}^4N}{\mathrm{d}a\,\mathrm{d}t\,\mathrm{d}\Omega\,\mathrm{d}E}$\,, ovvero la radianza calcolata per unità di energia della radiazione incidente.
+\end{description}
+In termini di energia della radiazione, invece, le grandezze da misurare sono:
+\begin{description}
+    \item[Fluenza di energia] $\Psi = \dfrac{\mathrm{d}R}{\mathrm{d}a}$\,, ovvero l'energia totale delle radiazioni per unità di superficie del corpo investito dalle radiazioni.
+    \item[Tasso di fluenza di energia] $\psi = \dfrac{\mathrm{d}\Psi}{\mathrm{d}t} = \dfrac{\mathrm{d}^2R}{\mathrm{d}a\,\mathrm{d}t}$\,, ovvero la fluenza di energia per unità di tempo.
+    \item[Radianza di energia] $r = \dfrac{\mathrm{d}\psi}{\mathrm{d}\Omega} = \dfrac{\mathrm{d}^3R}{\mathrm{d}a\,\mathrm{d}t\,\mathrm{d}\Omega}$\,, ovvero il tasso di fluenza di energia calcolato per unità di angolo solido del corpo investito dalle radiazioni.
+\end{description}
+I due gruppi di grandezze di campo sono connessi l'un l'altro mediante la seguente relazione:
+\begin{equation}
+    \Psi = E \Phi\,,
+\end{equation}
+e le grandezze saranno soggette a un'attenuazione che dipende dalla natura del mezzo interposto e dalla distanza percorsa dalle radiazioni, come si è già discusso nella sezione \ref{4.2}. Se a determinare l'attenuazione è un recettore, diventa fondamentale valutare in che misura avviene l'interazione e i suoi possibili effetti.
+
+Nell'identificazione e quantificazione delle \underline{grandezze dosimetriche}, si tratterà solo la radiazione indirettamente ionizzante (raggi X e $\gamma$), la cui interazione con la materia si articola in due fasi:
+\begin{itemize}[label=$-$]
+    \item \emph{interazione con particelle} (principalmente elettroni) e conseguente messa in moto di queste, che assumono il nome di secondari carichi;
+    \item \emph{perdita di energia dei secondari carichi}, la quale viene assorbita dal mezzo tramite ionizzazione, eccitazione, rottura di legami molecolari, ecc.
+\end{itemize}
+È opportuno associare a ciascuna delle due fasi una grandezza dosimetrica.\\
+Per la prima fase, la grandezza associata al trasferimento di energia fra radiazione e secondario carico è il kerma (\textit{kinetic energy released to the matter}), definita come segue:
+\begin{equation}
+    K = \frac{\mathrm{d}\bar{E_\mathrm{t}}}{\mathrm{d}m}\,,
+\end{equation}
+cioè l'energia media trasferita per unità di massa nel punto di interazione; l'unità di misura del kerma è il gray (Gy). Poiché l'energia trasferita nell'interazione fra radiazione e materia è molto maggiore di quella che viene poi realmente assorbita dalla materia stessa, il kerma serve a stabilire un limite superiore all'energia che la materia può assorbire, e quindi ai danni che possono venir generati.\\
+Per la seconda fase, la grandezza associata all'assorbimento di energia da parte del corpo investito dalle radiazioni è la dosa assorbita, così definita:
+\begin{equation}
+    D = \frac{\mathrm{d}\bar{E_\mathrm{a}}}{\mathrm{d}m}\,,
+\end{equation}
+cioè l'energia media assorbita da tutto il volume in cui può muoversi un secondario carico per unità di massa. Poiché, come il kerma, si tratta di un rapporto fra energia e massa, anche l'unità di misura di \textit{D} è il gray.
+
+Cerchiamo, adesso, una qualche relazione tra \textit{K} e \textit{D}, partendo dal confronto delle due grandezze in un caso semplificato: quando la radiazione investe un mezzo in modo uniforme e senza attenuazione, come nella \figref{fig:kd}. A causa dell'assenza di attenuazione, il kerma rimane costante, mentre la dose assorbita cresce con la distanza, in quanto è più probabile che un secondario carico interagisca con la materia dopo aver percorso una certa profondità, piuttosto che appena dopo essere stato eccitato. La regione in cui \textit{K} è maggiore di \textit{D} è detta di \textit{build up} o di accumulo, mentre la regione in cui le due grandezze sono confrontabili è detta di equilibrio elettronico. Proprio nella regione di equilibrio elettronico, \textit{K} e \textit{D} possono considerarsi in relazione diretta, quindi è conveniente limitare la misura a questa regione, in cui si verifica la condizione di equilibrio di particelle cariche, così chiamata perché tanta energia viene depositata all'interno del volume d'interesse dall'esterno (a causa delle radiazioni incidenti), quanta ne viene ceduta all'esterno dal volume (a causa dell'azione dei secondari carichi).
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.8]{immagini/kd.png}
+\caption{\label{fig:kd} \textit{Andamento di kerma e dose assorbita quando le radiazione investe un mezzo uniforme senza subire attenuazione}.}
+\end{figure}
+
+\noindent Poiché $K = \Phi \dfrac{\mu_\mathrm{l}}{\rho} \bar{E_\mathrm{t}}$, dove $\Phi$ è la fluenza di particelle, $\mu_\mathrm{l}$ è il coefficiente di attenuazione lineare e $\rho$ è la densità del corpo investito dalle radiazioni, si ha motivo di pensare che, nella condizione di equilibrio di particelle cariche, valga la seguente relazione:
+\begin{equation}
+    D = \Phi \dfrac{\mu_\mathrm{l}}{\rho} \bar{E_\mathrm{a}} = K(1-g)\,,
+\end{equation}
+dove \textit{g} rappresenta la porzione di energia persa per \textit{bremsstrahlung} e può assumere valori compresi tra $10^{-2}$ e $10^{-4}$. Con questa costruzione, diventa possibile stimare la dose assorbita a partire dal kerma, che può essere misurato facilmente a partire dalla misura delle grandezze di campo.
+
+\subsection{Strumenti di misura della dosimetria}
+Tutti gli strumenti di misura nell'ambito della dosimetria, per svolgere la loro funzione, devono \virgolette{terminare} con un trasduttore, trasformando la grandezza di campo quantificata in, ad esempio, numero di tracce su una pellicola radiologica oppure in segnale elettrico (è il caso dei rivelatori MOSFET). Malgrado questa comunanza, gli strumenti di misura dosimetrici possono essere di natura diversa, distinguendosi in due tipologie: strumenti differenziali e strumenti integrali.
+
+Gli \underline{strumenti differenziali} valutano se sono presenti campi di radiazione e cosa li determina, valutando la fluenza di particelle; esempi eclatanti di strumenti differenziali sono gli spettrometri, i quali possono assumere le forme più svariate, da quelli da laboratorio a quelli portatili. Tali strumenti possono essere utilizzati per valutare la contaminazione di cibi, terreni, materiali da costruzione, ecc. o per le indagini ambientali \textit{in situ}. Possono anche essere montati su veicoli per stimare la traccia radiologica di diversi luoghi, associando a ogni misura delle coordinate geografiche, e si possono perfino effettuare misurazioni su persone per accertarsi che non siano entrate in contatto con materiale contaminato.
+
+Gli \underline{strumenti integrali} stimano l'entità della radiazione e il più famoso di questi è il cosiddetto contatore Geiger, il quale si basa su un dispositivo noto come camera di ionizzazione. Una camera di ionizzazione è sostanzialmente un condensatore collegato a una differenza di potenziale e il suo funzionamento si basa sulla raccolta, da parte degli elettrodi, di cariche generate dalle ionizzazioni, dovute alle radiazioni, nel mezzo posto fra gli elettrodi stessi; tale mezzo può essere anche semplicemente aria, che deve essere posta in comunicazione con l’esterno mediante piccoli forellini. Le pareti della camera dovranno essere costituite da materiali molto leggeri (grafite, bachelite, policarbonato o plexiglas) e sottili, per non perturbare la fluenza. Un'importante grandezza nell'ambito della quantificazione della radiazione mediante strumenti integrali è l'esposizione, definita come segue:
+
+\begin{equation}
+    X = \frac{\mathrm{d}Q}{\mathrm{d}m}\,;
+\end{equation}
+quindi, \textit{X} è la quantità di carica per unità di massa di aria prodotta per ionizzazione. L'unità di misura dell'esposizione è il röntgen (R), che equivale a $2,58\times10^{-4}$\,C/kg. Volendo coniugare l'esposizione con un'altra grandezza strutturata in maniera simile, il kerma, operiamo le seguenti semplificazioni in modo da trovare un'equazione che le metta in relazione direttamente.
+\begin{itemize}[label=$\triangleright$]
+    \item Consideriamo $Q = \mathrm{e}\,\Delta N$, dove e è la carica dell'elettrone e $\Delta N$ è il numero di cariche prodotte dalla ionizzazione.
+    \item Consideriamo $\bar{E_\mathrm{t}} = \mathrm{w}\,\Delta N$, dove w è una costante che non specifichiamo e $\Delta N$ è il numero di interazioni fra radiazione e materia, uguale a $\Delta N$ del punto precedente.
+\end{itemize}
+\begin{equation}
+X = \frac{\Delta Q}{\Delta m}\hspace{3 pt} | \hspace{3 pt}K = \frac{\Delta \bar{E_\mathrm{t}}}{\Delta m}\hspace{3 pt} \Rightarrow \hspace{3 pt}\Delta m = \frac{\Delta Q}{X} = \frac{\Delta \bar{E_\mathrm{t}}}{K}\hspace{3 pt} \Rightarrow \hspace{3 pt}K = \frac{\mathrm{w}}{\mathrm{e}}X \approx \frac{\mathrm{w}}{\mathrm{e}(1-g)}X\,.
+\end{equation}
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.62]{immagini/geiger.png}
+\caption{\label{fig:geiger} \textit{Schematizzazione di un rivelatore a gas}.}
+\end{figure}
+
+\noindent Un contatore Geiger vero e proprio è costituito da un rivelatore a gas, ovvero una camera di ionizzazione di forma cilindrica, il cui anodo è una sbarretta molto sottile posizionata al centro della camera, mentre il catodo, di forma cilindrica, delimita la camera stessa, come rappresentato nella \figref{fig:geiger}. All'interno della camera si stabilisce un campo elettrico radiale, di modulo:
+\begin{equation}
+    E = \frac{1}{r}\frac{V}{\ln{\frac{b}{a}}}\,,
+\end{equation}
+dove \textit{V} è la differenza di potenziale applicata al rivelatore a gas, \textit{a} è il raggio dell'anodo, \textit{b} è il raggio interno del catodo e \textit{r} è la distanza dall'anodo. Ciò consente di ottenere campi elettrici molto elevati in prossimità dell'anodo con tensioni applicate comprese tra 500 e 1000\,V. Nel processo di ionizzazione dovuto alla radiazione, il numero medio di coppie cariche create è proporzionale all'energia depositata dal fotone primario e dipende anche dall'energia di ionizzazione del gas impiegato. Inoltre, l’ampiezza dell'impulso di corrente prodotto dalla camera, direttamente correlato al numero di ioni raccolti dagli elettrodi, dipende dalla tensione anodica applicata, come si può constatare dalla \figref{fig:ioniz}. Nel grafico in questione si possono distinguere sei regioni.
+\begin{enumerate}
+    \item \emph{Regione di ricombinazione}: poiché la tensione applicata è molto bassa, non tutte le cariche prodotte riescono a raggiungere il relativo elettrodo, poiché si ricombinano durante il tragitto.
+    \item \emph{Regione della camera di ionizzazione}: all'aumentare della tensione si raggiunge la condizione di saturazione ionica, che si esplica in un \textit{plateau} nella curva, il quale corrisponde alla completa raccolta delle coppie elettrone-ione prodotte dalla radiazione nella camera.
+    \item \emph{Regione del contatore proporzionale}: aumentando ulteriormente la tensione si raggiunge la soglia di moltiplicazione, per cui gli elettroni secondari vengono accelerati fino a produrre ulteriore ionizzazione nel gas; questo fenomeno avviene in prossimità dell'anodo, dove il campo è più forte e determina un effetto valanga (detta valanga di Townsend), in cui tuttavia l’ampiezza del segnale è ancora proporzionale all'energia perduta dal fotone primario.
+    \item \emph{Regione di proporzionalità limitata}: valori di tensione ancora più elevati conducono a un'eccessiva moltiplicazione, di conseguenza gli ioni positivi, molto più lenti degli elettroni nel loro viaggio verso il catodo, possono raggiungere una concentrazione (carica spaziale) così alta da ostacolare la raccolta degli elettroni sull'anodo e indurre effetti non lineari nella crescita del numero di ioni raccolti agli elettrodi.
+    \item \emph{Regione del contatore Geiger}: se la tensione anodica viene portata a un valore sufficientemente alto, invece di prodursi una valanga localizzata in qualche punto dell'anodo, come avviene nella camera a ionizzazione, si verifica una reazione a catena in cui molte valanghe si producono per tutta la lunghezza dell'anodo (scarica); queste valanghe secondarie sono innescate da fotoni emessi dalle molecole del gas in fase di diseccitazione. Infatti, nella formazione della valanga di Townsend, molte molecole del gas vengono solamente eccitate piuttosto che ionizzate e, in un tempo dell'ordine del nanosecondo, tali molecole ritornano nel loro stato fondamentale emettendo un fotone nel visibile o nell'ultravioletto. Se uno di questi fotoni interagisce con un atomo del gas oppure con la superficie del catodo, si genera un elettrone libero che è in grado di cominciare un nuovo processo di valanga. La corrente di uscita risulta, così, saturata e il rivelatore diventa molto sensibile, poiché è sufficiente un ridotto numero di ionizzazioni iniziali per produrre la scarica nel gas e l’impulso. In queste condizioni la carica spaziale diventa dominante: la scarica si mantiene finché non viene raggiunta una concentrazione di ioni positivi tale da ridurre l’intensità del campo elettrico al di sotto della soglia di moltiplicazione e il processo risulta, così, autolimitante.
+\end{enumerate}
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.51]{immagini/ioniz.png}
+\caption{\label{fig:ioniz} \textit{Numero di ioni raccolti dagli elettrodi in funzione della tensione applicata}.}
+\end{figure}
+
+\section{Radioprotezione}
+Come accennato, la \textbf{radioprotezione} si occupa di ottimizzare il rapporto rischi/benefici, per il recettore, associati a una certa pratica radiologica. È già stato visto che i danni da radiazione possono essere dovuti ad azione diretta o indiretta delle radiazioni, ma non è ancora stata introdotta una differenziazione fra i vari tipi di danneggiamento. Ponendo l'attenzione sull'unità funzionale basilare dell'organismo umano, ossia la cellula, possiamo distinguere i danni in deterministici e stocastici.
+
+\noindent In un \underline{danno deterministico} si riscontrano le seguenti caratteristiche:
+\begin{itemize}[label=$-$]
+    \item il danno è esclusivamente di tipo somatico ed è localizzato nei tessuti esposti alle radiazioni;
+    \item esiste una soglia di esposizione al di sotto della quale non si riscontrano effetti;
+    \item al di sopra della soglia, maggiore è la dose alla quale si espone un tessuto, maggiore sarà il danno provocato;
+    \item il tempo di latenza fra l'irraggiamento e l'insorgenza della reazione è relativamente breve (al massimo qualche mese);
+    \item è facile stabilire un nesso di causalità diretta fra la causa del danneggiamento e il danno stesso.
+\end{itemize}
+Si parla, invece, di \underline{danno stocastico} quando possono essere individuate le seguenti peculiarità:
+\begin{itemize}[label=$-$]
+    \item il danno può essere somatico o genetico, nel caso a essere colpite siano le cellule germinali;
+    \item non esiste una soglia al di sotto della quale si può essere sicuri di non provocare danni;
+    \item la gravità del danno non dipende dalla dose ricevuta ma, essendo a carattere probabilistico, una dose maggiore aumenta la probabilità di provocare danni;
+    \item il tempo di latenza è molto lungo, in quanto i danni possono manifestarsi anche a decenni di distanza dall'irraggiamento;
+    \item proprio a causa della natura probabilistica del danno, del tempo di latenza lungo e del fatto che i danni radio-indotti sono indistinguibili da quelli non radio-indotti, è difficile stabilire un nesso di casualità.
+\end{itemize}
+È facile, a questo punto, dedurre che i compiti della radioprotezione saranno diversi in base a quale tipologia di effetto si vuole evitare: se per evitare i danni deterministici bisogna definire in quali condizioni essi insorgono, e di conseguenza evitare il configurarsi di tali condizioni (o indurle, nell'ambito della radioterapia), nel caso degli effetti stocastici non si può fare altro se non ridurre al massimo la dose somministrata, in modo tale da limitare quanto più possibile la probabilità di insorgenza dei danni.
+
+\subsection{Grandezze protezionistiche}
+Poniamoci e cerchiamo di rispondere, adesso, a qualche domanda.
+\begin{itemize}[label=$-$]
+    \item È possibile quantificare i valori di soglia prima introdotti in una qualche grandezza fisica?
+    \item Il tipo di danno e la distribuzione dell'energia depositata nel recettore dipendono dal tipo di radiazione?
+    \item I valori di soglia variano in base ai tessuti?
+\end{itemize}
+Tali domande trovano risposta nell'introduzione di due nuove grandezze, di cui una è la \underline{dose equivalente}:
+\begin{equation}
+    H_t = \sum_r w_r D_{r,t}\,,
+\end{equation}
+dove $w_r$ è il fattore di pericolosità della radiazione e $D_{r,t}$ è la dose assorbita di una determinata radiazione da un singolo tessuto. La dose equivalente riesce, quindi, a tenere conto di tutte le radiazioni di natura diversa che incidono su un tessuto specifico. Il fattore di pericolosità $w_r$ di una radiazione dipende dall'EBR (efficacia biologica relativa) della radiazione stessa: l'EBR è il rapporto tra la dose assorbita della radiazione considerata e la dose assorbita di una radiazione di riferimento che produce lo stesso effetto biologico della prima radiazione (di solito si prende come radiazione di riferimento quella elettromagnetica a qualsiasi frequenza). In radioprotezione risulta di particolare importanza l'EBR per effetti stocastici a dosi basse. Sulla sinistra della \figref{fig:w} sono riportati i valori di $w_r$ delle principali radiazioni.
+
+Se ci si trova a operare su più tessuti di tipo diverso, è necessario introdurre la \underline{dose efficace}, così definita:
+\begin{equation}
+    E = \sum_t w_t H_t\,,
+\end{equation}
+dove $w_t$ è il fattore di sensibilità di un certo tessuto. La dose efficace permette, in teoria, di monitorare la radiazione irraggiata anche all'intero organismo con diversi tipi di radiazione. I fattori di sensibilità $w_t$ sono indice della radiosensibilità di ciascun tessuto dell'organismo e i loro valori sono stabiliti in modo da essere rappresentativi del contributo dei singoli organi e tessuti al danneggiamento complessivo da radiazione dovuto a effetti stocastici; la somma di tutti i $w_t$ è pari a 1. Sulla destra della \figref{fig:w} sono riportati i valori di $w_t$ di diversi organi e tessuti.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.4905]{immagini/wr.png}\quad\includegraphics[scale=0.47]{immagini/wt.png}
+\caption{\label{fig:w} \textit{Valori dei fattori di pericolosità (a sinistra) e dei fattori di sensibilità (a destra)}.}
+\end{figure}
+
+Ovviamente, poiché ogni tessuto ha il proprio fattore di sensibilità, anche i valori di soglia dipendono dal tessuto e sono misurati in gray. Sebbene sia la dose assorbita sia le due nuove grandezze che sono state appena definite, siano tutte rapporti fra energia e massa, dose equivalente e dose efficace hanno un'unità di misura diversa rispetto alla dose assorbita, vale a dire il sievert (Sv). Inoltre, sia $H_t$ sia \textit{E} si basano su fattori adimensionali, dipendenti da studi epidemiologici e altri parametri non completamente oggettivi, come la pericolosità di una data radiazione o la sensibilità di un organo: ne consegue che nessuna delle due grandezze sia direttamente misurabile. Non è possibile, dunque, costruire strumenti di misura per la dose equivalente e per la dose efficace, le cosiddette \textbf{grandezze protezionistiche}, ma queste assumono un carattere esclusivamente legale, ovvero hanno significato in fase di elaborazione di programmi di protezione dall'insorgenza di effetti biologici in caso di esposizione a radiazioni ionizzanti. Tutto ciò porta a concludere che la grandezza propriamente fisica adatta a quantificare l'interazione radiazione-materia è sempre e solo la dose assorbita, ma siccome gli effetti biologici non dipendono solo dalla quantità di energia assorbita, ma anche dal tessuto e dalla natura della radiazione, se lo scopo è proteggere e definire dei limiti di sicurezza, allora sarà necessario farlo mediante grandezze che contemplino nella loro definizione i suddetti parametri.
+
+\subsection{Grandezze dosimetriche operative}
+Dato che le grandezze protezionistiche non possono essere misurate, per assicurarsi che, durante l'esposizione di un recettore a delle radiazioni, i valori fissati dalla legge per le grandezze stesse non siano superati, sorge la necessita di definire delle quantità nuove: le \textbf{grandezze dosimetriche operative}. Tali grandezze dovranno avere le seguenti peculiarità:
+\begin{itemize}[label=$-$]
+    \item devono essere definite allo stesso modo per tutti i tipi di radiazione ionizzante;
+    \item nel caso in cui siano presenti più campi di radiazione, i valori devono essere sommabili;
+    \item devono essere buoni estimatori della grandezza limite di interesse in quella particolare condizione operativa;
+    \item devono essere determinabili a partire da misurazioni su campioni primari di taratura;
+    \item devono essere riferite a condizioni sperimentali specifiche (mezzo di riferimento, profondità, ecc.), sia in fase di taratura della strumentazione sia in fase di misura.
+\end{itemize}
+In base a queste indicazioni, le due grandezze operative dosimetriche sono l'equivalente di dose personale $H_\mathrm{p}$ e l'equivalente di dose ambientale \textit{H}*. Quando bisogna valutare una condizione di esposizione, si considerano i limiti in termini di grandezze protezionistiche, poi si misurano le grandezze operative, e se il loro valore è inferiore al limite stabilito dalla legge, si ha la sicurezza di aver rispettato le condizioni di non manifestazione del danno, poiché le grandezze operative sono sempre inferiori alla dose efficace
+
+\subsection{Figure professionali in radioprotezione}
+L'ambito di conoscenza in cui ci si trova, a questo punto, non è solo fisico ma anche giuridico, e proprio dal punto di vista legale sono contemplati due campi distinti ma correlati: la radioprotezione degli ambienti e la radioprotezione dei lavoratori. Il d.\,lgs.\,101/20 stabilisce che le classificazione delle aree nell'ambito della radioprotezione degli ambienti viene eseguita dall'esperto di radioprotezione, mentre la classificazione e l'idoneità dei lavoratori nell'ambito della radioprotezione dei lavoratori stessi viene eseguita sempre dall'esperto di radioprotezione insieme a un medico autorizzato. Per tutte le attività che presentino un rischio da radiazioni ionizzanti, il datore di lavoro deve nominare un esperto di radioprotezione (ERP), cioè una persona, iscritta in un elenco nazionale, abilitata a esercitare la sorveglianza fisica della radioprotezione. L'ERP valuta il rischio, effettua le misure di dosimetria, classifica le aree e le persone, progetta le aree in cui verranno utilizzate le sorgenti, effettua controlli e redige relazioni periodiche, predispone le norme di radioprotezione e trasmette al medico i risultati delle indagini dosimetriche individuali.
+
+Lo stesso pacchetto normativo sopra citato affida le valutazioni dosimetriche in ambito di diagnosi, medicina nucleare e radioterapia allo specialista in fisica sanitaria. Lo specialista in fisica sanitaria, o fisico medico, è una figura professionale che applica i principi e le metodologie della fisica in medicina, nei settori della prevenzione, della diagnosi e della cura, al fine di assicurare la qualità delle prestazioni erogate e la prevenzione dei rischi per i pazienti. Il fisico medico ha un ruolo fondamentale in tutti i campi di applicazione della fisica alla medicina, ma in particolare in quello dell'\textit{imaging} diagnostico, della medicina nucleare e della radioterapia. In questo campo il progresso scientifico e tecnologico è stato enorme e ha determinato una serie di conseguenze tali da imporre l'integrazione di diverse professionalità. Le \virgolette{prestazioni mediche}, erogate ai pazienti sottoposti a indagini diagnostiche e trattamenti terapeutici, devono quindi essere il risultato di competenze differenti ma complementari. Il fisico medico in ospedale garantisce la sicurezza e l'efficacia delle diagnosi e della terapia attraverso la valutazione e il monitoraggio periodico sia delle tecnologie utilizzate sia della dose assorbita nel corso delle indagini radiologiche, medico-nucleari e nei trattamenti radioterapici. Altre attività sono connesse al controllo e all'analisi di segnali fisiologici, alla sicurezza e alla protezione nell'uso di tutti gli agenti fisici utilizzati in ambito clinico e anche alla scelta e alla valutazione delle tecnologie sanitarie.
+
+\section{Protezione per radiazioni non ionizzanti}
+In questa sezione, si parlerà indistintamente di radiazioni non ionizzanti e campi elettromagnetici, intendendo i due termini come indicanti lo stesso tipo di radiazioni. Le linee guida attualmente in uso a livello internazionale per quanto riguarda la protezione per radiazioni non ionizzanti sono redatte dall'ICNIRP (\textit{International Commission on Non-Ionizing Radiation Protection}), un organismo scientifico indipendente riconosciuto dall'Organizzazione Mondiale della Sanità. L'ultimo aggiornamento delle linee guida è del 2020 e si riferisce a campi elettromagnetici di frequenza compresa tra 100\,kHz e 300\,GHz. Le linee guida distinguono gli effetti generati dai campi elettromagnetici non ionizzanti in:
+\begin{itemize}[label=$-$]
+    \item \textit{effetti nocivi}, se le radiazioni danneggiano la salute dell'individuo esposto e della progenie;
+    \item \textit{effetti biologici}, se non c'è certezza che l'effetto generato dalle radiazioni si traduca in un effetto nocivo.
+\end{itemize}
+Un'ulteriore distinzione viene fatta in base alla modalità con cui è avvenuta l'esposizione; si parlerà in questo caso di:
+\begin{itemize}[label=$-$]
+    \item \textit{effetti diretti}: sono il risultato di un'interazione diretta dei campi con l'organismo;
+    \item \textit{effetti indiretti}: presuppongono l'interazione con un oggetto che si trovi a un potenziale elettrico diverso da quello del corpo a causa di un campo elettromagnetico agente su di esso.
+\end{itemize}
+
+Infine, le linee guida impongono delle \textbf{restrizioni di base}, le quali dipendono dalla frequenza del campo elettromagnetico e si basano direttamente su effetti sanitari accertati. Le grandezze fisiche usate per specificare queste restrizioni sono la densità di corrente $\Vec{J}$, il tasso di assorbimento specifico di energia, abbreviato in SAR, e la densità di potenza \textit{S}. Le restrizioni di base vengono si portano dietro dei \textbf{livelli di riferimento}, che quantificano una soglia oltre la quale si corre un certo rischio. Questi livelli vengono forniti per una valutazione pratica dell'esposizione, al fine di stabilire se le restrizioni di base siano rispettate. Alcuni livelli di riferimento sono derivati dalle appropriate restrizioni di base mediante misure e/o tecniche numeriche, mentre altri tengono conto degli effetti di percezione o degli effetti indiretti dell'esposizione a campi elettromagnetici. Le grandezze fisiche caratteristiche dei livelli di riferimento sono l’intensità di campo elettrico \textit{E}, l’intensità di campo magnetizzante \textit{H}, l’intensità di induzione magnetica \textit{B}, la densità di potenza \textit{S} e la corrente che fluisce attraverso le estremità del corpo $I_\mathrm{L}$. Le grandezze usate per tener conto degli effetti di percezione e di altri effetti indiretti sono la corrente di contatto $I_\mathrm{C}$ e, per i campi pulsati, l’assorbimento specifico di energia, abbreviato in SA.
+
+\subsection{Meccanismi di accoppiamento campi-corpo}
+Esistono tre meccanismi di accoppiamento ben individuati, attraverso i quali i campi elettrici e magnetici variabili nel tempo interagiscono direttamente con la materia vivente.
+\begin{description}
+    \item[Accoppiamento con campi elettrici a bassa frequenza] L’interazione fisica dei campi elettrici variabili nel tempo con il corpo umano dà luogo a un flusso di cariche elettriche, alla polarizzazione di cariche legate con formazione di dipoli elettrici e al riorientamento di dipoli elettrici già presenti nei tessuti. L’importanza relativa di questi diversi effetti dipende dalle proprietà elettriche del corpo, cioè dalla conducibilità elettrica, che governa il flusso della corrente elettrica, e dalla permittività elettrica, che governa l’entità degli effetti di polarizzazione. La conducibilità e la permittività elettriche variano con il tipo di tessuto corporeo e dipendono anche dalla frequenza del campo applicato. I campi elettrici esterni al corpo inducono su questo una carica superficiale che dà luogo a correnti indotte nel corpo, la cui distribuzione dipende dalle condizioni di esposizione al campo, dalle dimensioni e dalla forma del corpo e dalla sua posizione nel campo.
+    \item[Accoppiamento con campi magnetici a bassa frequenza] L’interazione fisica dei campi magnetici variabili nel tempo con il corpo umano dà luogo a campi elettrici indotti e alla circolazione di correnti elettriche all'interno del corpo. L’intensità del campo indotto e la densità di corrente sono proporzionali al raggio della sezione del corpo interessata (assimilabile a una spira), alla conducibilità elettrica del tessuto nonché alla velocità di variazione e al valore dell'induzione magnetica. Per una data intensità e una data frequenza del campo magnetico, i campi elettrici più intensi sono indotti laddove le dimensioni della spira sono maggiori. Anche l’esatto percorso della corrente indotta in ciascuna parte del corpo dipende dalla conducibilità elettrica del tessuto. Sebbene il corpo non sia elettricamente omogeneo, la densità delle correnti indotte può essere calcolata usando modelli realistici dal punto di vista anatomico ed elettrico, assieme a metodi di calcolo che presentano un alto grado di risoluzione anatomica.
+    \item[Assorbimento di energia elettromagnetica] L’esposizione a campi elettrici e magnetici a bassa frequenza normalmente dà luogo a un assorbimento di energia trascurabile, che non produce alcun aumento misurabile di temperatura nel corpo. Invece, l’esposizione a campi elettromagnetici di frequenza superiore a circa 100\,kHz può portare a significativi assorbimenti di energia e aumenti di temperatura. In generale, l’esposizione a un campo elettromagnetico uniforme dà luogo a una deposizione e a una distribuzione dell'energia nel corpo molto variegata, che devono essere valutate mediante misure e calcoli dosimetrici che risultano parecchio complessi.
+\end{description}
+
+\subsection{Tasso d'assorbimento specifico}
+Proprio per misurare l'assorbimento di energia elettromagnetica viene introdotto il \textbf{tasso d'assorbimento specifico} (SAR), che esprime la misura della percentuale di energia elettromagnetica assorbita teoricamente dal corpo umano quando questo viene esposto all'azione di un campo elettromagnetico a radiofrequenza, termine con il quale si intendono sia le onde radio sia le microonde. Più specificamente, il SAR è definito come la quantità di energia elettromagnetica che viene assorbita nell'unità di tempo da un elemento di massa unitaria di un sistema biologico, ragion per cui la sua unità di misura è il watt su chilogrammo. Il SAR può essere calcolato partendo dalla conoscenza dell'intensità del campo elettrico all'interno del tessuto, nel modo seguente:
+\begin{equation}
+    \text{SAR} = \frac{1}{V}\int_\mathrm{campione}\frac{\sigma(\Vec{r})\abs{\Vec{E}(\Vec{r})}^2}{\rho(\Vec{r})}\,\mathrm{d}\Vec{r}\,,
+\end{equation}
+dove $\sigma$, $\rho$ e \textit{V} sono rispettivamente la conducibilità elettrica, la densità e il volume del campione, mentre $\Vec{E}$ è il campo elettrico. Tale formula è molto utile per elaborare modelli teorici, ma può anche essere utilizzata per effettuare delle misure reali. Siccome il campo elettrico è molto difficile da misurare punto per punto all'interno del corpo umano, per farlo viene usato in laboratorio un manichino SAM (\textit{standard anthropometric model}), riempito di acqua o gel e collegato a un computer che rileva gli assorbimenti; in questo modo si riesce a simulare quello che avverrebbe nel caso di interazione di un campo elettromagnetico col corpo umano, e a stimare il SAR medio e la sua distribuzione. I valori di SAR dipendono dai seguenti fattori:
+\begin{itemize}[label=$-$]
+    \item \emph{parametri che caratterizzano il campo incidente}, cioè frequenza, intensità, polarizzazione e posizione relativa della sorgente e dell'oggetto, ovvero se il campo è vicino o lontano dall'oggetto;
+    \item \emph{caratteristiche del corpo esposto}, cioè dimensioni e geometria interna ed esterna, nonché proprietà dielettriche dei vari tessuti;
+    \item \emph{effetti di contatto a terra ed effetti di riflessione}, da parte di altri oggetti nel campo vicini al corpo esposto.
+\end{itemize}
+
+Ci si occupa dell'interazione del corpo con i campi generati da sorgenti lontane, cioè tali da poter considerare i fronti d'onda come piani, quando l'asse maggiore del corpo umano è parallelo al vettore campo elettrico, poiché in questa situazione il SAR del corpo intero raggiunge i suoi valori massimi. La quantità di energia assorbita dipende da diversi fattori, tra cui le dimensioni del corpo esposto. Il cosiddetto \virgolette{uomo di riferimento tipico}, la cui definizione è quella fornita dall'ICNIRP nel 1994, in assenza di contatto a terra ha una frequenza di risonanza prossima ai 70\,MHz; per individui più alti la frequenza di risonanza è un po’ più bassa, mentre nel caso di adulti di bassa statura, bambini o neonati e nel caso di un corpo in posizione seduta, la frequenza di risonanza può superare i 100\,MHz.
+
+I livelli di SAR possono raggiungere livelli elevati anche per campi generati da sorgenti vicine, nel caso le frequenze superino i 10\,MHz, come accade per i telefoni cellulari e per i forni a microonde. In questa situazione, la dipendenza dell'assorbimento di energia dalla frequenza è molto diversa da quella descritta per le condizioni di campo lontano. I modelli di calcolo numerico e le misure delle correnti indotte nel corpo e dei campi interni ai tessuti hanno dimostrato, nel caso di telefoni mobili, walkie talkie e trasmettitori radiotelevisivi, che l’esposizione in campo vicino può dar luogo a elevati valori di SAR locale (ad esempio nella testa, nei polsi e nelle caviglie) e che sia il SAR mediato sull'intero corpo, sia quello locale, dipendono fortemente dalla distanza che separa la sorgente ad alta frequenza dal corpo. I dati di SAR ottenuti dalle misure sono in accordo con quelli ottenuti da calcoli su modelli numerici.
+
+Il valore del SAR è misurato in condizioni di assorbimento massimo da parte del corpo umano. Nel caso del telefono cellulare, l'orecchio è spesso il punto più vicino all'antenna, di conseguenza il SAR viene calcolato in riferimento a quella zona della testa, e anche i livelli di sicurezza vengono stabiliti localmente. Per i telefoni cellulari, e altri dispositivi portatili, il limite del SAR è di 2\,W/kg mediato rispetto a 10\,g di tessuto. Per l'esposizione dell'intero corpo esiste un limite di 0,08\,W/kg mediato rispetto all'intero corpo: tale valore è calcolato dividendo per 5 il valore di sicurezza stabilito per un'esposizione professionale, che è di 0,4\,W/kg per l'intero corpo. Nonostante il suo ampio impiego, il SAR viene usato per misurare l'esposizione a campi con frequenza compresa esclusivamente tra 100\,kHz e 10\,GHz: infatti, a frequenze superiori lo spessore di penetrazione dei campi nei tessuti è piccolo, e il SAR, che tiene conto dell'assorbimento di energia in riferimento a volumi, non risulta più una buona grandezza. Una grandezza più appropriata, che quantifica l'assorbimento superficiale di energia, è la densità di energia incidente, espressa in watt su metro quadro.
+
+\subsection{Esposizione ai campi a radiofrequenza}
+La normativa italiana, sulla base della normativa recepita dall'Unione Europea, fissa i limiti per l’esposizione ai campi a radiofrequenza in un aumento massimo di temperatura del paziente di 0,5\,°C per tutto il corpo. In alcuni casi, previa valutazione di un medico, si può consentire un innalzamento di temperatura di 1\,°C. In ogni caso, il valore medio del SAR localizzato nei distretti corporei deve essere tale da non indurre un innalzamento della temperatura al di sopra di 38\,°C per qualsiasi tessuto della testa, di 39\,°C per i tessuti del corpo e di 40\,°C per i tessuti degli arti. Alcuni tessuti, come quelli degli occhi e delle gonadi, hanno una ridotta capacità di dissipazione del calore, a causa di una vascolarizzazione minore, e costituiscono i siti in cui potenzialmente si verificano più facilmente effetti dannosi.
+
+Negli anni non è stato possibile trovare una correlazione tra effetti dei campi elettromagnetici fino a 30\,GHz e aumentato rischio di tumore; gli studi si sono concentrati soprattutto sui casi leucemia infantile e tumori al cervello, ma i risultati ottenuti non sono giudicati, dall'ICNIRP, sufficienti da costituire una base scientifica per delle linee guida di esposizione. Lo stesso discorso può essere fatto per gli studi sugli effetti nocivi delle onde a radiofrequenze sulle donne in gravidanza.
+
+\subsection{Protezione per risonanza magnetica nucleare}
+Dopo aver trattato i caratteri generali della protezione da radiazioni non ionizzanti e aver trattato specificamente la protezione dai campi a radiofrequenza, vediamo qualche dettaglio sulla protezione nell'ambito della risonanza magnetica nucleare.\\
+All'interno di una struttura sanitaria in cui siano installate apparecchiature diagnostiche a risonanza magnetica, devono essere rispettate norme di sicurezza per la presenza di:
+\begin{itemize}[label=$-$]
+    \item un campo magnetico statico sempre presente;
+    \item gradienti di campo magnetico variabili nel tempo, necessari per la codifica spaziale del segnale, attivati durante le sequenze di acquisizione;
+    \item un campo elettromagnetico a radiofrequenza, attivato per produrre gli impulsi;
+    \item fluidi criogenici pressurizzati, nel caso di magneti superconduttori.
+\end{itemize}
+
+L’interazione del \underline{campo magnetico statico} con componenti del corpo umano può dar luogo ai seguenti effetti.
+\begin{itemize}[label=$\triangleright$]
+    \item \emph{Effetti magneto-meccanici}. La traslazione magneto-meccanica è dovuta all'effetto di gradienti spaziali di campo magnetico su materiali paramagnetici e ferromagnetici. Negli esseri viventi, essendo molto limitata la presenza di questi materiali, l’effetto di traslazione è generalmente trascurabile; un adulto di 70\,kg ha circa 3,7\,g di ferro nei suoi tessuti, ma esso è distribuito in vari composti come l’emoglobina, la ferritina e l’emosiderina, che sono debolmente paramagnetiche.
+    \item \emph{Effetti dovuti alla forza di Lorentz su correnti ioniche}. L’effetto della forza di Lorentz è anch'esso molto piccolo, dato che le velocità di traslazione raggiunte delle cariche sono molto basse, molto inferiori anche alla velocità associata all'agitazione termica; si è calcolato che sarebbe necessario un campo di 24\,T per indurre una riduzione del 10\% nella conduzione nervosa.
+\end{itemize}
+
+I \underline{gradienti di campo magnetico} impiegati in risonanza magnetica hanno frequenze comprese fra 100\,kHz e 20\,MHz, che provocano un assorbimento di energia localizzato soprattutto a livello del collo e delle gambe. L'intensità dei gradienti utilizzati varia da 10 a 40\,mT/m fino ai 200\,mT/m dell'\textit{echo planar imaging}. I gradienti sono ripetutamente accesi, spenti o sottoposti a un’inversione del loro verso, quindi in ogni punto del corpo del paziente avrà luogo una variazione periodica dei valori locali del campo magnetico. I campi magnetici variabili nel tempo possono dare origine a fenomeni di stimolazione diretta dalle cellule nervose e muscolari, perché creano campi elettrici indotti e microcorrenti. Il corpo non è elettricamente omogeneo, tuttavia la densità delle correnti indotte può essere calcolata usando modelli realistici dal punto di vista anatomico ed elettrico, assieme a metodi di calcolo che presentano un alto grado di risoluzione anatomica. La normativa nazionale, con il d.\,lgs.\,81/2008, prevede per i campi magnetici variabili nel tempo, associati all'accensione e allo spegnimento rapido dei gradienti di localizzazione spaziale, che per la velocità di variazione del campo magnetico non vengano superati i 6\,T/s. I gradienti di campo magnetico sono inoltre responsabili di un altro fenomeno che può essere considerato un effetto biologico sul corpo umano: il rumore acustico dovuto alla vibrazione meccanica delle bobine nel loro movimento.
+
+Per quanto riguarda il \underline{campo elettromagnetico a radiofrequenza}, solo una piccola parte dell'energia ceduta dall'impulso è assorbita dai nuclei di idrogeno, mentre la maggior parte è assorbita sotto forma di calore; se il sistema di termoregolazione del paziente non è in grado di dissipare il calore prodotto ci sarà un innalzamento della temperatura corporea. Per evitare, in parte, che ciò si verifichi, è necessario che le condizioni ambientali della sala dove si svolge l'esame di risonanza magnetica siano adeguate: in particolare, la temperatura non deve salire al di sopra di 22\,°C e l’umidità non deve superare il 50\% (soprattutto per garantire un corretto funzionamento della componentistica elettronica del macchinario).
+
+Infine, per quanto concerne la protezione dai \underline{fluidi criogenici}, la principale problematica è il \textit{quench}. Siccome i macchinari per la risonanza magnetica si basano su magneti superconduttori, i quali devono essere tenuti a bassissime temperature, questi devono contenere al loro interno diverse centinaia di litri di elio liquido di raffreddamento. Se la temperatura all'interno della camera che contiene le bobine superconduttrici sale eccessivamente, l'elio liquido vaporizza e inizia a fuoriuscire dall'apparecchiatura in forma gassosa: tale fenomeno viene chiamato \textit{quench} e rappresenta una situazione di pericolo sia per gli operatori sia per il paziente. In questo caso, l'unica soluzione è attivare la procedura d'emergenza e allontanare il paziente dal macchinario.
+
+\newpage

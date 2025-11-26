@@ -1,0 +1,74 @@
+\chapter{Elettrofisiologia}
+L'elettrofisiologia è una branca della fisiologia che studia le correnti ioniche nei tessuti biologici e le tecniche di registrazione elettrica che consentono la misurazione di questo flusso. I fenomeni elettrici all'interno dell'organismo possono essere riscontrati nel sistema nervoso e nel cuore ma anche a livello della pelle e delle cellule. In questo capitolo ci si concentrerà proprio sull'elettrofisiologia del sistema nervoso centrale e delle cellule.
+
+\section{Elettroencefalografia}
+L'\textbf{elettroencefalografia} (EEG) è la registrazione dell'attività dell'encefalo; serve ad analizzare e a studiare la relazione tra l’attività di determinate aree cerebrali e specifiche funzioni cerebrali. Questa tecnica fu inventata nel 1929 da Hans Berger, il quale scoprì che sussisteva una differenza di potenziale fra due elettrodi posti sullo scalpo. L'EEG è una tecnica non invasiva, applicata in clinica con finalità diagnostica o di ricerca sul sistema nervoso e le sue patologie.
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[scale=0.55]{immagini/eeg.png}
+    \caption{\label{fig:eeg} \textit{Attività delle sinapsi}.}
+\end{figure}
+
+Il segnale cerebrale registrato registrato dall'EEG rappresenta l'attività sincrona delle sinapsi: l'attività irregolare dà luogo a un segnale ad alta frequenza e ampiezza piccola, mentre l'attività sincrona è caratterizzata da basse frequenze di ampiezza elevata. In realtà, il segnale registrato è espressione non solo dei processi sinaptici, ma anche di quelli dendritici e probabilmente anche di potenziali della neuroglia. I potenziali rilevabili tramite EEG sono solo quelli associati a correnti all'interno dell'encefalo che scorrono perpendicolarmente rispetto allo scalpo; ciò non costituisce una grossa limitazione, poiché i neuroni corticali, che costituiscono le unità funzionali elementari della corteccia cerebrale, sono organizzati in maniera tale da formare ammassi colonnari a orientazione perpendicolari alla superficie della corteccia stessa.
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[scale=0.8]{immagini/ritmi.png}
+    \caption{\label{fig:ritmi} \textit{Ritmi di EEG}.}
+\end{figure}
+
+Il segnale EEG occupa un intervallo di frequenze compreso tra gli 0,5 e 100\,Hz, all'interno del quale possono essere individuate delle bande di frequenze, chiamate ritmi (\figref{fig:ritmi}), associate a dei particolari stati fisiologici o patologici:
+\begin{description}
+    \item[Ritmi $\delta$] Le onde $\delta$ hanno frequenza compresa tra 0,5 e 4\,Hz, e un’ampiezza media di 75\,$\mu$V. Negli adulti, le onde $\delta$ sono associate a stati di sonno profondo, mentre una grande attività in banda $\delta$ nello stato di veglia è da considerarsi patologica. Nei bambini, l’ampiezza delle onde $\delta$ diminuisce all'aumentare dell'età.
+    \item[Ritmi $\theta$] Le onde $\theta$ hanno frequenza compresa tra 4 e 7\,Hz, e ampiezza media di 150\,$\mu$V. Come il ritmo $\delta$, anche le onde $\theta$ sono maggiormente presenti nei bambini, mentre negli adulti sono associate a stati di sonno leggero o di meditazione. In alcuni adulti il ritmo $\theta$ è associato anche a stress emotivo, in particolare frustrazione.
+    \item[Ritmi $\alpha$] Le onde $\alpha$ cadono nella banda compresa tra 8 e 13\,Hz, e hanno un’ampiezza inferiore a 10\,$\mu$V. Queste onde si registrano in condizione di veglia, ma indicano uno stato di rilassamento. Nelle aree occipitali, ad esempio, l’ampiezza delle onde $\alpha$ aumenta molto quando si chiudono gli occhi, mentre diminuisce drasticamente alla riapertura, oppure se viene fatto uno sforzo mentale. In particolare, quando il soggetto è attento e concentrato su una specifica attività, alle onde $\alpha$ si sostituiscono ritmi a frequenza maggiore.
+    \item[Ritmi $\beta$] Le onde $\beta$ occupano la banda di frequenze tra 13 e 30\,Hz, e hanno ampiezza inferiore a 20\,$\mu$V. Queste onde si registrano nelle aree frontali, centrali e parietali, e si manifestano quando il soggetto è coinvolto in un’attività mentale. I ritmi $\beta$ sono anche associati all'attività motoria, e vengono modulati sia durante il movimento reale sia con l’immaginazione motoria.
+    \item[Ritmi $\gamma$] I ritmi $\gamma$ hanno frequenze maggiori di 30\,Hz e indicano uno stato di profonda concentrazione. Il ritmo $\gamma$ si instaura anche in relazione ad alcune funzioni motorie e durante la contrazione massimale dei muscoli.
+\end{description}
+
+
+Per quantificare l'attività cerebrale, il modo più semplice è introdurre un sistema di assi per cui sull'asse \textit{x} si trova il tempo, sull'asse \textit{y} l'ampiezza del segnale e sull'asse \textit{z} lo spazio, quest'ultimo legato alla disposizione dei canali sullo scalpo. Aumentando il grado di complessità, per ottenere una descrizione più adatta ci sarebbe bisogno di ricavare le frequenze dei singoli segnali dallo spettro EEG, cosa che si può fare con l'analisi di Fourier. Con delle informazioni del genere, risulta conveniente porre sull'asse \textit{x} la frequenza e sull'asse \textit{y} la potenza del segnale. Lo spettro di un soggetto sano è caratterizzato tipicamente da potenza elevata nelle bande a bassa frequenza (ritmi $\delta$ e $\theta$), che tende a decrescere salendo di frequenza: questo tipo di comportamento viene detto \textit{pink noise}. A questo punto, se si vuole aggiungere anche la variabile spazio, il modo più comodo per visualizzare il tutto è una mappa topografica, riportata nella \figref{fig:mappa}.
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[scale=0.8]{immagini/mappa.png}
+    \caption{\label{fig:mappa} \textit{Mappa topografica EEG}.}
+\end{figure}
+
+\noindent Aggiungendo ulteriori gradi di complessità, si può arrivare a studiare anche la connettività dei \textit{network} cerebrali, come si fa anche con l'fMRI ma concentrandosi sulla sincronia in una determinata banda EEG. Si possono anche studiare le alterazioni di connettività nelle patologie neurologiche.
+
+\section{Altri esami elettrofisiologici encefalici}
+La \textbf{magnetoencefalografia} (MEG) è una tecnica che misura in maniera non invasiva il campo magnetico generato dall'attività elettrica postsinaptica dei dendriti apicali dei neuroni piramidali. Questo piccolissimo campo magnetico viene misurato per mezzo di magnetometri atomici ottici altamente sensibili, basati su dispositivi superconduttori a interferenza quantistica, detti SQUID. Per poter avere dei risultati significativi con la MEG, è necessario schermare quanto più possibile il campo magnetico terrestre. Per poter acquisire il segnale MEG fuori dallo scalpo, è necessario che circa un milione di neuroni spazialmente allineati siano sincronicamente attivi; questo numero di neuroni può produrre un campo magnetico osservabile esternamente di soli 100\,fT. La MEG ha una risoluzione temporale paragonabile a quella dell'EEG ma una risoluzione spaziale di gran lunga migliore, poiché il segnale magnetico non viene perturbato dai tessuti biologici nel suo tragitto fino al rivelatore.
+
+L'\textbf{elettrocorticografia} (ECoG) è una tecnica molto più invasiva di quelle viste finora, poiché lo scalpo viene rimosso fino a sotto le meningi, in modo da poter applicare gli elettrodi (a forma di griglia) direttamente sulla corteccia e registrare da lì il segnale. La risoluzione spaziale dell'ECoG è molto più alta di quella dell'EEG ed è paragonabile a quella della MEG, attorno al centimetro; anche il rapporto segnale/rumore è molto buono. L'ECoG è utilizzata per mappare le aree funzionali della corteccia, per localizzare le aree epilettogene in fase di pianificazione prechirurgica e per valutare il successo della rimozione di tali aree.
+
+Un'altra tecnica, meno invasiva ma che prevede anch'essa l'installazione di elettrodi in profondità, è la \textbf{stereoelettroencefalografia} (SEEG), che utilizza elettrodi molto lunghi e sottili per registrare il segnale intracranico senza ricorrere alla chirurgia. A differenza dell'ECoG, la SEEG non registra il segnale sulla superficie della corteccia ma in regioni profonde del cervello, come mostrato nella \figref{fig:ecog}; è utilizzata per casi particolarmente gravi di epilessia, poiché può provocare emorragie cerebrali e infezioni anche fatali.
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[scale=0.75]{immagini/ecog.png}
+    \caption{\label{fig:ecog} \textit{Installazione degli elettrodi in ECoG e SEEG}.}
+\end{figure}
+
+\section{Tecniche di neurostimolazione}
+In linea di principio, se è possibile studiare il funzionamento del cervello mediante segnali elettrici e magnetici, dovrebbe anche essere possibile condizionarne il funzionamento mediante gli stessi segnali, indotti dall'esterno. Le principali tecniche di stimolazione sono le seguenti.
+\begin{description}
+    \item[Stimolazione magnetica transcranica] Abbreviata in TMS, è una tecnica non invasiva di stimolazione elettromagnetica del tessuto cerebrale, effettuata posizionando dei potenti magneti in prossimità della cute. Mediante questa tecnica, è possibile stimolare e studiare il funzionamento delle connessioni neuronali del cervello, provocando un'alterazione della attività elettrica piuttosto ridotta e transitoria e per lo più limitata ai tessuti più esterni, in quanto i campi magnetici sono poco penetranti. È possibile adottare anche questa tecnica in modo ripetuto per trattare disturbi psichiatrici e neurologici quali la depressione, le allucinazioni e il morbo di Parkinson.
+    \item[Stimolazione cerebrale profonda] Abbreviata in DBS, consiste nell'impianto chirurgico di elettrocateteri nelle aree del cervello deputate al controllo dei movimenti, e di un dispositivo medico, simile a un pacemaker cardiaco, vicino alla clavicola o nella regione addominale; quest'ultimo invia degli impulsi elettrici agli elettrodi situati nelle aree cerebrali, bloccando i segnali che provocano i sintomi motori disabilitanti, causati da disturbi come il morbo di Parkinson e la distonia. La DBS è utilizzata anche per curare l'epilessia e i disturbi ossessivo-compulsivi.
+\end{description}
+
+\section{Elettrofisiologia cellulare}
+Dopo aver visto le applicazioni dei segnali elettrici prodotti dalle cellule, vediamo da quali processi questi segnali si originano. Tutte le cellule sono capaci di generare potenziali elettrici a riposo a cavallo delle membrane cellulari e sono in grado di cambiare la loro permeabilità ai vari ioni. Ci sono però alcune cellule, dette cellule eccitabili, che non rispondono solo passivamente a stimoli elettrici ma rispondono attivamente generando una risposta che va sotto il nome di \textbf{potenziale d’azione}. Un potenziale d'azione è un evento di breve durata che consiste in una rapida variazione nel potenziale di membrana, il quale passa dal normale valore negativo verso un valore positivo, e termina con una variazione che ripristina il potenziale negativo. Il potenziale d'azione nelle cellule del sistema nervoso permette il passaggio di informazioni fra cellule, trasmettendosi a tutte le membrane della cellula e dunque anche alle diramazioni più distanti costituite dagli assoni, dove causa la liberazione di sostanze (i neurotrasmettitori) contenute in vescicole; queste, agendo sulle cellule vicine determinano delle conseguenze, come per esempio la modifica del potenziale. Potenziali di azione si verificano in vari tipi di cellule animali che comprendono i neuroni, cellule muscolari, e cellule endocrine, così come in alcune cellule vegetali. Un potenziale d'azione prevede un rapido cambiamento di carica tra l'interno e l'esterno della membrana cellulare; l'esterno è caricato positivamente, l'interno negativamente. In parole povere, il potenziale d'azione serve a ristabilire il potenziale a riposo della cellula quando questa si depolarizza in seguito a uno stimolo.
+
+Il \textbf{modello di Hodgkin-Huxley} fu il primo modello matematico creato per descrivere il processo di depolarizzazione della membrana cellulare. Il modello si basa sull'assunto che la membrana plasmatica si comporti come un condensatore lineare, dove le due piastre dell'armatura solo la superficie extracellulare e il citoplasma, separate dal doppio strato fosfolipidico che costituisce la membrana stessa; i canali ionici, invece fungono da resistori, come schematizzato in \figref{fig:membrana}.
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[scale=0.7]{immagini/membrana.png}
+    \caption{\label{fig:membrana} \textit{Schematizzazione della membrana cellulare nel modello di Hodgkin-Huxley}.}
+\end{figure}
+
+Per misurare la corrente che attraversa un singolo canale ionico si utilizza una tecnica detta \textit{patch clamp}, introdotta nel 1976 da Erwin Neher e Bert Sakmann, vincitori del premio Nobel per la medicina nel 1991. Il \textit{patch clamp} consiste nel bloccare la differenza di potenziale elettrico in una piccola area della membrana cellulare o dell'intera cellula, rendendo possibile analizzare le modalità attraverso le quali i canali ionici influiscono sulla differenza di potenziale a livello di membrana. Il \textit{patch clamp} si può utilizzare su colture cellulari, su singole cellule isolate o anche su sottili fettine di tessuto cerebrale. Si utilizza un solo microelettrodo, inserito in una micropipetta di vetro la cui estremità, con diametro di 1\,$\mu$m e resistenza dell'ordine del megaohm, viene fatta aderire perfettamente a una membrana cellulare, permettendo così di isolare una piccola area della membrana stessa e i canali ionici in essa presenti. A questo punto è possibile modificare e manipolare chimicamente o elettricamente i canali stessi, in modo da studiarne le proprietà.
+
+Le proprietà bioelettriche delle cellule controllano diversi comportamenti; per esempio, i campi elettrici endogeni sono responsabili dei segnali di migrazione per la galvanotassia cellulare, un fenomeno di migrazione delle cellule che si verifica quando queste sono sottoposte a stimolazione elettrica. La galvanotassia era già nota alla fine del XIX secolo ma ancora oggi non sono chiari i meccanismi cellulari che la provocano, sebbene giochi un ruolo fondamentale nell'embriogenesi, nella proliferazione cellulare, nella rigenerazione dei tessuti e anche nell'invasività dei tumori.

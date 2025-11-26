@@ -1,0 +1,153 @@
+\chapter{Ultrasuoni}
+
+Gli \textbf{ultrasuoni} (US) sono onde meccaniche di frequenza superiore al limite di udibilità dell'orecchio umano, convenzionalmente fissato a 20\,kHz. Nelle interazioni coi tessuti si osservano i fenomeni tipici delle onde, come attenuazione, riflessione ed effetto Doppler, ed è possibile ricavare informazioni sulle proprietà fisiche del mezzo con cui interagiscono. Gli ultrasuoni possono venire impiegati sia in diagnostica sia in terapia. In particolare, ci si soffermerà sui seguenti argomenti:
+\begin{itemize}[label=$-$]
+    \item produzione di ultrasuoni;
+    \item interazione degli ultrasuoni con i tessuti biologici;
+    \item ecografia ed eco-doppler;
+    \item effetti biologici degli ultrasuoni;
+    \item terapia a ultrasuoni focalizzati.
+\end{itemize}
+
+\section{Produzione di ultrasuoni}
+Gli ultrasuoni impiegati in campo medico vengono prodotti sfruttando la \textbf{piezoelettricità} di alcuni materiali cristallini. La piezoelettricità è la capacità di un materiale di polarizzarsi quando soggetto a una deformazione meccanica, generando così una differenza di potenziale. Al tempo stesso, i materiali piezoelettrici si deformano quando sottoposti a tensione elettrica. Se la differenza di potenziale applicata alle superfici del cristallo varia sinusoidalmente, la deformazione segue la variazione di potenziale e le pareti del cristallo oscillano col periodo della variazione. Se, invece, la sollecitazione è un impulso elettrico breve e intenso, il cristallo subisce una rapida deformazione per poi tornare alla sua forma originale, con il diametro della pastiglia che segue il moto smorzato rappresentato nella \figref{fig:piezo}. Nel caso di cristalli a forma di pastiglia cilindrica, la lunghezza d'onda $T_0$ della funzione $\Delta d(t)$ è proporzionale al diametro della pastiglia. La sollecitazione con impulsi elettrici brevi permette di ottenere piccoli pacchetti di ultrasuoni di frequenza nota, i quali si generano dalla vibrazione del cristallo. Quest'ultimo è inserito all'interno di un trasduttore, cioè un dispositivo in grado di trasformare una grandezza, in questo caso il potenziale elettrico, in un'altra, gli ultrasuoni. Del trasduttore, illustrato nella \figref{fig:trasduttore}, fanno anche parte un blocchetto di materiale detto di \textit{backing}, che ha il compito di minimizzare la produzione di ultrasuoni \virgolette{all'indietro}, e una lente di focalizzazione, la quale serve a collimare i pacchetti di ultrasuoni in un fascio più ristretto.
+
+Poniamo adesso l'attenzione sulla frequenza di lavoro da utilizzare, soprattutto con lo scopo di evitare fenomeni di diffrazione all'uscita del trasduttore, i quali farebbero divergere l'onda (\figref{fig:diffra}). In un trasduttore, la fenditura attraverso la quale escono gli ultrasuoni è pari alla larghezza \textit{D} del cristallo, che tipicamente è dell'ordine del centimetro. Poiché l'angolo di diffrazione è dato da:
+\begin{equation}
+    \sin{\theta} = \frac{\lambda}{D}\,,
+\end{equation}
+dove $\lambda$ è la lunghezza d'onda, si dovrà impostare $\lambda$ in modo che $\theta$ sia molto vicino a zero; di conseguenza, si sceglierà $\lambda \ll D$, quindi $\lambda < 10^{-3}$\,m. Possiamo dedurre la frequenza da utilizzare conoscendo la velocità con cui si propaga il suono nei tessuti biologici: se consideriamo un valore standard di 1500\,m/s, allora:
+\begin{equation*}
+    f = \frac{v}{\lambda} > \frac{1,5 \times 10^3}{10^{-3}} \text{Hz} = 1,5\,\text{MHz}\,.
+\end{equation*}
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.77]{immagini/piezo.png}\quad\includegraphics[scale=0.85]{immagini/piezo-2.png}
+\caption{\label{fig:piezo} \textit{Da sinistra a destra: applicazione a una pastiglia di materiale piezoelettrico di un potenziale variabile e di uno breve, con relativo grafico della variazione del diametro nel tempo}.}
+\end{figure}
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.63]{immagini/trasduttore.png}
+\caption{\label{fig:trasduttore} \textit{Trasduttore a ultrasuoni}.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.63]{immagini/diffra.png}
+\vspace{-20 pt}
+
+\caption{\label{fig:diffra} \textit{Fenomeno della diffrazione da singola fenditura}.}
+\end{figure}
+
+\section{Interazione degli ultrasuoni con i tessuti}
+Chiaramente, maggiore è la velocità con cui si propaga il suono nel mezzo da indagare, maggiore dovrà essere la frequenza minima dell'onda. Nei cosiddetti tessuti molli, che costituiscono la grande maggioranza dei tessuti dell'organismo umano, la velocità con cui si propaga il suono è di poco superiore ai 1500\,m/s, simile alla velocità assunta dal suono in acqua, che d'altro canto è il principale costituente dei tessuti molli. La velocità del suono nei liquidi è data dalla seguente equazione:
+\begin{equation}
+    v = \sqrt{\frac{K}{\rho}}\,,
+\end{equation}
+dove \textit{K} è il modulo di compressibilità e $\rho$ è la densità del mezzo. È chiaro che la velocità di propagazione è condizionata dalle proprietà fisiche del tessuto, principalmente dalla resistenza del tessuto alla compressione, che dipende dalla sua densità ed elasticità. Le onde sonore si propagano meglio e più velocemente nei liquidi piuttosto che nell'aria, quindi i tessuti molli, che sono costituiti per la massima parte di acqua, si prestano in maniera particolare allo studio ecografico. Sia nei liquidi sia nei gas, però, le molecole non sono legate fra di loro oppure lo sono solo debolmente, di conseguenza le onde trasversali, che implicano un certo tipo di legame fra le molecole del mezzo, non possono manifestarsi; ne consegue che il suono si propaghi nei fluidi solo per mezzo di onde longitudinali, in sostanza come un'onda di pressione.
+
+Per quanto riguarda la scelta della frequenza da utilizzare, questa non ha solo un limite inferiore, dovuto alla necessità di evitare la diffrazione dell'onda, ma ha anche un limite superiore costituito dalla profondità di penetrazione. Infatti, un'onda di frequenza elevata ha, come ovvio, una migliore capacità di risoluzione, ma risulta inadatta per analisi eseguite in profondità. Al contrario, un'onda con frequenza piccola riuscirà a penetrare più a fondo, a scapito della risoluzione dell'immagine. La relazione che lega l'intensità della radiazione alla profondità di penetrazione è la seguente:
+\begin{equation}
+    I(x) = I_0\,\mathrm{e}^{-\mu x}\,,
+    \label{mu}
+\end{equation}
+dove $I_0$ è l'intensità iniziale dell'onda e $\mu$ è il coefficiente di assorbimento acustico, direttamente proporzionale alla frequenza dell'onda. L’immagine visualizzata sul monitor in un'ecografia è il risultato dell'interazione degli ultrasuoni con i tessuti. La resistenza intrinseca che la materia oppone a essere attraversata dagli ultrasuoni prende il nome di impedenza acustica:
+\begin{equation}
+    Z = \rho v\,.
+\end{equation}
+Dall'impedenza acustica dipendono direttamente i contrasti fra i diversi tessuti che appaiono nell'immagine finale. I punti di passaggio tra tessuti con impedenza acustica diversa sono chiamati interfacce. L’eco riflessa dalle interfacce dei tessuti verso la sonda è la base dell'immagine ecografica. È molto importante che l’angolo d’incidenza del fascio di ultrasuoni sia perpendicolare ai tessuti da visualizzare: infatti, le interfacce che non si trovano a un angolo di 90° rispetto al fascio di ultrasuoni, riflettono il suono con un angolo che non ritornerà alla sonda e non contribuiscono a creare l’immagine. Per questo motivo, la sonda va riposizionata continuamente per visualizzare ogni singola interfaccia di interesse in maniera perpendicolare.
+
+In realtà, ogni volta che gli ultrasuoni incontrano un’interfaccia, il fascio viene in parte riflesso e in parte propagato. L’entità della \underline{riflessione} è espressa dal coefficiente di riflessione, definito come:
+\begin{equation}
+    R = \frac{Z_2-Z_1}{Z_1+Z_2}\,,
+\end{equation}
+dove $Z_1$ è l'impedenza del mezzo di provenienza dell'onda e $Z_2$ è quella del mezzo di arrivo. Se ne deduce che se gli ultrasuoni si propagano attraverso tessuti con impedenze acustiche molto simili, solo una piccola percentuale viene riflessa da queste interfacce, mentre la maggior parte si propaga in modo lineare fino alle strutture più profonde, creando un’immagine fedele delle strutture anatomiche attraversate. In generale:
+\begin{itemize}[label=$-$]
+    \item se si passa da un tessuto di impedenza minore a uno di impedenza maggiore, la maggior parte degli ultrasuoni sarà riflessa;
+    \item se si passa da un tessuto di impedenza maggiore a uno di impedenza minore, la maggior parte degli ultrasuoni sarà assorbita.
+\end{itemize}
+
+Oltre alla riflessione, nell'interazione fra ultrasuoni e tessuti vanno considerati altri due fenomeni fondamentali tipici delle onde: la diffrazione e la rifrazione.
+
+La \underline{diffrazione} si manifesta quando l'onda incontra un ostacolo di dimensione paragonabile o inferiore alla sua lunghezza d'onda, che abbia impedenza acustica diversa dal mezzo in cui si propaga l'onda stessa. Il fenomeno consiste nella diffusione dell'onda in tutte le direzioni dello spazio, senza direzionalità, come rappresentato nell'immagine di sinistra della \figref{fig:rifrazione}.
+
+La \underline{rifrazione} è anch'esso un fenomeno di alterazione della direzione dell'onda, che si manifesta quando l’interfaccia tra tessuti con diverse velocità di propagazione viene colpita con un angolo obliquo invece che perpendicolare. In tal caso il fascio viene deviato e nell'immagine finale si ha un artefatto per cui il tessuto trasmesso risulta in una posizione non reale. Le strutture che più comunemente causano rifrazione sono la cistifellea e le cisti; come per la diffrazione, la struttura che provoca la rifrazione deve avere impedenza acustica diversa dal mezzo in cui si propaga l'onda. L'effetto della rifrazione nell'immagine prodotta è un'ombra acustica laterale, come illustrato nell'immagine di destra della \figref{fig:rifrazione}.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.62]{immagini/diffrazione.png}\quad\includegraphics[scale=0.66]{immagini/rifrazione.png}
+\caption{\label{fig:rifrazione} \textit{A sinistra, fenomeno di diffrazione da ostacolo; a destra, fenomeno di rifrazione}.}
+\end{figure}
+
+\section{Ecografia}
+
+\begin{wrapfigure}{R}{0.5\textwidth}
+    \centering
+    \includegraphics[width=0.3\textwidth]{immagini/ecocuore.png}
+    \caption{\textit{Schematizzazione di ecografia al cuore, con segnale relativo alle interfacce interne dell'organo}.}
+    \label{fig:ecocuore}
+\end{wrapfigure}
+
+L'\textbf{ecografia} è la principale tecnica d'indagine che impiega gli ultrasuoni. Sfruttando la velocità costante degli ultrasuoni nei tessuti biologici (a eccezione delle ossa, dove il suono si propaga molto più velocemente) e la possibilità di realizzare facilmente fasci orientabili, è possibile studiare i tessuti a diverse profondità e anche localizzare le superfici di separazione interne degli organi. La tecnica è basata sulla emissione di brevi impulsi che, penetrando nei tessuti, vengono parzialmente riflessi da ogni superficie di separazione tra zone a diversa impedenza acustica, determinando degli eco che vengono rilevati dal cristallo piezoelettrico e convertiti in segnale elettrico. Le superfici di separazione interne agli organi vengono localizzate attraverso la misura del tempo tra l’emissione di un pacchetto di ultrasuoni e la ricezione degli eco riflessi dalle superfici interne, come rappresentato nella \figref{fig:ecocuore}. Il segnale elettrico, infine, viene convertito in una scala di grigi. A ogni pixel dell'immagine è assegnata una diversa luminosità, proporzionale all'intensità degli eco riflessi corrispondenti: i pixel associati a eco intensi sono detti iperecogeni e codificati in bianco, quelli corrispondenti a eco intermedi sono chiamati ipoecogeni e sono codificati in grigio, mentre quelli caratterizzati da assenza di eco sono detti anaecogeni e codificati in nero.
+
+In ecografia, la risoluzione, cioè la distanza minima alla quale devono trovarsi due oggetti per poter produrre eco distinti ed essere localizzati distintamente, può essere di due tipi, rappresentati anche nella \figref{fig:riso}:
+\begin{itemize}[label=$-$]
+    \item \emph{laterale}, per distinguere oggetti equidistanti dal trasduttore, è pari alla larghezza \textit{D} dell'apertura del trasduttore;
+    \item \emph{assiale}, per distinguere oggetti posti a diversa distanza dal trasduttore, è pari alla lunghezza dell'onda inviata; poiché le frequenze non superano i 3,5\,MHz, la lunghezza d'onda, e quindi la risoluzione, è sempre maggiore di 0,6\,mm.
+\end{itemize}
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.7]{immagini/riso.png}
+\caption{\label{fig:riso} \textit{Risoluzioni laterale e assiale}.}
+\end{figure}
+
+\subsection{Tecniche di ecografia}
+La modalità più diffusa di ecografia è la \textbf{\textit{brightness mode}} (\textit{B-mode}), nella quale l'intensità dell'eco viene espressa come luminosità del punto sullo schermo. Se il segnale proveniente dal trasduttore viene applicato alla griglia di un tubo a raggi catodici, nelle fasi in cui il segnale è alto si ha un elevato passaggio di elettroni e un punto luminoso sullo schermo, mentre una minore intensità corrisponde a un segnale più debole.
+
+La \textit{B-mode} permette di ottenere immagini a due dimensioni, ma l'ecografia permette anche di ottenere immagini tomografiche a tre dimensioni. L'\textbf{ecotomografia a scansione manuale} si serve di un trasduttore di grandi dimensioni, il quale viene mosso manualmente dall'operatore sulla superficie del corpo. Le immagini acquisite vengono messe insieme sulla base del movimento dei bracci dell'ecografo, i quali sono dotati di sensori di posizione, e utilizzate per costruire l'immagine tridimensionale. Tale tecnica è adatta solo per organi pressoché immobili, come quelli allocati nell'addome, in quanto gli eventuali movimenti sarebbero impossibili da registrare e impiegare in fase di costruzione dell'immagine, e si produrrebbero degli artefatti.
+
+Se si vuole applicare l'ecografia a organi molto mobili, come il cuore, si può ricorrere all'\textbf{ecotomografia a cortina lineare}, in cui il trasduttore è costituito da un numero elevato di piccoli cristalli piezoelettrici, come mostrato nella \figref{fig:cortina}. Questa tecnica prevede che i cristalli vengano eccitati in successione e gli eco rappresentati sul monitor in \textit{B-mode}, su linee parallele. È possibile, in questo modo, ottenere molte scansioni tridimensionali al secondo e osservare organi in movimento.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.92]{immagini/cortina.png}
+\caption{\label{fig:cortina} \textit{Schematizzazione di un ecotomografo a cortina lineare}.}
+\end{figure}
+
+Un'ultima tecnica molto importante è l'\textbf{eco-doppler}, che si fonda proprio sull'effetto Doppler sonoro. Quando una qualsiasi onda meccanica investe un oggetto in movimento, l'onda che viene riflessa dall'oggetto stesso avrà una frequenza diversa, in accordo con le leggi che descrivono l'effetto Doppler. Questa indagine è fondamentale per evidenziare il movimento di fluidi nell'organismo e delle cellule in essi contenute: ad esempio, si riesce a rivelare il circolo sanguigno e la sua velocità, grazie all'effetto Doppler provocato dai globuli rossi. Nella \figref{fig:ecodoppler} è riportato un eco-doppler in codifica di colore, in cui, mediante una scala di colori dal rosso al blu, si incontrano regioni in cui il sangue è in avvicinamento (rosso) o in allontanamento (blu).
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.92]{immagini/ecodoppler.png}
+\caption{\label{fig:ecodoppler} \textit{Immagine eco-doppler in codifica di colore}.}
+\end{figure}
+
+\section{Effetti biologici degli ultrasuoni}
+Sebbene gli ultrasuoni siano onde meccaniche, quindi di gran lunga meno invasive delle radiazioni elettromagnetiche ionizzanti, tanto da poter essere impiegati addirittura per controlli prenatali, essi non sono comunque esenti dal provocare danni nei tessuti verso i quali vengono diretti, ma per limitarli è sufficiente qualche accorgimento. Le grandezze correlate agli effetti degli ultrasuoni sui tessuti dipendono dall'ampiezza dell'onda (più specificamente l'ampiezza della pressione acustica), dalla potenza acustica di emissione (legata all'energia trasportata dall'onda) e dall'intensità, ossia la potenza acustica in rapporto alla superficie sulla quale viene diretta l'onda. Gli effetti biologici degli ultrasuoni si suddividono in termici e meccanici.
+
+\subsection{Effetti termici}
+Gli \textbf{effetti termici} sono generati dalla conversione dell'energia meccanica ultrasonora, che viene assorbita in forma di calore dai tessuti. La probabilità che si verifichi un effetto termico è descritta dall'indice termico IT, che è il rapporto tra potenza acustica in un punto e quella necessaria per produrre in quel punto un incremento di 1\,°C. In sostanza, l’IT indica quale sia il massimo incremento termico atteso in qualsiasi punto del tessuto esposto. L'incremento locale di temperatura è correlato a frequenza, tempo di esposizione e durata degli impulsi ultrasonici, ma anche a proprietà tissutali quali assorbimento, attenuazione, impedenza acustica e circolo ematico, che riporta il tessuto alla temperatura corporea. Di conseguenza, predire l’entità del riscaldamento tissutale risulta difficile e i reali valori di innalzamento termico \textit{in situ} risultano differenti da quelli teoricamente previsti. Chiaramente, in base alla composizione del tessuto l’IT varia sensibilmente, risultando minimo nei liquidi e più marcato nei solidi, per raggiungere valori massimi nell'osso. L’FDA (\textit{Food and Drugs Administration}) consiglia di mantenere, per prudenza, i valori di intensità acustica al di sotto di
+720\,mW/$\text{cm}^2$.
+
+\subsection{Effetti meccanici}
+Gli \textbf{effetti meccanici} indotti nei tessuti dagli ultrasuoni sono principalmente tre: cavitazione, \textit{shear stress} e rottura di molecole.
+
+La \underline{cavitazione} è un fenomeno che consiste nella crescita e nel collasso di microcavità, contenenti gas, disperse nel liquido del tessuto attraversato dagli ultrasuoni, come mostrato nella \figref{fig:cavitazione}. Al suo passaggio attraverso un liquido, l'onda ultrasonica ne provoca una locale rarefazione e una conseguente brusca caduta di pressione. Ciò porta al raggiungimento di valori pressori uguali od inferiori a quello della tensione di vapore del liquido stesso, che vaporizza formando delle microbolle. Se l’intensità della sollecitazione è limitata, la bolla pulsa leggermente e riesce a mantenere la pressione interna pari in ogni istante alla pressione esterna: questa condizione si chiama cavitazione stabile. Se l’intensità della sollecitazione è molto intensa, invece, la parete della bolla deve spostarsi di molto per riuscire a equiparare le pressioni interna ed esterna, e a ogni oscillazione si produce un gradiente di pressione che determina un continuo scambio di gas attraverso la parete della bolla, con tendenza del gas a entrare. Aumentando la dimensione della bolla, cambia anche la frequenza di risonanza del sistema; quando la frequenza di risonanza si avvicina alla frequenza dell'onda ultrasonora, le oscillazioni della parete aumentano di ampiezza fino a produrre lo scoppio della bolla, con diffusione del gas nello spazio circostante. In vicinanza della parete, nel momento del collasso si può avere una pressione di migliaia di atmosfere e la rottura dei legami molecolari. Sebbene la cavitazione rappresenti un rischio per i tessuti, il suo innesco non è così probabile. Infatti, l'energia trasportata dall'onda deve essere particolarmente elevata per dare inizio alla cavitazione, e anche i tempi di applicazione dell'onda devono essere prolungati, affinché la bolla riesca a crescere così tanto da collassare. Inoltre, capita che il moto del liquido porti la bolla fuori dal fascio di onde, interrompendo il processo di crescita. Infine, per scongiurare completamente una già bassa probabilità di cavitazione, è raccomandato non lasciare la sonda dell'ecografo ferma su un tessuto per molto tempo.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.6]{immagini/cavitazione.png}
+\caption{\label{fig:cavitazione} \textit{Fenomeno della cavitazione}.}
+\end{figure}
+
+Lo \underline{\textit{shear stress}} è un effetto che si genera nelle zone ai bordi del fascio di ultrasuoni, dove il liquido è soggetto a notevoli differenze di pressione in un volume molto ridotto. Questa disomogeneità della sollecitazione pressoria determina microcorrenti locali, che possono danneggiare sia le membrane cellulari dei globuli rossi, sia l’endotelio dei vasi investiti dal fascio. Lo \textit{shear stress} può essere evitato fissando dei valori massimi di intensità acustica e di tempo di esposizione. In particolare, nessun effetto biologico è stato osservato per valori di intensità e durata il cui prodotto fosse inferiore a 50\,J/$\text{cm}^2$, ma in ogni caso il livello di intensità acustica non deve superare i 100\,mW/$\text{cm}^2$.
+
+La \underline{rottura di molecole} si osserva principalmente quando molecole complesse, come le proteine, sono costituite da altre molecole, più piccole ma comunque grosse, legate fra di loro da catene sottili di pochi atomi. In questi casi, se la molecola si viene a trovare in un campo di pressione disomogeneo, la sollecitazione, e quindi lo spostamento, delle varie parti è diverso, portando in qualche caso alla deformazione e alla rottura della molecola.
+
+\section{Terapia a ultrasuoni focalizzati}
+La termoablazione di tessuti profondi basata sull'utilizzo di ultrasuoni focalizzati è una procedura messa a punto negli anni '80 per il trattamento dei fibromiomi uterini o dei tumori prostatici. Di recente, tale tecnica ha subito notevoli migliorie e viene utilizzata anche per l'ablazione di lesioni ossee, come metastasi alle ossa e osteomi. La sorgente di energia ultrasonora è costituita da un trasduttore focalizzato che viene posizionato a contatto con la cute del paziente, in corrispondenza della lesione profonda oggetto del trattamento. L'onda acustica si propaga dalla sonda attraverso i tessuti e si concentra nella regione individuata, generando per pochi secondi uno stato di ipertermia locale, anche con temperature di 60-80\,°C, che determina una necrosi irreversibile del tessuto trattato. Mentre in diagnostica si utilizzano ultrasuoni ad alta frequenza e bassa potenza, in modo tale da non generare effetti permanenti sul corpo, in terapia si usano ultrasuoni a bassa frequenza e più alta potenza, con lo scopo di raggiungere tessuti posti più in profondità e provocare effetti biologici permanenti. Esiste uno spettro di variazioni biologiche che possono essere indotte da ultrasuoni, in funzione dell'intensità e della durata dell'esposizione. L'intervallo delle frequenze di ultrasuoni utilizzati in terapia va da 20\,kHz a 3\,MHz, una fascia inferiore all'uso diagnostico. Per intensità molto alte (1000\,W/$\text{cm}^2$), gli ultrasuoni sono in grado di produrre necrosi tissutale istantanea, utile nel trattamento dei tumori. Un altro impiego terapeutico degli ultrasuoni è la neuromodulazione, cioè la produzione stimolata di molecole da parte del sistema nervoso: per questo utilizzo, gli effetti biologici devono essere reversibili e non provocare necrosi, quindi è necessario applicare intensità acustiche minori (100\,mW/$\text{cm}^2$).
+
+\newpage

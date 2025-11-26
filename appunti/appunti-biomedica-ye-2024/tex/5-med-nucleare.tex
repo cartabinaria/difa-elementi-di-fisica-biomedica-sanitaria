@@ -1,0 +1,131 @@
+\chapter{Medicina nucleare}
+
+\section{Caratteri generali}
+La medicina nucleare è una branca della medicina che utilizza radionuclidi inseriti all'interno di specifiche molecole, dette radiofarmaci, le quali vengono somministrate nell'organismo per scopi diagnostici, terapeutici e di ricerca. I radiofarmaci devono essere scelti sulla base del \textit{target} e sono somministrati per via orale o, soprattutto, per via endovenosa. Una pratica terapeutica che rientra nel campo della medicina nucleare è già stata incontrata nel paragrafo \ref{4.4.2}, ovvero la terapia radiometabolica; in questo capitolo si tratterà, però, solo dell'uso diagnostico della medicina nucleare, nelle sue applicazioni più importanti: scintigrafia, SPECT e PET.
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[scale=0.75]{immagini/tiroide.png}
+    \caption{\label{fig:tiroide} \textit{Da sinistra a destra: scintigrafie di tiroide sana, con presenza di nodulo freddo e con presenza di nodulo caldo}.}
+\end{figure}
+
+Giusto per vedere subito un esempio delle immagini diagnostiche in medicina nucleare, sono riportate nella \figref{fig:tiroide} delle scintigrafie di tre tiroidi diverse. A sinistra si vede una tiroide sana, con la sua caratteristica forma a farfalla; nell'immagine al centro è possibile osservare una regione caratterizzata da ipocaptazione del radiofarmaco, imputabile a un nodulo \virgolette{freddo}, chiamato così proprio a causa dell'ipocaptazione. A destra, invece, il lobo destro è completamente deformato dalla presenza di un nodulo \virgolette{caldo}, che capta il radiofarmaco; il lobo di sinistra è di dimensioni ridotte e scarsamente captante, perché funzionalmente inibito.
+
+I radionuclidi utilizzati in medicina nucleare variano a seconda della tecnica utilizzata: per scintigrafia e SPECT si utilizzano specie che eseguono decadimenti $\gamma$, mentre i radionuclidi impiegati nella PET decadono emettendo positroni, quindi con decadimento $\beta^+$, che vengono poi \virgolette{convertiti} in fotoni, come vedremo successivamente.
+
+\section{Scintigrafia e tomografia a emissione di fotone singolo}
+La \textbf{scintigrafia a emissione di fotone singolo} è stata la prima tecnica di produzione di immagini diagnostiche con utilizzo di radioisotopi. Il processo prevede l'utilizzo di un rivelatore a scintillazione, chiamato scanner lineare, che rivela i raggi $\gamma$ provenienti da una piccola regione del corpo e che viene spostato, per mezzo di un braccio meccanico, in modo da ricoprire tutta la zona da esaminare. La scintigrafia venne utilizzata per tutti gli anni '70 e oltre.
+
+L'evoluzione degli strumenti di rivelazione è dovuta principalmente alla necessità di diminuire il tempo di scansione, molto elevato nel caso di scanner rettilineo, e far migliore uso della dose assorbita dal paziente. Nasce così l'idea di uno scanner a testata multipla in grado di ruotare, che permette di effettuare rivelazioni su molti angoli contemporaneamente, producendo referti di \textbf{tomografia a emissione di fotone singolo} (SPECT); lo spostamento del lettino su cui è adagiato il paziente, inoltre, permette di scansionare l'intero corpo.
+
+\subsection{Gamma camera}
+\begin{figure}[htp]
+    \centering
+    \includegraphics[scale=0.3]{immagini/gammacamera.png}
+    \caption{\label{fig:gammacamera} \textit{Gamma camera SPECT}.}
+\end{figure}
+
+\noindent Sia la scintigrafia planare sia la SPECT si basano sull'utilizzo della \textbf{gamma camera}, mostrata nella \figref{fig:gammacamera} e chiamata anche \virgolette{camera di Anger} in onore dell'ingegnere che fu inventore e costruttore del primo prototipo nel 1953. La gamma camera è un rivelatore di raggi $\gamma$ che converte il segnale elettromagnetico in segnali elettrici. In generale, un rivelatore di questo tipo deve essere molto veloce nella conversione, poiché i raggi $\gamma$ provengono da sorgenti non regolabili e che, inoltre, sono somministrate al paziente in piccole dosi, per non sottoporlo a rischi eccessivi, di conseguenza l'emissione è garantita per tempi brevi. Per immagini funzionali, come quelle cardiache, bisogna acquisire almeno 10 immagini al secondo, quindi il rivelatore deve eseguire 10 conversioni al secondo. Una gamma camera, indipendentemente dall'utilizzo che se ne fa, è costituita fondamentalmente dalle seguenti componenti.
+\begin{description}
+    \item[Collimatore] È un setto in materiale molto denso (piombo o tungsteno), a forma di griglia, che copre il rivelatore in modo tale che all'interno di ogni sua maglia giungano le radiazioni provenienti dal frammento di campione su cui quella maglia si proietta (immagine di sinistra della \figref{fig:collimatore}); in altre parole, il collimatore fa in modo che giungano al rivelatore solo raggi $\gamma$ perpendicolari a esso, perché altrimenti non si riuscirebbe a ottenere un'immagine significativa dell'assorbimento spaziale del radiofarmaco. Il collimatore si rende necessario, come si vedrà, soprattutto in SPECT, poiché la radiazione $\gamma$ nativa, cioè non generata da annichilazione di positroni, ha una propagazione radiale e non lungo la medesima linea, come nell'annichilazione. Con la sua azione, il collimatore produce l'effetto di ridurre di molto il numero di fotoni rivelabili rispetto a quelli emessi, circa $10^{-4}$ fotoni in meno.\\
+    In realtà, sebbene il collimatore sia uno strumento efficace, non riesce a evitare alcuni fenomeni: ad esempio, un certo numero di fotoni non perpendicolari potrebbe riuscire a superare il setto, venendo rivelato, oppure un fotone inizialmente perpendicolare potrebbe essere fermato o deviato nell'attraversare il paziente; al contrario, può anche avvenire che un fotone inizialmente non perpendicolare venga deviato all'interno del paziente, perdendo energia e dirigendosi perpendicolarmente verso il rivelatore.
+    \item[Scintillatore] Sono cristalli che, se investiti da radiazione ionizzante, la convertono in parte in calore, in parte in luce visibile. Il meccanismo di scintillazione nei materiali inorganici dipende dagli stati energetici generati dal reticolo cristallino del materiale. In un cristallo puro, i livelli energetici che possono occupare gli elettroni variano con continuità all'interno di bande di energia; la banda occupata a più alta energia è la banda di valenza, mentre la banda vuota a più bassa energia è quella di conduzione, e le due bande sono separate da un intervallo di energie proibite di ampiezza dell'ordine dell'elettronvolt. Se il cristallo assorbe energia, un elettrone della banda di valenza può passare nella banda di conduzione, dando origine a una lacuna nella banda di valenza. L'elettrone nella banda di conduzione può, in un tempo brevissimo, tornare nella banda di valenza a riempire la lacuna che aveva lasciato, emettendo un fotone di energia simile a quello che lo aveva eccitato: questo fenomeno prende il nome di autoassorbimento. In un cristallo puro, dato che l’energia necessaria alla formazione di una coppia elettrone-lacuna è simile a quella rilasciata nella loro ricombinazione, gli spettri di emissione e di assorbimento si sovrappongono e il cristallo non è trasparente alla sua emissione. L'autoassorbimento può essere evitato, o comunque reso trascurabile, aggiungendo al cristallo un drogante, ovvero un atomo diverso da quelli del cristallo che ha la proprietà di generare dei livelli energetici intermedi fra la banda di valenza e la banda di conduzione. In questo modo, il cristallo riesce ad assorbire raggi $\gamma$, facendo saltare i suoi elettroni dalla banda di valenza a quella di conduzione oppure a uno dei nuovi livelli energetici generati dal drogante; quando gli elettroni cercheranno di tornare a livelli energetici più bassi, però, non lo faranno passando direttamente alla banda di valenza, ma perderanno energia \virgolette{a scalini} (immagine di destra della \figref{fig:collimatore}), ovvero passando per i livelli energetici generati dal drogante, e così facendo emetteranno tanti fotoni di energia minore (dal blu dello spettro del visibile all'ultravioletto), piuttosto che un unico fotone $\gamma$. Lo spettro di assorbimento e lo spettro di emissione risultano, così, completamente diversi e distinguibili.\\
+    I cristalli impiegati per la costruzione degli scintillatori sono generalmente alogenuri alcalini (ad esempio NaI), i quali hanno un elevato potere d’arresto che li rende particolarmente adatti a rivelare radiazioni penetranti. Sono tuttavia lenti, avendo tempi di risposta dell'ordine delle centinaia di nanosecondi. Lo ioduro di sodio fu il primo scintillatore inorganico, scoperto negli anni '40, e viene drogato con il tallio. Lo ioduro di cesio drogato con tallio (CsI(Tl)) è un'alternativa allo ioduro di sodio drogato, è migliore meccanicamente e resiste all'umidità. Il germanato di bismuto (BGO) ha un elevato potere d'arresto, ma una minore efficienza dello ioduro di sodio drogato; è spesso usato per rivelare i fotoni emessi dall'annichilazione dei positroni nella PET.
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[scale=0.6]{immagini/collimatore.png}\quad\includegraphics[scale=0.9]{immagini/scinti.png}
+    \caption{\label{fig:collimatore} \textit{A sinistra, schematizzazione di un collimatore di un rivelatore a scintillazione; a destra, bande energetiche di un cristallo drogato}.}
+\end{figure}
+
+\item[Tubi fotomoltiplicatori] Abbreviati in PMT, hanno il compito di convertire il segnale luminoso prodotto dalla diseccitazione degli elettroni in segnale elettrico (\figref{fig:pmt}). Benché emessi in sequenza da un unico raggio $\gamma$, i lampi di luce giungono al fotomoltiplicatore in un tempo inferiore alle possibilità di discriminazione temporale dello stesso, che li vede come un unico lampo luminoso, di intensità proporzionale all'energia del fotone $\gamma$ che li ha generati. Così, se il fotone incidente dissipa tutta la sua energia nel cristallo, viene mantenuta una perfetta proporzionalità tra la l'energia del raggio $\gamma$ e l'intensità della luce che giunge ai fotomoltiplicatori; ciò risulta di fondamentale importanza per i successivi stadi dell'elaborazione del segnale.\\
+Il funzionamento del fotomoltiplicatore si basa principalmente su due effetti: l’effetto fotoelettrico (per trasformare il segnale luminoso in segnale elettrico) e l’emissione secondaria (cioè l'elettromoltiplicazione). Il fotomoltiplicatore è costituito da un tubo in vetro al cui interno è stato praticato il vuoto, in cui è presente un anodo e diversi elettrodi che costituiscono i dinodi. I fotoni colpiscono attraverso una finestra di ingresso una superficie chiamata fotocatodo, ricoperta di uno strato di materiale che favorisce l’effetto fotoelettrico. I fotoelettroni emessi sono focalizzati da un elettrodo verso lo stadio di moltiplicazione. Questo stadio è costituito da una serie di elettrodi ciascuno caricato a un potenziale superiore al precedente. Il primo fotoelettrone subisce un'accelerazione a causa del campo elettrico e acquisisce energia cinetica; quando l'elettrone colpisce il primo elettrodo del dinodo, provoca l’emissione secondaria di elettroni. La struttura del sistema è progettata in modo che ciascun elettrone emesso da un elettrodo venga accelerato e provochi l'emissione di diversi elettroni dall'elettrodo successivo, generando un fenomeno a cascata che produce moltissimi elettroni da un solo fotoelettrone. Al termine della sequenza di elettrodi gli elettroni colpiscono un anodo, e un rapido impulso elettrico indicala rivelazione del fotone.\\
+I fotomoltiplicatori devono essere schermati magneticamente, in quanto un campo magnetico esterno (anche quello terrestre) può deviare il percorso degli elettroni al suo interno.
+\end{description}
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[scale=0.6]{immagini/pmt.png}
+    \caption{\label{fig:pmt} \textit{Schematizzazione del funzionamento di un tubo fotomoltiplicatore}.}
+\end{figure}
+
+\subsection{Radionuclidi e radiofarmaci}
+I radionuclidi usati in scintigrafia e SPECT devono avere come unico risultato delle loro reazioni spontanee l'emissione di un quanto $\gamma$ o X. La mancanza di qualsiasi decadimento di tipo particellare è fondamentale per evitare un'inutile ionizzazione degli atomi costituenti i tessuti del paziente. Il tecnezio-99 metastabile ($\mathrm{^{99m}Tc}$) è il radionuclide maggiormente utilizzato; più del 90\% degli studi di scintigrafia e SPECT utilizzano tale radionuclide.%
+\footnote{La scoperta del tecnezio risale al 1937, quando Carlo Perrier ed Emilio Segrè, che lavoravano in Italia nei laboratori dell'Istituto di Fisica dell'Università di Palermo, riuscirono a isolare del $\mathrm{^{97}Tc}$ da un campione di molibdeno sottoposto a bombardamento con deuteroni (nuclei di deuterio) nel ciclotrone dell'Università di Berkeley. All'elemento contraddistinto da numero atomico 43 fu attribuito il nome ufficiale di tecnezio subito dopo la fine della seconda guerra mondiale. Esso è stato il primo elemento prodotto artificialmente nella storia ed è praticamente assente sulla Terra. La sua rarità è dovuta al fatto che nessuno dei suoi isotopi è stabile. L'isotopo di interesse in medicina nucleare è unicamente il $\mathrm{^{99m}Tc}$, che decade in $\mathrm{^{99}Tc}$ con decadimento $\gamma$, tramite un riarrangiamento dei nucleoni sui loro livelli energetici.}
+Il tempo di decadimento del radionuclide utilizzato deve essere scelto accuratamente, ma bisogna tenere conto che quando si parla di tempo di dimezzamento di un radionuclide assimilato dal corpo umano, ci si riferisce alla quantità effettiva, dipendente sia dalle caratteristiche fisiche del radioisotopo sia da quelle metaboliche del radiofarmaco: infatti, il radionuclide continuerà a emettere radiazioni soltanto finché il radiofarmaco che lo contiene non verrà eliminato dall'organismo, dove ciascun radiofarmaco riesce a rimanere per un tempo caratteristico. La correlazione esistente tra queste grandezze è la seguente, dove compare il tempo di dimezzamento biologico:
+\begin{equation}
+    \frac{1}{T_{1/2}^\mathrm{E}} = \frac{1}{T_{1/2}} + \frac{1}{T_{1/2}^\mathrm{B}}\,.
+\end{equation}
+Occorre identificare un farmaco che sia assimilato soprattutto nell'organo di interesse, e in esso introdurre il tracciante radioattivo. A questo proposito, bisogna fare molta attenzione al fatto che la quantità di farmaco assunta dal paziente deve essere tanto modesta da non alterare la fisiologia dell'organo: il radiofarmaco deve solo trasportare nel tessuto d'interesse una quantità prestabilita di un certo radionuclide, senza modificarne la funzionalità.
+
+I radionuclidi impiegati in medicina nucleare si ottengono dal decadimento di altri radionuclidi di specie chimica diversa; tali radionuclidi, genitori della specie emittente voluta, sono chiamati mucche radioattive, e vengono fatti decadere all'interno di un generatore. Un generatore è un sistema che contiene un radionuclide \virgolette{padre}, a emivita relativamente lunga, il quale decade in un nuclide \virgolette{figlio}, anch'esso radioattivo, caratterizzato da una breve emivita e utilizzabile immediatamente nella preparazione di radiofarmaci.
+Per la preparazione del tecnezio-99m, che ha un'emivita di circa 6 ore, viene utilizzato il molibdeno-99 ($\mathrm{^{99}Mo}$), che invece ha emivita di 67,7 ore e decade secondo lo schema:
+\begin{equation*}
+    \mathrm{^{99}_{42}Mo} \to \mathrm{^{99m}_{43}Tc} + \mathrm{e}^- + \gamma\,.
+\end{equation*}
+Sulla colonnina del generatore (\figref{fig:mucca}), in mancanza di interventi esterni, sono  presenti sia il $\mathrm{^{99}Mo}$ sia il $\mathrm{^{99m}Tc}$; è possibile scegliere una resina a scambio ionico con caratteristiche tali da legare in modo indissolubile il molibdeno, lasciando invece completamente libero il tecnezio. Infine, tramite l’eluizione della colonnina del generatore si ottiene una soluzione radioattiva.
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[scale=0.85]{immagini/mucca.png}
+    \caption{\label{fig:mucca} \textit{Schematizzazione di un generatore}.}
+\end{figure}
+
+\subsection{Applicazioni}
+La scintigrafia e la SPECT sono utilizzate per ottenere lo stesso tipo di informazioni, sia sulla funzionalità di organi vari (ad esempio cuore, polmoni, fegato e tiroide), sia nell'individuazione di metastasi lungo tutto il corpo, indagine che può essere portata a termine con un'unica iniezione di tracciante.
+
+La risoluzione spaziale in SPECT (7-8\,mm) è inferiore a quella della PET (4-5\,mm). Al contrario della NMR, che si spinge fino a risoluzioni di 1\,mm ma è affetta da un basso rapporto segnale/rumore, le tecniche di medicina nucleare sono caratterizzate da bassa risoluzione spaziale ma alto rapporto segnale/rumore. La risoluzione dipende dal numero di posizioni angolari di acquisizione attorno alle singole fette e anche dalle proprietà geometriche di scintillatore e collimatore.\\
+Vediamo adesso alcune tecniche specifiche d'indagine.
+
+La \underline{scintigrafia ossea} ha un’elevata sensibilità ma non altrettanto buona specificità ed è utilizzata nella diagnosi di una serie di condizioni patologiche delle ossa, tra cui tumore dell'osso o metastasi, infiammazioni e fratture non visibili nelle radiografie. Il radiofarmaco più utilizzato è il metilen-difosfonato coniugato con il tecnezio-99 metastabile, indicato come $\mathrm{^{99m}Tc}$-MDP; questa molecola viene scelta proprio perché i fosfati sono elementi di base nella formazione delle ossa, e riescono a fissarsi su di esse. L'acquisizione delle immagini di solito viene eseguita dopo 3 ore dalla somministrazione del radiofarmaco, per dare tempo a quest'ultimo di fissarsi alle zone bersaglio. Un esempio di scintigrafia ossea è riportato nell'immagine di sinistra della \figref{fig:scintiossea}.
+
+L'\underline{\textit{imaging} miocardico di perfusione} (SPECT-MPI) è un esame miocardico in condizioni di stress che consente una valutazione delle patologie coronariche. È l’esame di medicina nucleare più diffuso ed è richiesto in ambito prechirurgico e in caso di dolori al petto. Ha una sensibilità di circa l'88\%, simile a quella di indagini cardiache effettuate con MRI o PET, ma specificità minore (61\%). Attualmente si usano radiofarmaci contenenti $\mathrm{^{99m}Tc}$ (tetrofosmina e sestamibi), ideali per essere rivelati dalla gamma camera. L’esame avviene dopo uno sforzo controllato e si inetta il radiofarmaco nel picco dello sforzo.
+
+L'\underline{\textit{imaging} cerebrale di perfusione} (SPECT-BPI) è un esame che valuta la capacità dei metaboliti di raggiungere determinati tessuti del cervello. Questo esame utilizza radiofarmaci che permeano la barriera emato-encefalica e permangono nel tessuto il tempo dell'esame; è indicato per la valutazione delle funzionalità cerebrali nei casi di ictus, ischemia, epilessia, demenza e infiammazione. Un esempio di BPI sovrapposto a MRI è riportato nell'immagine di destra della \figref{fig:scintiossea}.
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[scale=0.61]{immagini/scintiossea.png}\quad\includegraphics[scale=0.593]{immagini/bpi.png}
+    \caption{\label{fig:scintiossea} \textit{A sinistra, scintigrafia ossea total body; a destra, SPECT-BPI su MRI}.}
+\end{figure}
+
+\section{Tomografia a emissione di positroni}
+La \textbf{tomografia a emissione di positroni} (PET) dà informazioni di tipo fisiologico, permettendo di ottenere mappe dei processi funzionali all'interno dell'organismo. Il principio fisico alla base della PET è piuttosto semplice e si basa sull'annichilazione di elettroni con positroni; questi ultimi vengono prodotti da decadimenti $\beta^+$ di radionuclidi iniettati nel paziente. Quando avviene l'annichilazione si generano due fotoni $\gamma$, ciascuno avente energia di 511\,keV ed emessi nella stessa direzione ma con versi opposti, rispettivamente per la conservazione dell'energia e della quantità di moto. Il valore di 511\,keV è circa uguale al prodotto della velocità della luce al quadrato per la massa dell'elettrone.
+
+La distanza media che un positrone percorre nell'organismo prima di annichilarsi varia da 0,1 a 0,5\,mm, e dipende dalla sua energia e dal numero atomico del materiale in cui si trova il positrone stesso: ovviamente, più è alto il numero atomico, maggiore è il numero di elettroni, di conseguenza anche la probabilità di annichilazione aumenta. Siccome l'annichilazione avviene quando il positrone è in moto, sebbene nel sistema di riferimento del positrone i due fotoni siano emessi nella stessa direzione (a 180° l'uno dall'altro), nel sistema di riferimento del laboratorio, la quantità di moto del sistema elettrone-positrone subito prima dell'annichilazione può non essere nulla: questo implica una leggera deviazione ($\pm 0,25$°) dai 180°. Inoltre, si può avere una leggera deviazione ($\pm 40$\,eV) dall'energia prevista di 511\,keV.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{immagini/petm.png}
+    \caption{\textit{Macchina PET}.}
+    \label{fig:petm}
+\end{figure}
+
+Per mezzo di due rivelatori posti in opposizione è possibile rivelare i due fotoni in coincidenza, cioè entro un intervallo di tempo così breve da considerare gli eventi simultanei; tale intervallo non deve superare i 10\,ns. Un tale evento permette di individuare solo la linea di risposta (LOR) lungo la quale si trova il radionuclide emettitore del positrone. Per conoscere la posizione del radionuclide lungo la LOR si usano i \textit{detector block} (\figref{fig:detector}), cioè dei rivelatori costituiti da scintillatori suddivisi in piccoli cristalli. Il blocco è collegato a una matrice di fotomoltiplicatori sensibili alla posizione, in modo che la luce prodotta da un dato elemento colpisca i fotomoltiplicatori in maniera dipendente dalla posizione dell'elemento stesso all'interno del blocco. Ciò è possibile grazie ai rivelatori TOF, che migliorano la ricostruzione del segnale, diminuiscono il rumore tenendo conto della differenza tra i tempi di volo dei due fotoni collineari e riescono a identificare il punto in cui l'annichilazione è avvenuta. Un TOF deve avere una risoluzione temporale di almeno 200\,ps per poter identificare con sufficiente precisione (inferiore al centimetro) il punto in cui è avvenuta un'annichilazione. Da ogni rivelatore il segnale singolo viene amplificato e analizzato, ne viene identificata l’energia e successivamente i segnali utili vengono sottoposti alla verifica della coincidenza temporale, a seguito della quale quelli idonei vengono registrati.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.55\textwidth]{immagini/detector.png}
+    \caption{\textit{Detector block e detector rings}.}
+    \label{fig:detector}
+\end{figure}
+
+In questo procedimento sussistono due problemi: uno è la diffusione Compton, per la quale uno o entrambi i fotoni vengono deviati, di conseguenza, pur essendo generati dalla stessa annichilazione, i due fotoni non risultano appartenere alla stessa LOR e non vengono considerati validi. Il secondo problema è la possibile registrazione di due eventi non correlati che, per casualità, colpiscono il rivelatore in due punti opposti in istanti sufficientemente vicini da poter essere indizio di correlazione.
+
+\begin{comment}
+\begin{figure}[htp]
+    \centering
+    \includegraphics[scale=0.7]{detector.png}
+    \caption{\label{fig:detector} \textit{Detector block e detector rings}.}
+\end{figure}
+\end{comment}
+
+I limiti alla risoluzione della PET sono conseguenza di tre fattori:
+\begin{itemize}[label=$-$]
+    \item \emph{dimensione dei rivelatori}: dai 4 agli 8\,mm per cristallo, impedisce di avere una risoluzione inferiore ai 2-4\,mm;
+    \item \emph{antisimmetria della propagazione dei fotoni non perfetta}: porta un limite alla risoluzione di 1,5-2\,mm;
+    \item \emph{distanza percorsa dai positroni prima di annichilarsi}: inserisce un ulteriore limite di 0,1-0,5\,mm.
+\end{itemize}
+Attualmente, per l’impiego sull'uomo il limite teorico per la risoluzione è non inferiore a 2,5\,mm, ma nella pratica si ha una risoluzione di circa 4,5\,mm.
+
+\newpage

@@ -1,0 +1,108 @@
+\documentclass[12pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage{hyperref}
+\usepackage{geometry} % per la geometria del foglio
+    \geometry{
+        a4paper,
+        total={170mm,247mm},
+        left=20mm,
+        top=30mm,
+    }
+\usepackage{amsmath, amsthm, amssymb, mathtools}
+\usepackage{enumitem}
+\usepackage{physics}
+\usepackage{empheq, bm}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{wrapfig}
+\usepackage{subfig}
+\usepackage{float}
+\usepackage{verbatim}
+\usepackage{caption} % per avere didascalie migliori
+    \captionsetup{width=0.9\textwidth} % settings di caption
+    \DeclareCaptionFormat{custom} % un altro setting di caption
+    {
+        \centering #1#2\textit{\small{\sffamily #3}}
+    }
+    \captionsetup{format=custom}
+%\usepackage{upgreek}
+\usepackage[dvipsnames]{xcolor}
+\newcommand{\virgolette}[1]{``#1''}
+\usepackage{soul}
+\newcommand{\figref}[1]{figura \ref{#1}}
+\newcommand{\tabref}[1]{tabella \ref{#1}}
+\renewcommand{\eqref}[1]{equazione \ref{#1}}
+\hypersetup
+   {
+   %bookmarks=true,         % show bookmarks bar?
+    unicode=false,          % non-Latin characters in Acrobat’s bookmarks
+    pdftoolbar=true,        % show Acrobat’s toolbar?
+    pdfmenubar=true,       % show Acrobat’s menu?
+    pdffitwindow=false,     % window fit to page when opened
+    pdfstartview={FitH},    % fits the width of the page to the window
+    pdftitle={Appunti di fisica biomedica-sanitaria},    % title
+    pdfauthor={Simone Chiarella},     % author
+    pdfsubject={Fisica biomedica-sanitaria},   % subject of the document
+    pdfcreator={Simone Chiarella},   % creator of the document
+   %pdfproducer={Producer}, % producer of the document
+   %pdfkeywords={keyword1, key2, key3}, % list of keywords
+    pdfnewwindow=false,      % links in new PDF window
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=blue,          % color of internal links (change box color with linkbordercolor)
+    citecolor=red,        % color of links to bibliography
+    filecolor=magenta,      % color of file links
+    urlcolor=cyan,           % color of external links
+   %urlbordercolor={1 1 1}  % color of border around links
+   }
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\DeclareMathOperator{\sen}{sin}
+\DeclareMathOperator{\senc}{sinc}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\renewcommand{\Vec}{\bm}
+\addto{\captionsitalian}{\renewcommand{\abstractname}{}}
+%\renewcommand*\figurename{Fig.\@}
+%\renewcommand*\tablename{Tab.\@}
+
+\title{Appunti dal corso di\\\vspace{10 pt} \textsc{ Elementi di Fisica Biomedica-Sanitaria}}
+\author{Simone Chiarella}
+\date{23 Settembre 2021\\\vspace{25pt}
+(modificato il 15 luglio 2024 da Leandro Ye)}
+
+\begin{document}
+\maketitle
+%\shipout\hbox{}
+
+\begin{abstract}
+\large{Nel presente documento ho voluto raccogliere i contenuti del corso di \virgolette{Elementi di fisica biomedica-sanitaria}, tenuto nell'ambito del corso di laurea in Fisica dell'Università di Bologna durante l'a.a. 2020/2021.
+La trattazione degli argomenti contenuti in questa dispensa cerca di essere il più essenziale possibile, a volte eliminando alcune piccole parti da me ritenute \virgolette{eccessive} per una trattazione di questo livello e comunque non indispensabili ai fini del superamento dell'esame, anche con ottimi voti.
+Allo stesso tempo, con lo scopo di rendere più chiara la spiegazione di alcuni argomenti, gli appunti presi durante le lezioni e i seminari sono stati integrati con informazioni aggiuntive reperite da siti specializzati, libri di testo e tesi di laurea; si tratta comunque di informazioni di base che non necessitano di essere accompagnate da fonte, considerato anche il carattere didattico e interno di questo documento.
+Le immagini utilizzate sono state reperite nella stragrande maggioranza dei casi dalle diapositive presentate durante le lezioni e in nessun caso sono state realizzate da me.\\
+Spero che il mio lavoro possa tornare utile al lettore di questo scritto.\\
+
+\hfill Simone Chiarella\\
+\vspace{4cm}
+
+\noindent Ciao! Sono Leandro Ye e sono uno studente del corso di Fisica. Studiando da questo documento ho voluto migliorarne la leggibilità. Quello che ho fatto è modificare la dimensione dei caratteri, correggere le posizioni delle immagini in seguito al ridimensionamento e infine fare piccoli ritocchi qua e là. Non ho modificato il contenuto. Potrete trovare il file originale cliccando su \href{https://github.com/sim1-99/medical-physics-notes/tree/main}{questo link}, mentre potete avere accesso a questo file in \href{https://www.overleaf.com/read/jdqnvbtnkhbg#03a66c}{quest'altro link}.\\
+
+\hfill Leandro Ye}
+
+\end{abstract}
+\shipout\hbox{}
+
+\tableofcontents
+
+\input{tex/1-mr}
+
+\input{tex/2-ultrasuoni}
+
+\input{tex/3-ionizzanti}
+
+\input{tex/4-radioprotezione}
+
+\input{tex/5-med-nucleare}
+
+\input{tex/6-elettrofisiologia}
+
+\end{document}

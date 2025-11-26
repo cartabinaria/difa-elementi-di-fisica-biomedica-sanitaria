@@ -1,0 +1,281 @@
+\section{Funzionamento e principi fisici}
+Affinché si manifesti il fenomeno, il primo passo da fare è applicare un campo magnetico alla materia d'interesse, in modo da indurre una polarizzazione negli spin dei nuclei e orientarli tutti nello stesso verso; questo effetto si può ottenere in maniera più efficace se ci si trova a basse temperature, in modo che l'agitazione termica non influisca più di tanto.
+La polarizzazione degli spin avrà come conseguenza il manifestarsi di una grandezza macroscopica: la magnetizzazione.
+Per poterla rivelare, si applica un secondo campo magnetico, perpendicolare al primo e oscillante con frequenza circa uguale alla frequenza di risonanza dei nuclei che vogliamo eccitare.
+A questo punto, quando il sistema è eccitato, si spegne il secondo campo magnetico e, tramite un'apposita strumentazione hardware (ad esempio, una bobina ricetrasmittente), si studiano le radiazioni emesse dai nuclei eccitati, misurando i vari tempi di rilassamento, finché il sistema non sarà tornato alla condizione di equilibrio.
+
+Vediamo ora quali sono i principi e le leggi fisiche dietro la risonanza magnetica nucleare.
+Come detto, i nuclei possono assumere valori del momento angolare di spin interi o seminteri.
+La presenza di uno spin diverso da zero fornisce i nuclei di un momento magnetico:
+\begin{equation}
+    \Vec{\mu} = \gamma_\mathrm{n} \bigg( \frac{\mathrm{h}}{2\pi} \bigg) \Vec{I}\,,
+\end{equation}
+dove $\gamma_\mathrm{n}$ è il rapporto giromagnetico per il nucleo e $\Vec{I}$ è il momento angolare di spin.
+Esiste un metodo molto semplice per capire se un nucleo può essere utilizzato per svolgere NMR oppure no, e si basa sul numero di massa \textit{A} e sul numero atomico \textit{Z} del nucleo stesso:
+\begin{itemize}[label=$-$]
+    \item se \textit{A} e \textit{Z} sono pari, allora $\Vec{I}=0$, $\Vec{\mu}=0$ e non sarà possibile fare NMR ($\mathrm{^{12}C}$, $\mathrm{^{16}O}$);
+    \item se \textit{A} è pari e \textit{Z} è dispari, allora $\Vec{I}$ ha modulo intero, $\Vec{\mu}$ è non nullo e sarà possibile fare NMR ($\mathrm{^2H}$, $\mathrm{^{14}N}$);
+    \item se \textit{A} è dispari, allora $\Vec{I}$ ha modulo semintero, $\Vec{\mu}$ è non nullo e sarà possibile fare NMR ($\mathrm{^1H}$, $\mathrm{^{13}C}$, $\mathrm{^{23}Na}$).
+\end{itemize}
+Nella \figref{fig:iso} è possibile vedere i principali isotopi impiegabili in biomedicina che possono essere soggetti a NMR.
+Salta subito all'occhio il notevole rapporto giromagnetico del nucleo di idrogeno, il che giustifica il suo ampio utilizzo  per NMR in ambito clinico, in quanto un elevato rapporto giromagnetico produce un elevato momento magnetico del nucleo e restituisce un segnale più intenso.
+Gli isotopi con spin uguale a 1 non sono utilizzabili in ambito clinico perché richiedono tecniche molto avanzate.
+Sempre in ambito clinico, non trova impiego neanche il $\mathrm{^{19}F}$, ma viene utilizzato per lo studio di diversi farmaci chemioterapici somministrati in fase di sperimentazione agli animali.
+
+Il risultato di una osservazione della componente \textit{z} del momento angolare $\Vec{I}$ di un singolo nucleo in uno stato di base è un numero \textit{m} intero o semintero compreso tra \textit{I} e \textit{-I}: \textit{m}, quindi, potrà assumere $2I+1$ valori.
+Di conseguenza, si avranno $2I+1$ valori anche per la misura della componente \textit{z} del momento magnetico:
+\begin{equation}
+    \mu_z=\gamma_\mathrm{n} \hbar m\,.
+\end{equation}
+Se il nucleo è in uno stato che è la sovrapposizione di stati di base, il risultato di una misura di $\hat{I}_z$ è:
+\begin{equation}
+    \sum_m \abs{a_m}^2 m\,.
+    \label{sum}
+\end{equation}
+
+\begin{wrapfigure}{R}{0.55\textwidth}
+    \centering
+    \includegraphics[width=0.5\textwidth]{immagini/iso.png}
+    \caption{\textit{Isotopi impiegabili per NMR in biomedicina}.}
+    \label{fig:iso}
+\end{wrapfigure}
+
+\noindent Per un singolo nucleo, il significato dell'\eqref{sum} è che la misura ha la probabilità $\abs{a_m}^2$ di restituire il risultato \textit{m}.
+Se, invece, abbiamo un gran numero di nuclei identici, la somma rappresenta la media degli \textit{m} pesati sulle probabilità $\abs{a_m}^2$.
+Da un punto di vista energetico, nel caso dello spin l'energia è espressa dall'operatore hamiltoniano:
+\vspace{4 pt}
+\begin{equation}
+    \hat{H}=-\gamma \hbar \hat{I}_z B_0\,,
+    \label{h}
+\end{equation}
+dove $B_0$ è il modulo del campo magnetico costante. Il campo magnetico dà luogo all'effetto Zeeman, cioè alla separazione dei livelli energetici, i quali avranno energia definita dagli autovalori dell'operatore hamiltoniano:
+\vspace{4 pt}
+\begin{equation}
+    E_m=-\gamma \hbar m B_0\,.
+\end{equation}
+Per il nucleo di idrogeno $I=\frac{1}{2}$, quindi $m=\pm \frac{1}{2}$ e si avranno due livelli energetici con differenza di energia pari a $\gamma \hbar B_0$.
+Si dimostra, per $I=\frac{1}{2}$, che:
+\begin{equation}
+    \langle \Psi|I_x|\Psi \rangle=\frac{1}{2} \Big(\abs{a_{\frac{1}{2}}^* a_{-\frac{1}{2}}}-\abs{a_{\frac{1}{2}} a_{-\frac{1}{2}}^*} \Big)= \frac{1}{2} \Big(\abs{a_{\frac{1}{2}}}^2-\abs{a_{-\frac{1}{2}}}^2 \Big)\,.
+    \label{psi}
+\end{equation}
+La quantità tra parentesi nell'\eqref{psi} riflette la coerenza di fase fra i due stati di spin e si dice che descrive il grado di \textit{single quantum coherence} dell'insieme.
+Il risultato può essere interpretato dicendo che il valore di aspettazione medio è determinato dalla differenza di popolazione fra i due livelli energetici.
+In condizioni di equilibrio tale differenza è nulla e determinata dalla distribuzione di Boltzmann:
+\begin{equation}
+    |a_{\pm \frac{1}{2}}|^2 = \frac{\exp{\pm \dfrac{\hbar \gamma B_0}{2\mathrm{k_B}T}}}{\exp{-\dfrac{\hbar \gamma B_0}{2\mathrm{k_B}T}}+\exp{\dfrac{\hbar \gamma B_0}{2\mathrm{k_B}T}}}\,.
+\end{equation}
+La grandezza fisica macroscopica osservabile, alla fine, sarà:
+\begin{equation}
+    \Vec{M}=N \gamma \hbar \big( \langle I_x \rangle \Vec{i} + \langle I_y \rangle \Vec{j} + \langle I_z \rangle \Vec{k} \big)\,,
+\end{equation}
+dove \textit{N} è il numero degli spin; all'equilibrio termico esiste una magnetizzazione longitudinale diretta come il campo magnetico, ma non c'è coerenza tra gli spin, ragion per cui la magnetizzazione trasversale sarà nulla.\\
+In un sistema di nuclei, per un generico valore di \textit{I}, essi si disporranno sui $2I+1$ livelli energetici occupando prima quelli a energia più bassa.
+La densità di occupazione segue la seguente legge:
+\begin{equation}
+    \frac{n_{m-1}}{n_m}=\exp{-\frac{\hbar \omega_0}{\mathrm{k_B}T}} \,.
+\end{equation}
+Per $\mathrm{^1H}$ a temperatura ambiente e alla frequenza $\nu_0 = 100$\,MHz, si ha $\mathrm{k_B}T \gg \hbar \omega_0$: in tal caso, la differenza di popolazione è proporzionale all'intensità del campo magnetico e la magnetizzazione segue la legge di Curie:
+\begin{equation}
+    \Vec{M}_0=N \frac{\gamma^2 \hbar^2 I(I+1)}{3\mathrm{k_B}T}\Vec{B}_0 \,.
+\end{equation}
+Quando il sistema di nuclei assorbe energia, la magnetizzazione nucleare di equilibrio viene perturbata: tutte le informazioni sui nuclei, compreso il segnale che dà luogo a MRI, ci pervengono dall'evoluzione del sistema nel suo ritorno all'equilibrio.
+Nel caso dei nuclei di $\mathrm{^1H}$, la legge che regola il fenomeno di variazione della magnetizzazione è:
+\begin{equation}
+    \Vec{M}_0=\frac{N \gamma \hbar \mu}{2\mathrm{k_B}T}\Vec{B}_0 = N\,\frac{\gamma^2 \hbar^2}{4\mathrm{k_B}T}\Vec{B}_0 \,.
+\end{equation}
+
+\subsection{Precessione di Larmor}
+Per comprendere al meglio l'evoluzione del sistema durante l'eccitazione, è necessario introdurre il fenomeno quantistico noto come \textbf{precessione di Larmor}, che si manifesta quando si applica un campo magnetico esterno a un atomo.
+In particolare, se i nuclei atomici sono dotati di momento magnetico, questi eseguiranno dei moti di precessione (a mo' di trottola) attorno alla direzione del campo magnetico esterno.
+Se indichiamo con $\Vec{M}$ il momento meccanico responsabile della precessione e con $\Vec{S}$ il momento angolare, allora vale:
+\begin{equation}
+    \Vec{M}=\frac{\mathrm{d}\Vec{S}}{\mathrm{d}t}=\Vec{\mu}\wedge\Vec{B}_0\,.
+\end{equation}
+Poiché $\Vec{\mu}=\gamma \Vec{S}$, allora:
+\begin{equation}
+    \frac{\mathrm{d}\Vec{\mu}}{\mathrm{d}t}=\Vec{\mu}\wedge\gamma\Vec{B}_0\,.
+\end{equation}
+Definiamo $\omega=\gamma B_0$, dove $B_0$ è il modulo del campo magnetico esterno, e infine otteniamo la \textbf{frequenza di Larmor} (o frequenza di risonanza):
+\begin{equation}
+    \boxed{\nu=\frac{\omega}{2\pi}=\frac{\gamma B_0}{2\pi}}
+    \label{larmor}
+\end{equation}
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.77]{immagini/larmor.png}\quad\includegraphics[scale=0.78]{immagini/precessione.png}
+\caption{\label{fig:larmor} \textit{Rappresentazione grafica della precessione di Larmor}.}
+\end{figure}
+
+La precessione di Larmor trova riscontro in meccanica quantistica già nell'equazione di Schrödinger:
+\begin{equation}
+    \mathrm{ih}\frac{\partial}{\partial t}|\Psi(t)\rangle=\hat{H}|\Psi(t)\rangle\,.
+\end{equation}
+Se \textit{\^H} è costante, si ha:
+\begin{equation}
+    |\Psi(t)\rangle=U(t)|\Psi(0)\rangle\,,
+\end{equation}
+dove $U(t)=\exp{-\mathrm{i}Ht/\hbar}$. Ricordando l'\eqref{h}, si ottiene:
+\begin{equation}
+    U(t)=\mathrm{e}^{\mathrm{i}\gamma B_0 I_z t}\,,
+\end{equation}
+cioè l'evoluzione del sistema consiste nella rotazione in senso orario di un angolo $\gamma B_0 t$ attorno a \textit{z}; in presenza di un campo magnetico tutti gli stati precedono alla frequenza di Larmor data dall'\eqref{larmor}.
+Se invece di un nucleo si estende il ragionamento a un sistema di nuclei, non parleremo più dei singoli momento angolare $\Vec{S}$ e momento magnetico $\Vec{\mu}$ del nucleo che precede attorno alla direzione del campo magnetico, ma piuttosto ci si concentra sul momento angolare macroscopico $\Vec{J}$ e sulla magnetizzazione $\Vec{M}=\gamma \Vec{J}$ che precede attorno alla direzione del campo magnetico esterno.
+
+\begin{wrapfigure}{R}{0.5\textwidth}
+    \centering
+    \includegraphics[width=0.40\textwidth]{immagini/b-1.png}
+    \caption{\textit{Rappresentazione delle grandezze fisiche in gioco nella NMR}.}
+    \label{fig:b1}
+\end{wrapfigure}
+
+Tutti gli effetti visti finora (effetto Zeeman, comparsa della magnetizzazione, precessione di Larmor) sono conseguenze del primo campo magnetico costante $\Vec{B}_0$, ma, come accennato, per eccitare il sistema abbiamo bisogno di un secondo campo magnetico $\Vec{B}_1$, perpendicolare a $\Vec{B}_0$, che ruota attorno all'asse \textit{z} (si veda la \figref{fig:b1}) con frequenza pari alla frequenza di Larmor.
+Per effetto dell'applicazione di $\Vec{B}_1$, la direzione della magnetizzazione non esegue più solo una precessione attorno a $\Vec{B}_0$ ma varia anche di un angolo di nutazione che dipende dal tempo di applicazione di $\Vec{B}_1$:
+\begin{equation}
+    \alpha = \gamma B_1 t\,.
+\end{equation}
+In pratica, l'angolo di nutazione aumenta fin quando la magnetizzazione si porta dall'asse \textit{z} al piano \textit{xy} ($\alpha = 90$°) oppure dall'asse \textit{z} all'asse \textit{-z} ($\alpha = 180$°).
+
+\subsection{Rilassamento}
+Come già accennato, è il ritorno della magnetizzazione all'equilibrio il fenomeno che ci permette di poter ottenere informazioni sul sistema ed, eventualmente, produrre immagini (MRI).
+Tale processo è definito \textbf{rilassamento} e consiste nel ritorno della componente longitudinale della magnetizzazione al valore massimo, contestualmente all'annullamento della componente trasversale.
+Chiaramente il sistema ha bisogno di tempo per poter completare il rilassamento, come insegna l'esperienza di Gorter del 1942.
+Gorter, ancora prima di Purcell e Bloch, voleva rivelare l'assorbimento di energia da parte di nuclei $\mathrm{^1H}$ in acqua o di $\mathrm{^{19}F}$ in sostanze solide, ma non conoscendo il tempo di rilassamento longitudinale, che può essere anche di diversi secondi, si ritrovò a eccitare continuamente il sistema senza dargli il tempo necessario per poter tornare all'equilibrio; l'esperienza si rivelò un insuccesso.
+I rilassamenti delle due componenti seguono processi fisici differenti e sono entrambi descritti dalle equazioni di Bloch.
+Tratteremo separatamente i due rilassamenti concentrandoci proprio sui tempi di rilassamento.
+
+\begin{wrapfigure}{R}{0.5\textwidth}
+    \centering
+    \includegraphics[width=0.45\textwidth]{immagini/trasversale.png}
+    \caption{\textit{Rappresentazione grafica del rilassamento trasversale con particolare attenzione alla perdita di coerenza di fase}.}
+    \label{fig:trasversale}
+\end{wrapfigure}
+
+Il \underline{rilassamento trasversale} è un processo entropico che si manifesta a causa della sfasatura dei gruppi di spin: se dopo aver applicato un angolo di nutazione di 90° alla magnetizzazione spegniamo il campo eccitante $\Vec{B}_1$, ci si potrebbe aspettare di primo acchito che i diversi spin che costituiscono la magnetizzazione continuino a precedere in senso orario attorno al campo $\Vec{B}_0$ tutti con la stessa frequenza, ma in realtà ciò non succede per due motivi:
+\begin{enumerate}
+    \item gli spin interagiscono fra loro, sfasandosi a vicenda;
+    \item $\Vec{B}_0$ non è mai perfettamente omogeneo, perché viene deformato dalla materia stessa che attraversa, sia essa diamagnetica che, soprattutto, paramagnetica o ferromagnetica (come l'emoglobina, che contiene un atomo di ferro).
+\end{enumerate}
+Tutto ciò induce uno sfasamento nei diversi gruppi di spin che perdono la loro coerenza di fase (\figref{fig:trasversale}) e alla fine assumono tutti una propria frequenza diversa dalla frequenza di Larmor che possedevano inizialmente: di conseguenza, la magnetizzazione, che costituisce il segnale, tende a zero.
+
+\noindent L'equazione di Bloch trasversale è:
+\begin{equation}\label{bloch_trans}
+    \frac{\mathrm{d}M_{xy}(t)}{\mathrm{d}t}=-\frac{M_{xy}(t)}{\mathrm{T_2}} \Rightarrow \boxed{M_{xy}(t)=M_{xy}(0)\,\mathrm{e}^{-\frac{t}{\mathrm{T_2}}}}
+\end{equation}
+In realtà, il $\mathrm{T_2}$ presente nell'equazione \ref{bloch_trans} è un $\mathrm{T_2^*}$, ovvero è il tempo di rilassamento trasversale che considera anche la non uniformità di $\Vec{B}_0$, mentre a noi interessa il vero $\mathrm{T_2}$, che è il tempo di rilassamento dovuto esclusivamente all'interazione reciproca tra spin.
+Occorre, dunque, elaborare un metodo per eliminare il contributo al rilassamento trasversale dovuto alla non uniformità del campo magnetico e calcolare $\mathrm{T_2}$: per riuscirci, ci si serve il concetto di eco.
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[scale=0.5]{immagini/eco.png}
+    \caption{\textit{Esempio generico di un segnale eco}.}
+    \label{fig:eco}
+\end{figure}
+
+\noindent In generale, l'eco è un qualsiasi segnale con ampiezza minima all'inizio, che aumenta col tempo fino a un massimo per poi diminuire di nuovo, come mostrato nella \figref{fig:eco}.
+Si ha un eco quando il segnale si sviluppa da un periodo di incoerenza a un periodo di coerenza.
+In particolare, la tipologia di eco utile ai fini della trattazione è la \textit{spin echo}, che possiamo fare emergere dal processo di rilassamento trasversale.
+Infatti, se dopo aver applicato alla magnetizzazione un impulso di 90° in fase di eccitazione, applichiamo (dopo un certo tempo, di cui si parlerà in seguito) un altro impulso di 180°, l'effetto che questo impulso avrà sugli spin sarà quello di ruotarli tutti di 180°, per l'appunto.
+Bisogna ricordarsi che gli spin hanno già perso la loro coerenza di fase quando l'impulso di 180° viene applicato, ma continuano a ruotare in senso orario nel piano \textit{xy} perpendicolare a $\Vec{B}_0$, e continueranno a farlo anche dopo l'inversione di 180°.
+Alla fine, dopo un lasso di tempo esattamente uguale al tempo che intercorre tra i due impulsi, gli spin riacquisteranno coerenza di fase e la magnetizzazione ritroverà l'intensità che possedeva prima che il processo entropico iniziasse.
+Definiamo il tempo di eco $T_\mathrm{E}$ come il tempo che separa l'applicazione del primo impulso dalla rifocalizzazione degli spin; di conseguenza il tempo che separa i due impulsi sarà pari a $\frac{T_\mathrm{E}}{2}$.
+Nella \figref{fig:riepilogo} si può vedere un riepilogo di tutto il processo.
+In particolare, si nota che se le interazioni fra spin fossero \virgolette{congelate} e si considerassero solo le disomogeneità del campo magnetico, i cui effetti sono resi nulli proprio dalla \textit{spin echo}, il segnale si rifocalizzerebbe completamente; se invece \virgolette{scongeliamo} le interazioni tra spin, il segnale sarà meno intenso di quello iniziale, come si può vedere dal picco dell'eco, che è più basso del picco iniziale del segnale.
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[scale=0.37]{immagini/riepilogo.jpg}
+    \caption{\textit{Processo di rilassamento trasversale con sequenza spin echo}.}
+    \label{fig:riepilogo}
+\end{figure}
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.5]{immagini/tec.png}
+\caption{\label{fig:tec} \textit{MRI trasversale di un cervello per diversi tempi di eco}.}
+\end{figure}
+
+\begin{wrapfigure}{R}{0.5\textwidth}
+    \centering
+    \includegraphics[width=0.45\textwidth]{immagini/te.png}
+    \caption{\textit{Intensità del segnale in funzione del tempo di eco per rilassamento trasversale di materia grigia, materia bianca e liquido cefalorachidiano}.}
+    \label{fig:te}
+\end{wrapfigure}
+
+Se non si considerano le disomogeneità che la materia analizzata induce nel campo, il tempo di rilassamento $\mathrm{T_2^*}$ coincide con $\mathrm{T_2}$; in altre parole, dopo un tempo $T_\mathrm{E}$ dall'applicazione del primo impulso, è come se il nostro sistema si sia evoluto con costante di tempo $\mathrm{T_2}$ invece che $\mathrm{T_2^*}$.
+Il tempo $T_\mathrm{E}$ che si sceglie, come pure la sequenza di impulsi, condiziona molto la qualità delle immagini.
+Ad esempio, nelle acquisizioni MRI riportate nella \figref{fig:tec}, si riesce a distinguere con grande facilità il liquor (che appare bianco) da tutto il resto, mentre la materia grigia e la materia bianca riescono vagamente a distinguersi solo per alcuni tempi di eco, segno che la sequenza di applicazione degli impulsi non è adeguata.
+La ragione del poco contrasto presente tra le due materie solide e dell'alto contrasto fra la parte liquida e quella solida del cervello è riscontrabile nella \figref{fig:te}; si può notare, infatti, come la sequenza di impulsi applicati riesca a separare molto bene il segnale proveniente dal liquido cefalorachidiano, che si mantiene piuttosto alto, da quelli provenienti dalla materia solida, che emettono un segnale di intensità quasi identica.
+
+Un ultimo importante parametro per il rilassamento trasversale è il tempo di ripetizione $T_\mathrm{R}$, ossia il tempo che deve passare prima di poter rieccitare il sistema, in caso si desideri avere ulteriori informazioni sulla materia in esame.
+Si può dimostrare un'utile espressione per il modulo della magnetizzazione in funzione di $T_\mathrm{R}$ e $T_\mathrm{E}$:
+\begin{equation}
+    M(T_\mathrm{R},T_\mathrm{E})= M_0 \Big[1-\mathrm{e}^{-\frac{T_\mathrm{R}}{\mathrm{T_1}}} \Big(\mathrm{e}^{-\frac{T_\mathrm{E}}{2\mathrm{T_1}}}-1 \Big) \Big]\mathrm{e}^{-\frac{T_\mathrm{E}}{\mathrm{T_2}}}\,,
+    \label{segnale}
+\end{equation}
+dove $\mathrm{T_1}$, come si vedrà tra un attimo, è il tempo di rilassamento longitudinale.
+\newpage
+Il \underline{rilassamento longitudinale} è un processo energetico che si manifesta a causa dello scambio di energia fra il sistema di spin, che ha assorbito energia, e il reticolo al quale tale energia viene ceduta: in pratica, quando il campo eccitante $\Vec{B}_1$ viene spento, la componente longitudinale della magnetizzazione ricompare e la magnetizzazione non fa altro che riportarsi in direzione parallela al campo $\Vec{B}_0$.\\
+L'equazione di Bloch longitudinale è:
+
+\begin{gather}
+    \frac{\mathrm{d}M_z(t)}{\mathrm{d}t}=-\frac{M_z(t)-M_0}{\mathrm{T_1}} \\\Rightarrow \boxed{M_z(t)=M_z(0)\,\mathrm{e}^{-\frac{t}{\mathrm{T_1}}}+M_0 \Big(1-\mathrm{e}^{-\frac{t}{\mathrm{T_1}}} \Big)}
+\end{gather}
+
+\begin{wrapfigure}{R}{0.4\textwidth}
+    \centering
+    \includegraphics[width=0.35\textwidth]{immagini/long.png}
+    \caption{\textit{Applicazione degli impulsi e modulo della magnetizzazione in funzione del tempo $\tau$ per rilassamento longitudinale}.}
+    \label{fig:long}
+\end{wrapfigure}
+
+\noindent Come per il rilassamento trasversale, per calcolare $\mathrm{T_1}$ è sufficiente applicare una coppia di impulsi alla materia da indagare.
+Per eccitare il sistema si applica un primo impulso di 180°, in modo da ribaltare la magnetizzazione e portarla dal semiasse positivo di \textit{z} a quello negativo; un secondo impulso di 90°, applicato dopo un tempo $\tau$, servirà successivamente per avere informazioni sulla magnetizzazione longitudinale.
+In seguito al ribaltamento della magnetizzazione, come mostrato nella \figref{fig:long}, si avrà $M_z(0)=-M_0$ e, sostituendo nell'equazione di Bloch longitudinale si ottiene:
+\begin{equation}
+    M_z(\tau)=M_0 \Big(1-2\mathrm{e}^{-\frac{\tau}{\mathrm{T_1}}} \Big)\,.
+    \label{Mz}
+\end{equation}
+Supponiamo di voler ottenere un'immagine MRI per un campione costituito da due tessuti diversi: il nostro scopo sarà mettere in evidenza uno di questi due tessuti, cercando di impostare i parametri in modo che l'altro non restituisca segnale o lo faccia debolmente rispetto al primo.
+L'equazione da considerare sarà semplicemente la somma di due equazioni dello stesso tipo dell'\eqref{Mz} per i due tessuti:
+\begin{equation}
+    S(\tau)=S_1 \Big(1-2\mathrm{e}^{-\frac{\tau}{\mathrm{T_{11}}}} \Big) + S_2 \Big(1-2\mathrm{e}^{-\frac{\tau}{\mathrm{T_{12}}}} \Big)\,.
+\end{equation}
+Poniamo uguale a zero il segnale del primo tessuto e otterremo il valore di $\tau$ che stiamo cercando:
+\begin{equation}
+    S_1 \Big(1-2\mathrm{e}^{-\frac{\tau}{\mathrm{T_{11}}}} \Big)=0 \hspace{3 pt} \Rightarrow \hspace{3 pt} 2\mathrm{e}^{-\frac{\tau}{\mathrm{T_{11}}}}=1 \hspace{3 pt} \Rightarrow \hspace{3 pt} \ln2=\frac{\tau}{\mathrm{T_{11}}} \hspace{3 pt} \Rightarrow \hspace{3 pt} \tau=\mathrm{T_{11}}\ln2\,.
+    \label{tau}
+\end{equation}
+L'utilità dell'\eqref{tau} può essere compresa osservando la \figref{fig:flair}, la quale mostra due immagini ottenute con MRI e pesate in $\mathrm{T_2}$: l'immagine di sinistra mette in evidenza tessuti come meningi e liquor, mentre quella di destra mette in evidenza la materia cerebrale vera e propria.
+Per ottenerla è stata impiegata proprio l'\eqref{tau}: infatti, conoscendo $\mathrm{T_1}$ del tessuto che vogliamo oscurare ($\mathrm{T_1}=2000$\,ms) si può calcolare $\tau$, ovvero il tempo dopo il quale dovremo applicare il secondo impulso: $\tau = 2000\,\text{ms} \times \ln2 = 1400$\,ms.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.4]{immagini/flair.png}
+\caption{\label{fig:flair} \textit{MRI pesato in $\mathrm{T_2}$ con tecniche diverse, in modo da mettere in evidenza tessuti differenti}.}
+\end{figure}
+
+Il segnale di un voxel (equivalente volumetrico del pixel) in MRI acquisito con sequenza \textit{spin echo} (SE) per un dato $\mathrm{M}_0$ è dato da:
+\begin{equation}
+    M(T_\mathrm{R},T_\mathrm{E})= \mathrm{M}_0 \Big[1-\mathrm{e}^{-\frac{T_\mathrm{R}}{\mathrm{T_1}}} \Big(2\mathrm{e}^{\frac{T_\mathrm{E}}{2\mathrm{T_1}}}-1 \Big) \Big]\mathrm{e}^{-\frac{T_\mathrm{E}}{\mathrm{T_2}}}\,,
+    \label{trte}
+\end{equation}
+A partire dall'\eqref{trte} è già possibile capire, a grandi linee, il valore che è necessario assegnare ai parametri per ottenere un'immagine pesata in un modo piuttosto che in un altro. Facciamo quale esempio:
+\begin{itemize}[label=$-$]
+    \item per un'immagine pesata in densità di protoni dobbiamo rendere dominante $\mathrm{M_0}$, perciò bisognerà fare in modo che $\mathrm{e}^{-\frac{T_\mathrm{R}}{\mathrm{T_1}}}$ tenda a 0 e che $\mathrm{e}^{-\frac{T_\mathrm{E}}{\mathrm{T_2}}}$ tenda a 1, impostando $T_\mathrm{R} \geq 5\mathrm{T_1}$ e $T_\mathrm{E} \ll \mathrm{T_2}$;
+    \item per un'immagine pesata in $\mathrm{T_2}$ dobbiamo rendere dominante $\mathrm{e}^{-\frac{T_\mathrm{E}}{\mathrm{T_2}}}$, perciò bisognerà fare in modo che $\mathrm{e}^{-\frac{T_\mathrm{R}}{\mathrm{T_1}}}$ tenda a 0, impostando $T_\mathrm{R} \geq 5\mathrm{T_1}$ e $T_\mathrm{E} \geq \mathrm{T_2}$;
+    \item per un'immagine pesata in $\mathrm{T_1}$ dobbiamo rendere dominante $\mathrm{e}^{-\frac{T_\mathrm{R}}{\mathrm{T_1}}}$, perciò bisognerà fare in modo che $\mathrm{e}^{-\frac{T_\mathrm{E}}{\mathrm{T_2}}}$ tenda a 1, impostando $T_\mathrm{R} \leq \mathrm{T_1}$ e $T_\mathrm{E} \ll \mathrm{T_2}$.
+\end{itemize}
+
+Nella \figref{fig:uovo} possiamo vedere un esempio per comprendere meglio la correlazione fra i tempi di rilassamento e i contrasti fra i vari tessuti.
+Nell'acquisizione in densità di protoni si vede come il segnale proveniente dall'albume sia più intenso, segno che esso contiene più protoni rispetto al tuorlo.
+Nell'immagine pesata in $\mathrm{T_2}$, invece, l'albume emette più segnale del tuorlo, il che ci dice che il tempo di rilassamento trasversale dell'albume è più lungo di quello del tuorlo.
+Al contrario, come si evince dall'immagine pesata in $\mathrm{T_1}$, il tempo di rilassamento longitudinale del tuorlo è più lungo di quello dell'albume.
+In generale, i materiali liquidi sono caratterizzati da tempi di rilassamento più lunghi dei materiali solidi.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.6]{immagini/uovo.png}
+\caption{\label{fig:uovo} \textit{MRI di un uovo in pesature differenti}.}
+\end{figure}

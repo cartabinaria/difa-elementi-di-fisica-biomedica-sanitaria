@@ -1,0 +1,359 @@
+\chapter{Radiazioni ionizzanti}
+
+Le radiazioni ionizzanti sono quelle capaci di provocare danni ai tessuti verso i quali vengono dirette, strappando gli elettroni da atomi e molecole. Una radiazione è considerata ionizzante se supera i 13,6\,eV, che è l'energia di ionizzazione dell'idrogeno; in medicina, le radiazioni ionizzanti di natura elettromagnetica impiegate sono quelle con frequenza compresa tra $10^{18}$ e $10^{20}$\,Hz, a cavallo fra i raggi X e i raggi $\gamma$, entrambi utilizzati sia in diagnostica sia in terapia, ma vengono utilizzati anche altri tipi di radiazione, di cui si tratterà in seguito. Notoriamente, i raggi X furono scoperti da Röntgen nel 1895 e ben presto ci si rese conto sia della loro potenzialità sia della loro pericolosità, con particolare riguardo ai tumori che possono innescare ma anche per le ustioni provocate in alcuni casi, come mostrato nella \figref{fig:ustione}: dunque si rende necessario, in un capitolo a parte, trattare anche gli ambiti della protezione dalle radiazioni ionizzanti.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.78]{immagini/ustione.png}
+\caption{\label{fig:ustione} \textit{Ustione di secondo grado provocata da raggi X}.}
+\end{figure}
+
+\section{Produzione di raggi X}
+Il dispositivo alla base della produzione di raggi X è il tubo a raggi X, schematizzato nella \figref{fig:tubox}: si tratta di una camera nella quale viene prodotto il vuoto e in cui sono presenti un filamento e un bersaglio. Ai bordi del filamento, costituito da rame o leghe, viene applicata una differenza di potenziale, che genera al suo interno una corrente dell'ordine del milliampere. La corrente fa riscaldare il filamento in maniera tale da far eccitare i suoi elettroni, che sfuggono dal filamento stesso (catodo) e si dirigono verso il bersaglio (anodo). La decelerazione improvvisa degli elettroni quando colpiscono il bersaglio produce raggi X, che sono indirizzati, proprio grazie a un'opportuna forma del bersaglio, verso una finestra della camera a vuoto. In realtà, solo una piccolissima parte (meno dell'1\%) dell'energia dissipata dagli elettroni nella loro decelerazione viene trasformata in radiazione elettromagnetica, mentre il resto dell'energia viene convertito in calore: per questo motivo, l'intero dispositivo deve essere accompagnato da un sistema di raffreddamento.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.9]{immagini/tubox.png}
+\caption{\label{fig:tubox} \textit{Schematizzazione di un tubo a raggi X}.}
+\end{figure}
+
+Lo spettro energetico della radiazione emessa dipende essenzialmente dalla differenza di potenziale applicata, dal materiale di cui è costituito il bersaglio e dalla presenza eventuale di filtri. La produzione di raggi X è originata da due fenomeni separati: il frenamento degli elettroni e le transizioni atomiche.
+
+La \underline{radiazione di frenamento} o \textit{bremsstrahlung} costituisce l'80\% della radiazione totale emessa e corrisponde alla parte continua dello spettro della \figref{fig:spettrox}. Viene emessa come conseguenza dell'interazione degli elettroni con il campo coulombiano del nucleo atomico, che li fa decelerare. Come illustrato nella \figref{fig:dece}, più un elettrone passa vicino al nucleo, più sarà energetica la radiazione emessa, fino al caso estremo in cui l'elettrone va a finire proprio sul nucleo, generando fotoni di frequenza massima. La perdita di energia media per unità di percorso per irraggiamento si può calcolare approssimativamente come:
+\begin{equation}
+    - \Big\langle \frac{\mathrm{d}E}{\mathrm{d}x} \Big\rangle = \dfrac{4N_\mathrm{a} Z^2 \alpha^3 \hbar^2}{\mathrm{m_e}^2 c^2}\,E\,\ln{\frac{183}{Z^{\frac{1}{3}}}}\,,
+\end{equation}
+dove \textit{E} è l'energia dell'elettrone, $N_\mathrm{a}$ è il numero di atomi del bersaglio per unità di volume, \textit{Z} è il numero atomico del materiale del bersaglio, $\alpha$ è la costante di struttura fine e $\mathrm{m_e}$ è la massa dell'elettrone. L'energia della radiazione prodotta ha valori distribuiti in maniera continua al di sotto di una soglia $E_\mathrm{MAX}$ data dal prodotto della carica dell'elettrone per la differenza di potenziale. Per fare un esempio, se la differenza di potenziale applicata è di 100\,kV, l'energia della radiazione sarà sempre inferiore a 100\,keV. Nella pratica, la radiazione di frenamento a bassa energia, inutile per gli scopi clinici, viene filtrata per ridurre la radiazione a cui si sottopone il paziente; nella \figref{fig:filtro} sono mostrati due possibili scenari, con filtro e senza.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=1.2]{immagini/spettrox.png}
+\caption{\label{fig:spettrox} \textit{Intensità della radiazione emessa dal tubo a raggi X in funzione della lunghezza d'onda}.}
+\end{figure}
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.6]{immagini/dece.png}
+\caption{\label{fig:dece} \textit{Emissione di radiazione come conseguenza del frenamento degli elettroni}.}
+\end{figure}
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.7]{immagini/filtro.png}
+\caption{\label{fig:filtro} \textit{Intensità della radiazione di frenamento, con filtro e senza, in funzione dell'energia}.}
+\end{figure}
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.6]{immagini/transizione.png}
+\caption{\label{fig:transizione} \textit{Transizione atomica con emissione di radiazione caratteristica}.}
+\end{figure}
+
+Le \underline{transizioni atomiche} sono responsabili della cosiddetta radiazione caratteristica, che costituisce il 20\% di tutta la radiazione emessa e si manifesta con dei picchi d'intensità in corrispondenza di certe energie. Si ha una transizione atomica quando un elettrone del fascio colpisce un elettrone dell'atomo collocato nel guscio K. L'elettrone atomico in questo modo viene scalzato via dall'atomo, lasciando una lacuna, che viene prontamente colmata da un elettrone presente nel guscio più esterno immediatamente successivo. Proprio questa transizione da un livello energetico a un altro libera molta energia, che si manifesta come un picco d'intensità del tipo presente nella \figref{fig:spettrox}. Può anche succedere che la radiazione prodotta dalla transizione vada a colpire e liberare altri elettroni dei gusci più esterni, fenomeno noto come effetto Auger.
+
+Il materiale di cui è costituito il bersaglio incide sul numero di fotoni prodotti, e quindi sull'intensità della radiazione uscente dal tubo. Il bersaglio deve essere fatto di un metallo pesante, che per i tubi tradizionali di solito è il tungsteno, con livelli energetici caratteristici di 58 e 67\,keV. Per i tubi impiegati in mammografia, invece, si preferisce usare tubi con anodi al molibdeno, che ha livelli energetici caratteristici di 17 e 19\,keV e fornisce un maggiore contrasto fra i tessuti mammari.
+
+\section{Formazione di un'immagine a raggi X}\label{4.2}
+La formazione di un'immagine a raggi X è la conseguenza dell'attenuazione del fascio prodotto, a carico dell'oggetto investito dal fascio stesso. Come illustrato nella \figref{fig:apparatox}, sia prima sia dopo l'oggetto da indagare è posto un collimatore, e l'immagine finale verrà impressa su una lastra. L'attenuazione del fascio è maggiore per i tessuti duri e minore per i tessuti molli, mentre è quasi nulla per l'aria, come mostrato nella \figref{fig:radiografia}. L'attenuazione del fascio segue la legge di Lambert-Beer:
+\begin{equation}\label{lambert}
+    I(x) = I_0\,\mathrm{e}^{-\mu_\mathrm{l}x}\,,
+\end{equation}
+analoga all'\eqref{mu}, già incontrata nel caso dell'assorbimento delle onde sonore, con l'unica differenza del coefficiente di attenuazione lineare $\mu_\mathrm{l}$ che prende il posto del coefficiente di assorbimento acustico. Nel caso di un fascio monocromatico, emesso con intensità $I_0$ ed energia \textit{E}, che attraversa lo spessore \textit{x} di un corpo si definisce la trasmittanza del fascio stesso come:
+\begin{equation}
+    T = \frac{I(x)}{I_0} = \mathrm{e}^{-\int_0^x \mu_\mathrm{l}(E,x')\,\mathrm{d}x'}\,,
+\end{equation}
+in cui è importante sottolineare che il coefficiente di attenuazione lineare $\mu_\mathrm{l}$ è funzione non solo dell'energia ma anche della posizione, in quanto la composizione del corpo investito dal fascio può essere varia. Inoltre, il coefficiente di attenuazione lineare dipende dal numero di massa atomica del materiale, dalla sua densità e anche dall'energia del fascio di raggi X, come si può osservare nella \figref{fig:trasmittanza}; si può dedurre che il coefficiente di attenuazione è proporzionale alla densità del materiale e inversamente proporzionale all'energia del fascio.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.6]{immagini/apparatox.png}
+\caption{\label{fig:apparatox} \textit{Schematizzazione di un apparato per la formazione di immagini a raggi X}.}
+\end{figure}
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.8]{immagini/radiografia.png}
+\caption{\label{fig:radiografia} \textit{Schema basilare per la formazione di immagini a raggi X}.}
+\end{figure}
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.467]{immagini/trasmittanza.png}\quad\includegraphics[scale=0.62]{immagini/trasmittanza-2.png}
+\caption{\label{fig:trasmittanza} \textit{Andamento della trasmittanza per materiali diversi a energia fissata (a sinistra) e per energie diverse a materiale fissato (a destra)}.}
+\end{figure}
+
+\noindent La dipendenza di $\mu_\mathrm{l}$ dai diversi parametri può essere espressa in funzione del coefficiente di attenuazione atomico $\mu_\mathrm{a}$ nel seguente modo:
+\begin{equation}
+    \mu_\mathrm{l} = \frac{\rho \mathrm{N_A}}{A} \mu_\mathrm{a}\,,
+\end{equation}
+dove $\rho$ rappresenta la densità del materiale, \textit{A} il numero di massa atomica degli atomi che lo compongono e $\mathrm{N_A}$ il numero di Avogadro. Il coefficiente di attenuazione atomico ha le dimensioni di una sezione d'urto e indica la probabilità di interazione tra un fotone attraversante una superficie unitaria contenente un solo atomo e quest'ultimo. Per fotoni con energia non troppo elevata (inferiore a 1\,MeV) le interazioni con la materia possono produrre tre fenomeni distinti.
+\begin{description}
+    \item[Effetto fotoelettrico] È la conseguenza dell'assorbimento della radiazione da parte di un elettrone, che riceve l'energia sufficiente per sfuggire dall'atomo. L'energia della radiazione viene utilizzata in parte per rompere il legame fra l'elettrone e il nucleo, mentre la restante parte si trasforma in energia cinetica dell'elettrone.
+    \item[\textit{Scattering} Compton] Si ha quando il fotone interagisce con un elettrone posto in un guscio esterno dell'atomo. Il fotone colpisce l'elettrone in un urto anelastico e viene deviato, fornendo all'elettrone l'energia necessaria per poter sfuggire dall'atomo.
+    \item[\textit{Scattering} Rayleigh] In questo caso, l'urto fra il fotone e l'elettrone è elastico, di conseguenza non si ha trasferimento di energia, ma l'unico effetto che si osserva è una deviazione nella traiettoria del fotone.
+\end{description}
+Il coefficiente di attenuazione atomico si può scrivere come somma delle sezioni d'urto dei singoli fenomeni appena elencati, posti in ordine:
+\begin{equation}
+    \mu_\mathrm{a} = \tau + \sigma_\mathrm{C} + \sigma_\mathrm{R}\,.
+\end{equation}
+In medicina, per la tomografia, non viene utilizzata radiazione con energia superiore a 1,02\,MeV, poiché un fotone del genere, interagendo con un campo elettrostatico, avrebbe energia sufficiente per produrre una coppia elettrone-positrone. La predominanza di un fenomeno rispetto a un altro dipende sia dal numero atomico del mezzo sia dall'energia del fotone, come si può osservare nella \figref{fig:effetti}: l'effetto fotoelettrico domina a bassa energia e grande numero atomico, l'effetto Compton prevale a energie medie e tendenzialmente a numero atomico piccolo, mentre la produzione di coppie elettrone-positrone si osserva per alte energie e grande numero atomico.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.85]{immagini/effetti.png}
+\caption{\label{fig:effetti} \textit{Effetto prevalente in funzione del numero atomico del materiale e dell'energia della radiazione}.}
+\end{figure}
+
+\section{Danni biologici delle radiazioni ionizzanti}
+Innanzitutto, è fondamentale introdurre la distinzione fra radiazioni direttamente e indirettamente ionizzanti.
+
+Le radiazioni \underline{direttamente ionizzanti} ionizzano la materia a causa della loro carica elettrica: gli esempi più eclatanti sono i fasci di particelle $\alpha$ e $\beta$.
+\begin{description}
+    \item[Particelle $\bm{\alpha}$] Sono costituite da due protoni e due neutroni, perciò ionizzano intensamente e perdono rapidamente la loro energia. In aria, una particella $\alpha$ di 3\,MeV di energia riesce a percorrere circa 3\,cm, producendo in media 4000 coppie di ioni al millimetro.
+    \item[Particelle $\bm{\beta}$] Sono elettroni o positroni prodotti da decadimento $\beta$, ionizzano meno delle particelle $\alpha$ per unità di percorso e compiono percorsi più lunghi. In aria, una particella $\beta$ di 3\,MeV di energia riesce a percorrere circa 10\,cm, producendo in media 4 coppie di ioni al millimetro.
+\end{description}
+Radiazioni di questo tipo, quando attraversano la materia subiscono diverse collisioni prima di essere fermate, ed è ragionevole pensare che il rallentamento sia continuo, con un percorso a \virgolette{zig-zag} per le particelle leggere, come le $\beta$, e uno pressoché rettilineo per quelle pesanti, come le $\alpha$. Nei tessuti biologici, l'energia viene impiegata, e quindi persa, nella ionizzazione degli atomi, nella rottura dei legami molecolari e, soprattutto per le particelle $\beta$, nell'emissione di radiazione.
+
+Le radiazioni \underline{indirettamente ionizzanti}, invece, ionizzano la materia mediante l'energia cinetica che le trasferiscono: le più utilizzate in medicina sono i raggi X e i raggi $\gamma$, ma sono importanti anche i neutroni.
+
+I danni provocati dalle radiazioni ionizzanti sono a carico delle cellule, e vanno dalla rottura di membrane varie (cellulare, nucleare, mitocondriale), all'innesco di processi chimici, come la radiolisi delle molecole di acqua, fino ai danni più importanti a carico del nucleo e del DNA in esso contenuto. Il danno prodotto ha implicazioni diverse a seconda che le cellule siano somatiche o germinali; per queste ultime, un danneggiamento del DNA potrebbe indurre una mutazione genetica che rischierebbe di essere trasmessa alla prole. Al contrario, il danneggiamento delle cellule somatiche rimane a carico dell'organismo interessato. La ionizzazione può interessare direttamente le macromolecole oppure l'acqua, provocando la produzione di radicali liberi: nel primo caso si parla di azione diretta, nel secondo di azione indiretta. Per quanto riguarda l'acqua, la produzione di radicali liberi in seguito alla radiolisi genera una cascata di reazioni che portano alla produzione di perossido di idrogeno ($\mathrm{H_2O_2}$) e del radicale idroperossido ($\mathrm{HO_2}$), due specie chimiche ad alto potere ossidante.%
+\footnote{Un radicale libero è una specie chimica (atomi neutri o molecole) che possiede un elettrone spaiato nell'orbitale esterno e, di conseguenza, è molto reattiva. L'azione del radicale libero è quella di legarsi ad altri radicali o di sottrarre elettroni a molecole vicine, danneggiandole. Si stima che almeno $2/3$ di tutti i danni da radiazione siano dovuti ai radicali liberi, che possono viaggiare trasportati dal sangue e causare danni anche a grandi distanze dalla zona d'origine. Inoltre, l'effetto dei radicali liberi viene amplificato dalla presenza di ossigeno.}
+In un processo di danneggiamento è possibile individuare tre fasi.
+\begin{description}
+    \item[Fase fisica] È l'interazione della radiazione con gli atomi e le molecole dei tessuti, con conseguenti eccitazioni, ionizzazioni e formazione di radicali liberi; si svolge in tempi dell'ordine dei $10^{-10}$\,s.
+    \item[Fase chimica] I radicali liberi e le molecole danneggiate reagiscono con altre molecole e fra di loro; la durata varia da qualche secondo a molte ore.
+    \item[Fase biologica] Le modificazioni prodotte in molecole biologicamente importanti si manifestano in danni somatici, con lesioni osservabili nell'organismo, e in danni genetici, che si possono osservare sulla prole o nelle generazioni successive.
+\end{description}
+Come già detto, le misure da adottare per limitare i danni da radiazioni ionizzanti, in ambito clinico ma non solo, verranno trattate nel capitolo successivo.
+
+\section{Radioterapia}
+
+\subsection{Caratteri generali}
+La \textbf{radioterapia} è una tecnica impiegata nella cura dei tumori, che prevede l'utilizzo di radiazioni ionizzanti con lo scopo di danneggiare il DNA delle cellule tumorali; poiché queste, a differenza delle cellule sane, non dispongono di solito di meccanismi efficaci per la riparazione dei danni genici, vanno facilmente incontro a morte. Tuttavia, la radioterapia è efficace solo se le cellule tumorali e le cellule sane sono caratterizzate da radiosensibilità diversa, altrimenti si rischia di danneggiare eccessivamente anche i tessuti sani. Proprio con lo scopo di tutelare il più possibile i tessuti sani, un elemento fondamentale della radioterapia è il frazionamento, che consiste nel ripartire la dose totale in diverse dosi più piccole distribuite nelle settimane. In questo modo, si dà il tempo alle cellule sane di riparare i danni al loro DNA, evitando così di infliggere un danno troppo grave da essere riparato. Alla fine, l'effetto generato è quello mostrato nella \figref{fig:frazionamento}.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.4]{immagini/frazionamento.png}
+\caption{\label{fig:frazionamento} \textit{Effetto del frazionamento in radioterapia sulle cellule sane e su quelle tumorali}.}
+\end{figure}
+
+\noindent Gli impieghi della radioterapia sono essenzialmente due:
+\begin{itemize}[label=$-$]
+    \item \emph{cura del tumore}, distruggendolo se non si è ancora diffuso troppo e uccidendo eventuali cellule tumorali residue, dopo un trattamento chemioterapico o una rimozione chirurgica del tumore stesso;
+    \item \emph{cura palliativa}, col solo scopo di ridurre il volume del tumore, quindi alleviando i sintomi e migliorando la qualità della vità del paziente, ma non la sua aspettativa di vita.
+\end{itemize}
+La radioterapia non è mai utilizzata da sola nella cura del tumore, ma viene sempre affiancata alla chemioterapia e, quando possibile, alla rimozione chirurgica. I siti più comunemente trattati con la radioterapia sono la mammella, la prostata, il polmone, l'intestino crasso, il pancreas, l'esofago, la testa, il collo e la pelle; è anche utilizzata nel trattamento di metastasi alla testa e alle ossa.
+
+Sebbene, nel momento in cui si venga sottoposti a radioterapia, non si abbia nessuna percezione di dolore o di nessun'altra sensazione, gli effetti delle radiazioni sono cumulativi: infatti, la maggior parte degli effetti collaterali si manifesta in prossimità delle fine del trattamento e tendono a sparire nel giro di qualche settimana. C'è, ovviamente, anche il rischio che le radiazioni radioterapiche possano essere fattore scatenante di un tumore, molti anni dopo il trattamento; tuttavia, i rischi sono enormemente inferiori rispetto ai benefici che si traggono.
+
+Le figure professionali che entrano in gioco nel definire e portare avanti il trattamento radioterapico sono le seguenti.
+\begin{description}
+    \item[Oncologo] Prescrive e supervisiona i trattamenti radioterapici.
+    \item[Fisico medico] Assicura che il piano terapeutico sia elaborato su misura per il paziente ed è responsabile per la calibrazione e l'accuratezza della strumentazione; inoltre, calcola e mantiene sotto controllo la dose somministrata al paziente.
+    \item[Radioterapista] Somministra la dose quotidiana prescritta dall'oncologo, sotto la sua supervisione.
+    \item[Infermiere di radioterapia oncologica] Si prende cura del paziente in tutte le fasi e interagisce con la sua famiglia.
+\end{description}
+
+\subsection{Pianificazione e modalità di trattamento}\label{4.4.2}
+Prima di iniziare la pianificazione del trattamento, devono essere acquisite delle immagini con varie tecniche, in modo da localizzare spazialmente il tumore e la zona da trattare; la tecnica di \textit{imaging} principale è la CT (tomografia computerizzata), i cui risultati vengono spesso fusi con la MRI o la PET. Poiché durante tutto il percorso terapeutico vengono eseguite delle indagini di \textit{imaging} per valutare la risposta del tumore alle cure, c'è la necessità che il paziente venga collocato sempre nella stessa posizione nella stanza, e anche che rimanga completamente immobile durante tutto il processo, sia di \textit{imaging} sia di somministrazione delle radiazioni. Per fare ciò, si utilizzano degli immobilizzatori, tali che possano garantire la comodità del paziente e la riproducibilità della posizione assunta nelle varie sedute.
+
+Il compito del fisico medico si svolge soprattutto nella fase terapeutica vera e propria, e si esplica, oltre che nelle mansioni prima elencate, anche nell'utilizzo del \textit{treatment planning system} (TPS), cioè il software dal quale si impostano i parametri della macchina con lo scopo di somministrare la dose adeguata al paziente. Proprio in questa fase, esistono due modalità di azione:
+\begin{itemize}[label=$-$]
+    \item \emph{modalità diretta}: si impostano dei parametri e si verifica se con quei parametri la dose somministrata è quella desiderata, correggendo i parametri in caso negativo;
+    \item \emph{modalità inversa}: si comunica al software la dose desiderata ed esso imposta dei parametri adeguati per ottenerla; ad oggi questa modalità è ancora poco usata rispetto alla prima, poiché spesso i software non riescono a trovare soluzioni efficaci e adeguate ai problemi che si pongono loro.
+\end{itemize}
+Ogni trattamento radioterapico deve essere sottoposto a diversi controlli di sicurezza, ad esempio riguardo la calibrazione della macchina, andando ad assicurarsi che questa somministri esattamente la dose che dovrebbe somministrare per una certa impostazione dei parametri. Questi controlli vengono svolti quotidianamente dal fisico medico insieme al radioterapista attraverso un processo di \virgolette{domande e risposte}, per esempio utilizzando uno strumento di misura che riproduce un paziente e valutando quanto la dose somministrata in questa fase differisce dalla dose pianificata.
+
+Le radiazioni utilizzate in radioterapia possono essere suddivise principalmente in base alla posizione della sorgente relativamente al paziente, e in secondo luogo in base alla natura della radiazione.\\
+La \underline{radioterapia a fasci esterni} utilizza le seguenti radiazioni nelle corrispondenti modalità:
+\begin{itemize}[label=$-$]
+    \item fotoni
+    \begin{itemize}[label=$\triangleright$]
+        \item raggi $\gamma$
+        \begin{itemize}[label=$\diamond$]
+            \item cobaltoterapia
+            \item Gamma Knife
+        \end{itemize}
+        \item raggi X
+        \begin{itemize}[label=$\diamond$]
+            \item terapia convenzionale con LINAC
+            \item terapia ibrida con LINAC
+            \item tomoterapia
+            \item CyberKnife
+        \end{itemize}
+    \end{itemize}
+    \item fasci di particelle
+    \begin{itemize}[label=$\triangleright$]
+        \item protoni (adroterapia)
+        \item neutroni (terapia a cattura neutronica del boro)
+        \item elettroni (terapia intraoperatoria)
+    \end{itemize}
+\end{itemize}
+La \underline{radioterapia interna} contempla le seguenti modalità:
+\begin{itemize}[label=$-$]
+    \item brachiterapia
+    \begin{itemize}[label=$\triangleright$]
+        \item a basso dosaggio (LDR)
+        \item ad alto dosaggio (HDR)
+    \end{itemize}
+    \item terapia radiometabolica (inserendo radionuclidi a raggi $\alpha$ o $\beta$ in farmaci che si attaccano al tumore)
+\end{itemize}
+Nel seguito viene svolta una panoramica delle tecniche di radioterapia appena citate.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.63]{immagini/linac.png}
+\caption{\label{fig:linac} \textit{Acceleratore lineare}.}
+\end{figure}
+La \underline{terapia convenzionale con LINAC} (acceleratore lineare), mostrato nella \figref{fig:linac}, è la principale modalità di radioterapia. Il funzionamento del LINAC si basa fondamentalmente su un sofisticato tubo a raggi X, in cui gli elettroni vengono accelerati facendoli passare attraverso il campo magnetico generato da un solenoide; all'uscita di questo si avrà, quindi, un fascio di elettroni pulsato e altamente collimato, che viene fatto passare per un quadrupolo, in cui viene ancora accelerato e orientato nella direzione desiderata. A questo punto, come nel tubo a raggi X, il fascio viene rallentato facendolo incidere su un bersaglio e viene prodotto un fascio di fotoni, che viene collimato, \virgolette{appiattito} (poiché altrimenti sarebbe molto più intenso al centro piuttosto che sui bordi) e di nuovo collimato, rispetto alla geometria desiderata in base alle esigenze. Nella \figref{fig:linac2} è mostrato uno schema delle componenti interne di un LINAC.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.9]{immagini/linac-2.png}
+\caption{\label{fig:linac2} \textit{Schema delle componenti interne di un acceleratore lineare}.}
+\end{figure}
+
+Nell'immagine di sinistra della \figref{fig:mammella} è riportata la regione di una mammella sottoposta a terapia, vista dell'uscita del macchinario: si può vedere come debba essere scontornata la zona da irradiare, mentre nella parte in cui non sono presenti tessuti non ci sia bisogno di agire con estrema precisione, sebbene sia opportuno evitare di irradiare l'area in cui il paziente respira, per evitare che questi inali radiazioni. Al contrario, bisogna fare molta attenzione a non irradiare il cuore se non è necessario, poiché ci sarebbe il rischio per il paziente di sviluppare una cardiopatia da radioterapia.
+
+Nell'immagine di destra della \figref{fig:mammella} si può vedere l'applicazione della tecnica nota come IMRT (\textit{intensity modulated radiation therapy}) per la quale, in modalità inversa, si fa trovare al software un modo per somministrare la dose desiderata alla regione del tumore senza danneggiare eccessivamente i tessuti sani che la circondano; per fare ciò, il computer calcola diverse direzioni lungo le quali inviare le radiazioni, in modo che la zona che si vuole davvero colpire rientri in tutti i fasci e riceva la dose prescritta, mentre la radiazione, che inevitabilmente colpisce anche i tessuti sani, viene \virgolette{spalmata} su varie direzioni.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.93]{immagini/mammella.png}\quad\includegraphics[scale=1.04]{immagini/imrt.png}
+\caption{\label{fig:mammella} \textit{TC di una mammella sottoposta a radioterapia, con in evidenza le zone da irradiare (a sinistra) e direzioni di somministrazione in IMRT (a destra)}.}
+\end{figure}
+
+La \underline{tomoterapia} è un tipo di terapia che si basa sullo stesso principio dell'IMRT, ma è utilizzata quando le zone da trattare sono molto difficili da raggiungere, perché poste in profondità oppure perché circondate da organi importanti; di solito, la tomoterapia viene scelta per la cura dei tumori a testa-collo, al pancreas, al sistema nervoso centrale e alla prostata. Come si vede dalla \figref{fig:tomoterapia}, un macchinario per la tomoterapia è costituito da un LINAC da 6\,MV che ruota attorno al paziente, eseguendo da 1 a 10 giri al minuto; inoltre, è presente un sistema di sensori che ricostruisce l'immagine della zona trattata in tempo reale.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.78]{immagini/tomoterapia.png}
+\caption{\label{fig:tomoterapia} \textit{Schematizzazione di una macchina per la tomoterapia}.}
+\end{figure}
+
+La \underline{radiochirurgia} è utilizzata per cercare di eradicare piccoli tumori, in zone che richiedono grande precisione e che non possono essere trattate con la chirurgia propriamente detta. La radiochirurgia può essere eseguita con raggi $\gamma$ o con raggi X: nel primo caso, il trattamento prende il nome di Gamma Knife, nel secondo di CyberKnife, entrambi termini che derivano dai nomi commerciali dei macchinari impiegati.
+\begin{description}
+    \item[Gamma Knife] Utilizza delle sorgenti di cobalto-60 tali da emettere raggi $\gamma$ di bassa intensità lungo più direzioni, in modo da danneggiare quasi solo il tumore; la testa del paziente viene tenuta ferma per mezzo di un casco saldamente fissato. Questa tecnica viene utilizzata esclusivamente per la cura di patologie della testa, ad esempio metastasi cerebrali, meningiomi, melanomi uveali e malformazioni artero-venose. Il trattamento dura da alcuni minuti fino a qualche ora, a seconda del tipo e della posizione della lesione da trattare; generalmente è richiesta una sola sessione di trattamento.
+    \item[CyberKnife] È un sistema costituito da un braccio robotico, su cui è montato un LINAC miniaturizzato da 6\,MV, un lettino robotizzato, dei tubi a raggi X a bassa energia montati sul soffitto, che forniscono immagini della zona trattata in tempo reale, e infine un sistema di LED che monitora costantemente i movimenti del paziente, permettendo di seguire il tumore durante i movimenti respiratori e di interrompere immediatamente il trattamento in caso di movimenti bruschi da parte del paziente. Diversamente dal Gamma Knife, il CyberKnife può essere utilizzato, oltre che per la cura di patologie cerebrali, anche per il trattamento di fegato, pancreas, prostata e polmoni. Di solito una sessione non dura più di un'ora.
+\end{description}
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.68]{immagini/gammaknife.png}
+\caption{\label{fig:gammaknife} \textit{Strumentazione Gamma Knife}.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{immagini/cyberknife.png}
+\caption{\label{fig:cyberknife} \textit{Strumentazione CyberKnife}.}
+\end{figure}
+
+L'\underline{adroterapia} è una forma di radioterapia che utilizza fasci di protoni o ioni positivi (soprattutto ioni carbonio) per il trattamento dei tumori, con un grande uso soprattutto dei primi, perciò si tratterà solo di questi. Se per accelerare e indirizzare gli elettroni basta il campo magnetico di un solenoide e un quadrupolo magnetico, per i protoni, decisamente più pesanti, questo processo è molto più difficile, ragion per cui si utilizza un ciclotrone. Sempre a causa della loro grande massa, i protoni possiedono una scarsa dispersione laterale nell'attraversamento dei tessuti; il fascio quindi non si diffonde molto, rimanendo piuttosto focalizzato sulla massa tumorale e garantendo solo bassi effetti collaterali ai tessuti circostanti. Tutti i protoni di una data energia hanno lo stesso potere di penetrazione, dunque pochissimi protoni penetrano oltre tale distanza, evitando di intaccare i tessuti posteriori al tumore. Inoltre, la dose erogata al tessuto è massima solo negli ultimi millimetri del tragitto della particella, come si vede nella \figref{fig:adroterapia}: questo punto massimo è chiamato picco di Bragg. Per il trattamento di tumori a profondità maggiori, il ciclotrone deve produrre un fascio di energia maggiore; se, invece, è necessario trattare tumori più vicini alla superficie del corpo, si utilizzano protoni di energia inferiore. Gli acceleratori utilizzati per la terapia protonica in genere producono protoni con energie comprese tra 70 e 250\,MeV. In Italia sono presenti solo tre centri di adroterapia: il CNAO di Pavia, il Centro di Protonterapia di Trento e il CATANA di Catania.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.82]{immagini/adroterapia.png}
+\caption{\label{fig:adroterapia} \textit{Assorbimento percentuale di radiazione in funzione della profondità di penetrazione, per raggi X, protoni e ioni carbonio}.}
+\end{figure}
+
+La \underline{brachiterapia} è una forma di radioterapia in cui una sorgente di radiazioni è collocata all'interno o vicino alla zona da trattare, con lo scopo di somministrare alte dosi alla massa tumorale senza danneggiare i tessuti vicini. I radionuclidi attualmente impiegati in brachiterapia sono $\mathrm{^{125}I}$, $\mathrm{^{103}Pd}$, $\mathrm{^{192}Ir}$ e $\mathrm{^{137}Cs}$. Le principali modalità di somministrazione della brachiterapia sono le seguenti.
+\begin{description}
+    \item[Brachiterapia a basso dosaggio (LDR)] I radionuclidi impiantati rilasciano la dose a piccole quantità ma per lunghi periodi, anche diversi mesi. Per la brachiterapia LDR vengono impiegati gli isotopi sopracitati di iodio, palladio e cesio, sotto forma di \virgolette{semini}, come quelli mostrati in \figref{fig:semi}. La brachiterapia LDR viene comunemente impiegata nella cura dei tumori alla prostata, alla mammella, a testa-collo e per i tumori ginecologici.
+    \item[Brachiterapia ad alto dosaggio (HDR)] I radionuclidi impiantati rilasciano una dose molto elevata in pochi minuti; l'isotopo utilizzato, in questo caso, è l'iridio-192. Anche la brachiterapia HDR viene usata comunemente per la cura dei tumori ginecologici, alla mammella, a testa-collo, per alcuni tipi di tumori alla prostata, ma anche per tumori dei polmoni e della pelle.
+\end{description}
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.985]{immagini/semi.png}\quad\includegraphics[scale=1.3]{immagini/semi-2.png}
+\caption{\label{fig:semi} \textit{Semi utilizzati in brachiterapia LDR}.}
+\end{figure}
+
+La \underline{radioterapia intraoperatoria} (IORT) utilizza un acceleratore lineare esattamente come la radioterapia ordinaria, con la differenza, però, che gli elettroni non vengono frenati da un bersaglio all'uscita dall'acceleratore, bensì il fascio viene convogliato dentro una guida e diretto così com'è verso la carne viva del paziente. L'utilità della IORT è quella di uccidere eventuali cellule tumorali rimaste a seguito di una rimozione chirurgica del tumore, essendo eseguita immediatamente dopo aver effettuato l'asportazione, prima di richiudere la ferita. L'energia degli elettroni prodotti può essere compresa tra 6 e 18\,MeV e andrà regolata in modo da raggiungere la dose terapeutica del 90\% dell'assorbimento della radiazione alla profondità desiderata.
+
+La \underline{terapia ibrida con LINAC} è un insieme di tecniche che consentono di effettuare radioterapia insieme a \textit{imaging}. È già stato più volte che è possibile eseguire TC o, più in generale, acquisire immagini a raggi X, mentre il trattamento radioterapico è in corso; tuttavia alcuni tipi di tumori non sono distinguibili con l'\textit{imaging} a raggi X, quindi diventa praticamente impossibile, per chi esegue la terapia, indirizzare le radiazioni con precisione nella zona del tumore. Per questo motivo, la terapia ibrida con LINAC combina la radioterapia standard con altre due importanti tecniche di \textit{imaging}: l'MRI e la PET.
+
+\section{Tomografia computerizzata}
+Inizialmente, con la \textbf{tomografia computerizzata} (TC) era possibile ottenere solo immagini tomografiche del piano assiale dell'organismo: per questo motivo era chiamata, e spesso lo è tuttora, tomografia assiale computerizzata (TAC), sebbene il nome corretto attualmente sia solo tomografia computerizzata.
+
+La differenza fondamentale tra radiografia e tomografia è che la seconda è frutto di un ricalcolo e di una ridistribuzione del segnale nelle tre dimensioni, che non ha, quindi, lo scopo unico di fornire immagini radiologiche tridimensionali (tomografiche), ma riesce anche a mettere in evidenza dettagli che altrimenti non sarebbe possibile notare da una semplice serie di immagini radiografiche bidimensionali. Un'altra differenza fondamentale è il passaggio dal pixel al voxel, il che risolve le ambiguità dovute alla sovrapposizione di diversi oggetti lungo una direzione, non distinguibili in radiografia.
+
+Il principio di ricostruzione dell'immagine nella TC è piuttosto semplice: si tratta di acquisire immagini radiografiche da direzioni diverse e metterle insieme per individuare il punto nello spazio in cui è collocato l'oggetto che ha generato l'attenuazione. Il numero di direzioni da acquisire si fonda su una regola empirica e dipende dalla risoluzione in pixel del rivelatore: il numero di direzioni di acquisizione deve essere comparabile al numero di pixel per riga del rivelatore. È inutile, perciò, acquisire un'immagine per ogni grado di angolo se si hanno, per esempio, solo 100 pixel per riga. Sebbene il coefficiente di attenuazione lineare che compare nella \eqref{lambert} dipenda sia dall'energia del fascio sia dalla densità del corpo investito, nella ricostruzione delle immagini di TC classica è spesso accettabile considerare $\mu_\mathrm{l}$ come funzione solo della densità. Ciò detto, prendendo come riferimento la \figref{fig:attenuazione}, la legge di Lambert-Beer diventa la seguente:
+\begin{equation}
+    I(x,y) = I_0(x,y)\,\mathrm{e}^{-\int\limits_L \mu_\mathrm{l} (x,y)\,\mathrm{d}l}\,.
+\end{equation}
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.8]{immagini/attenuazione.png}
+\caption{\label{fig:attenuazione} \textit{Schematizzazione di una radiografia}.}
+\end{figure}
+
+\noindent Per ricostruire l'immagine bisogna recuperare i valori che assume il coefficiente di attenuazione lineare lungo \textit{L}; dunque, la singola radiografia è l'integrale della funzione $\mu_\mathrm{l}(x,y)$ lungo la direzione dei raggi X:
+\begin{equation}\label{integralemu}
+    \boxed{\ln{ \left[ \frac{I(x,y)}{I_0(x,y)} \right]} = -\int\limits_L \mu_\mathrm{l} (x,y)\,\mathrm{d}l}
+\end{equation}
+A questo punto, acquisendo un'immagine con un rivelatore digitale non si ottiene un'immagine radiografica come quella delle lastre, con gli oggetti più attenuanti mostrati in bianco, bensì un'immagine dove i fotoni conteggiati vengono codificati in bianco e gli oggetti attenuanti in nero (o, per meglio dire, assenza di bianco). Da un'immagine del genere è impossibile ricavare l'integrale dell'\eqref{integralemu}, che invece si ottiene dividendo il valore d'intensità del fascio rivelato nell'immagine radiografica per il valore iniziale dell'intensità $I_0$ del fascio, che si può ottenere acquisendo un'immagine radiografica di campo vuoto; a questo rapporto si applica il logaritmo naturale. Il risultato è quello della \figref{fig:globo}, che mostra le immagini radiografiche iniziale e finale di un globo di legno. Osservando attentamente l'immagine, ad esempio nella zona in cui è presente il chiodo fra il globo e il telaio, si può vedere come l'operazione descritta dall'\eqref{integralemu} non ha il solo scopo di invertire i colori, ma ha soprattutto il compito di generare un contrasto corretto; in altre parole, se nella radiografia attenuata si è certi che due oggetti, di cui uno di gran lunga più denso dell'altro, venga riportato con il contrasto che effettivamente dovrebbe avere, nella radiografia acquisita questa certezza non c'è. L'operazione appena descritta non si può eseguire con un sistema classico di diretta incidenza dei raggi X sulla lastra.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.58]{immagini/globo-1.png}\quad\includegraphics[scale=0.577]{immagini/globo-2.png}
+\caption{\label{fig:globo} \textit{Radiografie acquisita e attenuata di un globo di legno}.}
+\end{figure}
+
+Nell'acquisizione di un'immagine radiografica è necessario anche eliminare il rumore, che appare con dei tipici puntini neri distribuiti casualmente in tutta l'immagine. Questi puntini sono dovuti a singoli raggi X che riescono a oltrepassare l'oggetto da esaminare senza interagire con esso e oltrepassano anche il rivelatore senza essere fermati, di conseguenza interagiscono direttamente con l'elettronica e vengono codificati con un'intensità estremamente elevata. Il rumore può essere eliminato con dei filtri locali, cioè metodi matematici di riduzione del rumore che prevedono la moltiplicazione dei valori d'intensità rilevata della matrice di pixel attorno a un punto per i valori di un'altra matrice detta \textit{kernel}. In pratica, si sovrappone il \textit{kernel} alla matrice dei pixel, si moltiplicano singolarmente le caselle della matrice dei pixel per le corrispondenti caselle del \textit{kernel} e si sommano tutti i valori della matrice risultante; il risultato rappresenta il valore d'intensità da assegnare al pixel al centro della matrice finale. L'operazione va ripetuta per ciascun pixel dell'immagine, attorno al quale si prenderà una certa matrice da moltiplicare sempre per lo stesso \textit{kernel}. Esistono diversi tipi di filtri, ognuno col suo \textit{kernel}, non solo per diminuire il rumore, ma anche per mettere in evidenza solo i bordi degli oggetti raffigurati nella radiografia, tralasciando l'immagine interna ai bordi qualora non sia utile, e anche per mettere a fuoco le immagini.
+
+Ognuno di questi filtri, in realtà, sebbene riesca anche a risolvere il problema per il quale è stato impiegato, introduce sempre un qualche altro tipo di problema di piccola o grande entità. Per fare un esempio, un filtro per la riduzione del rumore tende ad individuare come rumore, e quindi anche a sopprimere, del segnale che in realtà non è rumore ma appartiene ai bordi degli oggetti visualizzati nell'immagine. Si tratta, perciò, di trovare dei compromessi in modo da applicare filtri che risolvano il problema senza introdurre altri difetti di entità troppo grande.
+
+Il problema tomografico è, dal punto di vista matematico, un problema inverso, che prevede cioè la ricostruzione di un volume a partire da delle proiezioni radiografiche a diversi angoli. La soluzione dipende dai seguenti fattori:
+\begin{itemize}[label=$-$]
+    \item caratteristiche della sorgente;
+    \item caratteristiche del rivelatore;
+    \item geometria di acquisizione;
+    \item numero di angoli.
+\end{itemize}
+
+\begin{wrapfigure}{R}{0.5\textwidth}
+\centering
+\includegraphics[scale=0.5]{immagini/radon.png}
+\caption{\label{fig:radon} \textit{Oggetto scansionato e sua proiezione}.}
+\end{wrapfigure}
+
+La soluzione, nel caso ideale ad angoli infiniti, è data dall'antitrasformata di Radon, formulata dal matematico Johann Radon nel 1917, molto tempo prima dell'invenzione della tomografia. Facendo riferimento alla \figref{fig:radon}, \textit{f}(\textit{x,y}) è il profilo dell'oggetto da ricostruire, \textit{t} è l'asse perpendicolare alla direzione del fascio di raggi X e $p_\theta(t)$ è la proiezione di un punto sull'asse \textit{t} a un angolo $\theta$ fissato. La proiezione $p_\theta(t)$ è proprio la trasformata di Radon di \textit{f}(\textit{x,y}) per \textit{t} e $\theta$ fissati. Posso risalire all'oggetto \textit{f}(\textit{x,y}) a partire da $p_\theta(t)$, applicando l'antitrasformata di Radon:
+\begin{equation}\label{radon}
+    f(x,y) = \frac{1}{(2\pi)^2} \int_0^\pi \left( \int_{-\infty}^{+\infty} \frac{1}{x\cos{\theta}+y\sen{\theta}-t} \frac{\partial p_\theta(t)}{\partial t}\, \mathrm{d}t \right) \mathrm{d}\theta \,.
+\end{equation}
+Dall'insieme delle proiezioni (trasformate di Radon) si ricava il \textbf{sinogramma}. Un sinogramma, mostrato nella \figref{fig:sino}, è un’immagine formata da sinusoidi, ad altezza fissata sul rivelatore, le cui righe rappresentano la proiezione lineare dell'oggetto all'angolo $\theta$; inoltre, deve essere simmetrico rispetto al centro di rotazione e rispetto a rotazioni di 180°. In realtà, l'antitrasformata di Radon vale solamente per variazioni continue di $\theta$, per questo motivo non può essere impiegata nella pratica, dove ovviamente è possibile avere solo variazioni discrete dell'angolo che definisce la direzione di scansione. Si usa, quindi, una versione discretizzata dell'antitrasfornata di Radon.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.674]{immagini/sinogramma.png}\quad\includegraphics[scale=0.4]{immagini/sino.png}
+\caption{\label{fig:sino} \textit{Sinogramma di un globo e piano di riempimento di un sinogramma}.}
+\end{figure}
+
+Una volta che si è acquisito il sinogramma, prima di applicare l'antitrasformata di Radon, per migliorare la qualità dell'immagine (ad esempio rimuovendo rumore o artefatti) è opportuno passare allo spazio delle frequenze. Lo spazio delle frequenze, o spazio di Fourier (\figref{fig:frequenze}, lo abbiamo già incontrato nel paragrafo \ref{1.4.4} con il nome di spazio \textit{k}), si ottiene applicando al sinogramma la trasformata di Fourier. Se ad ogni proiezione acquisita si applica la trasformata di Fourier, si ottiene una serie di linee nel dominio delle frequenze; tali linee hanno, nel dominio delle frequenze, lo stesso angolo dell'asse \textit{t} corrispondente nello spazio (\textit{x,y}).%
+\footnote{Ogni funzione continua \textit{f}(\textit{x}) può essere espressa come integrale di sinusoidi complesse:
+\begin{equation*}
+    f(x) = \int_{-\infty}^{+\infty} \mathcal{F}(u)\,\mathrm{e}^{\mathrm{j} 2\pi ux}\,\mathrm{d}u\,.
+\end{equation*}
+Se \textit{f}(\textit{x}) si trova nel dominio spaziale, la sua trasformata di Fourier si trova nel dominio delle frequenze:
+\begin{equation*}
+    \mathcal{F}(u) = \int_{-\infty}^{+\infty} f(x)\,\mathrm{e}^{-\mathrm{j} 2\pi ux}\,\mathrm{d}x\,.
+\end{equation*}}
+Senza dilungarci troppo, questa operazione è conveniente in quanto è molto più semplice operare nello spazio di Fourier per migliorare la qualità dell'immagine, rispetto a quanto non lo sia nello spazio reale utilizzando i \textit{kernel}, come spiegato prima. Una volta che si è migliorata la qualità dell'immagine, si applica l'antitrasformata di Fourier per tornare al sinogramma, e da lì si applica l'antitrasformata di Radon per ottenere l'oggetto.
+
+\begin{figure}[htp]
+\centering
+\includegraphics{immagini/frequenze.png}
+\caption{\label{fig:frequenze} \textit{Dominio delle frequenze o spazio di Fourier}.}
+\end{figure}
+
+L'applicazione dell'antitrasformata di Radon costituisce il processo di \textit{back projection} o retroproiezione. Per capire di cosa si tratta, prendiamo una matrice $3\times3$ di numeri che rappresentano un'immagine, e consideriamo 4 proiezioni, come mostrato nella \figref{fig:proiezione}. Ogni valore proiettato lungo una linea è dato dalla somma dei valori di ciascuna casella della matrice per i quali quella stessa linea passa: questo processo di proiezione è detto \textit{forward projection} e viene eseguito dallo scanner TC in fase di acquisizione. La retroproiezione è il procedimento opposto, in cui lo scanner deve risalire, a partire dalle proiezioni che ha acquisito, al contenuto di ciascuna casella della matrice, che di solito per un'immagine TC è in formato $512\times512$. Nella sua versione più semplice, la retroproiezione viene eseguita semplicemente spalmando il valore delle proiezioni lungo ciascuna linea; tuttavia, questo metodo fornisce risultati non soddisfacenti, in particolare immagini soggette a una caratteristica sfocatura inversamente proporzionale alla distanza dal centro dell'immagine stessa. Per evitare la sfocatura, tra i processi di \textit{forward projection} e \textit{back projection} è necessario filtrare, nello spazio di Fourier, le frequenze che causano la sfocatura e, più in generale, che abbassano la qualità dell'immagine; con questa aggiunta, il processo di retroproiezione prende il nome di \textit{filtered back projection} (FBP). L'impiego delle trasformate e antitraformate di Radon e Fourier è proprio un metodo di FBP.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.75]{immagini/proiezione.png}
+\caption{\label{fig:proiezione} \textit{Esempio di forward projection per una matrice $3\times3$}.}
+\end{figure}
+
+\newpage
